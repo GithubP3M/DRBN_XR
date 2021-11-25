@@ -22,7 +22,7 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Trigger_z = this.gameObject.transform.position.y;
+		//obsolete for generalized impala Trigger_z = this.gameObject.transform.position.y;
 	}
 	
 	// Update is called once per frame
@@ -31,13 +31,18 @@ public class ImpalaGeneralized : MonoBehaviour {
 	}
 
 	float switchmod(){
-		//Debug.Log ("switch " + Trigger_z + this.name);
-		if (z < Trigger_z) {
-			modifier = -1;
-		} else {
-			modifier = 1;
-		}
-		return modifier;
+        //Debug.Log("switch " + Trigger_z + this.name);
+        
+
+        if (z < Trigger_z)
+        {
+            modifier = -1;
+        }
+        else
+        {
+            modifier = 1;
+        }
+        return modifier;
 	}
 
 	float CalcCz(float z,float modifier){
@@ -55,34 +60,44 @@ public class ImpalaGeneralized : MonoBehaviour {
 		return C_z;
 	}
 
-//  working version
-//	float switchmod(){
-//		if (z < 0) {
-//			modifier = -1;
-//		} else {
-//			modifier = 1;
-//		}
-//		return modifier;
-//	}
+    //  working version
+    //	float switchmod(){
+    //		if (z < 0) {
+    //			modifier = -1;
+    //		} else {
+    //			modifier = 1;
+    //		}
+    //		return modifier;
+    //	}
 
 
-//	float CalcCz(float z,float modifier){
-//		if (Mathf.Abs(z) > 1.35f && Mathf.Abs(z) < 1.8f) {
-//			C_z = 0.5f - 11f + Mathf.Exp (a * (z - z_0));
-//			C_z = C_z * modifier;
-//			Debug.Log ("medium");
-//		} else if (Mathf.Abs (z) > 1.35f) {
-//			C_z = 0;
-//			Debug.Log ("lo");
-//		} else if (Mathf.Abs (z) < 1.8f) {
-//			C_z = 1 * modifier;
-//			Debug.Log ("hi");
-//		}
-//		return C_z;
-//	}
+    //	float CalcCz(float z,float modifier){
+    //		if (Mathf.Abs(z) > 1.35f && Mathf.Abs(z) < 1.8f) {
+    //			C_z = 0.5f - 11f + Mathf.Exp (a * (z - z_0));
+    //			C_z = C_z * modifier;
+    //			Debug.Log ("medium");
+    //		} else if (Mathf.Abs (z) > 1.35f) {
+    //			C_z = 0;
+    //			Debug.Log ("lo");
+    //		} else if (Mathf.Abs (z) < 1.8f) {
+    //			C_z = 1 * modifier;
+    //			Debug.Log ("hi");
+    //		}
+    //		return C_z;
+    //	}
 
-	void OnTriggerStay (Collider collider) {
+ //   private void OnDrawGizmos()
+ //   {
+	//	Gizmos.DrawSphere(rb.gameObject.transform.localPosition, 0.01f);
+	//	Gizmos.DrawSphere(this.gameObject.transform.localPosition, 0.01f);
+	//}
+
+	//bool triggered = false; 
+    void OnTriggerStay (Collider collider) {
+		//triggered = true;
 		z = collider.gameObject.transform.position.y;
+		//Debug.Log(collider.gameObject.name + " my name is");
+		//Debug.Log(this.gameObject.name + " his name is");
 		rb = collider.GetComponent<Rigidbody> ();
 		gotag = collider.gameObject.transform.GetComponentsInChildren<Transform> ();
 		var m = switchmod ();
@@ -91,9 +106,13 @@ public class ImpalaGeneralized : MonoBehaviour {
 		//Vector3 dn = new Vector3 (0f, -1f, 0f);
 		//Vector3 up = new Vector3 (0f, 1f, 0f);
 
+
 		Vector3 dn = collider.gameObject.transform.localRotation.eulerAngles;
-		Vector3 up = collider.gameObject.transform.localRotation.eulerAngles;
-		//Debug.Log(dn);
+		Vector3 up = Quaternion.Inverse(collider.gameObject.transform.localRotation).eulerAngles;
+		
+
+		//Debug.Log(dn + " dn");
+		//Debug.Log(up + " up");
 
 		//if (collider.gameObject.tag=="helix"){
 		if (collider.gameObject.layer==11){
@@ -108,8 +127,11 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 
 			Vector3 Frb = (dn * CalcCz (z,m));
-			rb.AddForce (Frb);
+			//rb.AddForce (Frb); //disable temporarily for debugging purpose
 			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
+			Debug.DrawLine(rb.position, rb.position + dn, Color.blue);
+			Debug.DrawLine(rb.position, rb.position + up, Color.red);
+
 			//Debug.Log ("boom ");
 			//Debug.Log (rb.position-(rb.position + Frb));
 
@@ -127,9 +149,9 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 		}
 		else {
-			Vector3 Frb = (up * CalcCz (z,m));
-			rb.AddForce (Frb);
-			Debug.DrawLine (rb.position, rb.position + Frb, Color.white);
+			//Vector3 Frb = (up * CalcCz (z,m));
+			//rb.AddForce (Frb); //disable temporarily for debugging purpose
+			//Debug.DrawLine (rb.position, rb.position + Frb, Color.white);
 		}
 
 		//	void OnTriggerStay (Collider collider) {
