@@ -8,6 +8,7 @@ public class SphereColliderPopulate : MonoBehaviour
     private Vector3[] VertList;
     private Vector3[] NormList;
     private SphereCollider[] Population;
+    private GameObject[] Debugsphere;
     
     // Start is called before the first frame update
     void Start()
@@ -64,6 +65,12 @@ public class SphereColliderPopulate : MonoBehaviour
             ColliderOrientation.transform.localRotation = Quaternion.LookRotation(NormList[i]);
 
             ColliderOrientation.AddComponent<ImpalaGeneralized>();
+
+            //GameObject DSphere = new GameObject();
+            GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            DSphere.transform.position = VertList[i];
+            DSphere.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f) ;
+            //Debugsphere[i] = DSphere;
 
             //SphereCollider Sphere = PopulateGO.AddComponent<SphereCollider>();
             //Sphere.center = v;

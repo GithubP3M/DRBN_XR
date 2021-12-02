@@ -127,15 +127,16 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 
 			Vector3 Frb = (dn * CalcCz (z,m));
-			//rb.AddForce (Frb); //disable temporarily for debugging purpose
-			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
-			Debug.DrawLine(rb.position, rb.position + dn, Color.blue);
-			Debug.DrawLine(rb.position, rb.position + up, Color.red);
+            //rb.AddForce (Frb); //disable temporarily for debugging purpose
+            Debug.DrawLine(rb.position, rb.position + Frb, Color.black);
+            Debug.DrawLine(rb.position, rb.position + dn, Color.blue);
+            Debug.DrawLine(rb.position, rb.position + up, Color.red);
 
-			//Debug.Log ("boom ");
-			//Debug.Log (rb.position-(rb.position + Frb));
 
-			for (int ht = 0; ht < gotag.Length; ht++) {
+            //Debug.Log ("boom ");
+            //Debug.Log (rb.position-(rb.position + Frb));
+
+            for (int ht = 0; ht < gotag.Length; ht++) {
 				if (gotag [ht].tag == "hydrophobic") {
 					phobicpos = gotag [ht].position;
 					var zphob = phobicpos.y;
