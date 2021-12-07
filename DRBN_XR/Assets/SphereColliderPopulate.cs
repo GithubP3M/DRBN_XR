@@ -51,14 +51,14 @@ public class SphereColliderPopulate : MonoBehaviour
 
     void Populate(Vector3[] VertList, Vector3[] NormList) 
     {
-        for (int i =0; i<=VertList.Length; i++)
+        for (int i =0; i<VertList.Length; i++)
         {
             GameObject ColliderOrientation = new GameObject();
             ColliderOrientation.transform.parent=PopulateGO.transform;
             SphereCollider Sphere = ColliderOrientation.AddComponent<SphereCollider>();
             Sphere.radius = 0.05f;
             SphereCollider Sphere_Trig = ColliderOrientation.AddComponent<SphereCollider>();
-            Sphere_Trig.radius = 0.1f;
+            Sphere_Trig.radius = 0.4f;
             Sphere_Trig.isTrigger = true;
 
             ColliderOrientation.transform.position = VertList[i];

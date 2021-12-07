@@ -107,8 +107,16 @@ public class ImpalaGeneralized : MonoBehaviour {
 		//Vector3 up = new Vector3 (0f, 1f, 0f);
 
 
-		Vector3 dn = collider.gameObject.transform.localRotation.eulerAngles;
-		Vector3 up = Quaternion.Inverse(collider.gameObject.transform.localRotation).eulerAngles;
+		//Vector3 dn = collider.gameObject.transform.localRotation.eulerAngles;
+		//Vector3 dn = this.gameObject.transform.rotation.eulerAngles;
+		Vector3 dn = this.gameObject.transform.localEulerAngles;
+		Vector3 dn = this.gameObject.transform.TransformDirection;// still no idea how this works... 
+		Vector3 up = Quaternion.Inverse(this.gameObject.transform.localRotation).eulerAngles;
+
+		Debug.Log("name " + this.gameObject.name);
+		Debug.Log("vector " + this.gameObject.transform.localEulerAngles);
+		
+		
 		
 
 		//Debug.Log(dn + " dn");
@@ -127,16 +135,16 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 
 			Vector3 Frb = (dn * CalcCz (z,m));
-            //rb.AddForce (Frb); //disable temporarily for debugging purpose
-            Debug.DrawLine(rb.position, rb.position + Frb, Color.black);
-            Debug.DrawLine(rb.position, rb.position + dn, Color.blue);
-            Debug.DrawLine(rb.position, rb.position + up, Color.red);
+			//rb.AddForce (Frb); //disable temporarily for debugging purpose
+			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
+			Debug.DrawLine(rb.position, rb.position + dn, Color.blue);
+			//Debug.DrawLine(rb.position, rb.position + up, Color.red);
+			
 
+			//Debug.Log ("boom ");
+			//Debug.Log (rb.position-(rb.position + Frb));
 
-            //Debug.Log ("boom ");
-            //Debug.Log (rb.position-(rb.position + Frb));
-
-            for (int ht = 0; ht < gotag.Length; ht++) {
+			for (int ht = 0; ht < gotag.Length; ht++) {
 				if (gotag [ht].tag == "hydrophobic") {
 					phobicpos = gotag [ht].position;
 					var zphob = phobicpos.y;
