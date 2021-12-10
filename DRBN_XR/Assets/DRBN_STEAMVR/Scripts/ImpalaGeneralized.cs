@@ -107,14 +107,14 @@ public class ImpalaGeneralized : MonoBehaviour {
 		//Vector3 up = new Vector3 (0f, 1f, 0f);
 
 
-		//Vector3 dn = collider.gameObject.transform.localRotation.eulerAngles;
-		//Vector3 dn = this.gameObject.transform.rotation.eulerAngles;
-		Vector3 dn = this.gameObject.transform.localEulerAngles;
-		Vector3 dn = this.gameObject.transform.TransformDirection;// still no idea how this works... 
-		Vector3 up = Quaternion.Inverse(this.gameObject.transform.localRotation).eulerAngles;
+		Vector3 up = this.gameObject.transform.up.normalized;
+		Vector3 rt = this.gameObject.transform.right.normalized;
+		Vector3 fw = this.gameObject.transform.forward.normalized;
+
+
 
 		Debug.Log("name " + this.gameObject.name);
-		Debug.Log("vector " + this.gameObject.transform.localEulerAngles);
+		Debug.Log("vector " + this.gameObject.transform.up);
 		
 		
 		
@@ -134,12 +134,13 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 
 
-			Vector3 Frb = (dn * CalcCz (z,m));
+			///Vector3 Frb = (dn * CalcCz (z,m));
 			//rb.AddForce (Frb); //disable temporarily for debugging purpose
-			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
-			Debug.DrawLine(rb.position, rb.position + dn, Color.blue);
-			//Debug.DrawLine(rb.position, rb.position + up, Color.red);
-			
+			//Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
+			//Debug.DrawLine(rb.position, rb.position + up, Color.green);
+			//Debug.DrawLine(rb.position, rb.position + rt, Color.red);
+			Debug.DrawLine(rb.position, rb.position + fw, Color.blue);
+
 
 			//Debug.Log ("boom ");
 			//Debug.Log (rb.position-(rb.position + Frb));
@@ -149,9 +150,9 @@ public class ImpalaGeneralized : MonoBehaviour {
 					phobicpos = gotag [ht].position;
 					var zphob = phobicpos.y;
 
-					Vector3 F = (dn * CalcCz (zphob,m));
-					rb.AddForceAtPosition (F, phobicpos);
-					Debug.DrawLine (phobicpos, phobicpos + F, Color.blue);
+					//Vector3 F = (dn * CalcCz (zphob,m));
+					//rb.AddForceAtPosition (F, phobicpos);
+					//Debug.DrawLine (phobicpos, phobicpos + F, Color.blue);
 
 				}
 			}

@@ -58,7 +58,7 @@ public class SphereColliderPopulate : MonoBehaviour
             SphereCollider Sphere = ColliderOrientation.AddComponent<SphereCollider>();
             Sphere.radius = 0.05f;
             SphereCollider Sphere_Trig = ColliderOrientation.AddComponent<SphereCollider>();
-            Sphere_Trig.radius = 0.4f;
+            Sphere_Trig.radius = 0.06f;
             Sphere_Trig.isTrigger = true;
 
             ColliderOrientation.transform.position = VertList[i];
@@ -67,9 +67,12 @@ public class SphereColliderPopulate : MonoBehaviour
             ColliderOrientation.AddComponent<ImpalaGeneralized>();
 
             //GameObject DSphere = new GameObject();
+
             GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            DSphere.transform.parent = PopulateGO.transform;
             DSphere.transform.position = VertList[i];
-            DSphere.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f) ;
+            DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
             //Debugsphere[i] = DSphere;
 
             //SphereCollider Sphere = PopulateGO.AddComponent<SphereCollider>();
