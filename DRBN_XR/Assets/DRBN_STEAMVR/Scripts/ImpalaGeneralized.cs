@@ -22,17 +22,20 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//obsolete for generalized impala Trigger_z = this.gameObject.transform.position.y;
+		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+
 	}
 
 	float switchmod(){
-        //Debug.Log("switch " + Trigger_z + this.name);
-        
+        Debug.Log("switch " + Trigger_z + " " + this.name);
+
+		
 
         if (z < Trigger_z)
         {
@@ -44,6 +47,13 @@ public class ImpalaGeneralized : MonoBehaviour {
         }
         return modifier;
 	}
+
+    private void OnDrawGizmos()
+    {
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawSphere(new Vector3(0, Trigger_z, 0), 0.1f);
+	}
+    
 
 	float CalcCz(float z,float modifier){
 		if (Mathf.Abs(z) > 1.35f+Trigger_z && Mathf.Abs(z) < 1.8f+Trigger_z) {
@@ -60,61 +70,37 @@ public class ImpalaGeneralized : MonoBehaviour {
 		return C_z;
 	}
 
-    //  working version
-    //	float switchmod(){
-    //		if (z < 0) {
-    //			modifier = -1;
-    //		} else {
-    //			modifier = 1;
-    //		}
-    //		return modifier;
-    //	}
-
-
-    //	float CalcCz(float z,float modifier){
-    //		if (Mathf.Abs(z) > 1.35f && Mathf.Abs(z) < 1.8f) {
-    //			C_z = 0.5f - 11f + Mathf.Exp (a * (z - z_0));
-    //			C_z = C_z * modifier;
-    //			Debug.Log ("medium");
-    //		} else if (Mathf.Abs (z) > 1.35f) {
-    //			C_z = 0;
-    //			Debug.Log ("lo");
-    //		} else if (Mathf.Abs (z) < 1.8f) {
-    //			C_z = 1 * modifier;
-    //			Debug.Log ("hi");
-    //		}
-    //		return C_z;
-    //	}
-
- //   private void OnDrawGizmos()
- //   {
-	//	Gizmos.DrawSphere(rb.gameObject.transform.localPosition, 0.01f);
-	//	Gizmos.DrawSphere(this.gameObject.transform.localPosition, 0.01f);
-	//}
+    
 
 	//bool triggered = false; 
     void OnTriggerStay (Collider collider) {
 		//triggered = true;
 		z = collider.gameObject.transform.position.y;
+
+		
+		
+
 		//Debug.Log(collider.gameObject.name + " my name is");
 		//Debug.Log(this.gameObject.name + " his name is");
 		rb = collider.GetComponent<Rigidbody> ();
 		gotag = collider.gameObject.transform.GetComponentsInChildren<Transform> ();
 		var m = switchmod ();
 
+		
+
 		//Defined by the gameobject Z axis in generalized Impala
 		//Vector3 dn = new Vector3 (0f, -1f, 0f);
 		//Vector3 up = new Vector3 (0f, 1f, 0f);
 
 
-		Vector3 up = this.gameObject.transform.up.normalized;
-		Vector3 rt = this.gameObject.transform.right.normalized;
-		Vector3 fw = this.gameObject.transform.forward.normalized;
+		//Vector3 up = this.gameObject.transform.up.normalized;
+		//Vector3 rt = this.gameObject.transform.right.normalized;
+		Vector3 up = this.gameObject.transform.forward.normalized; //because of course, up is forward... 
+		Vector3 dn = this.gameObject.transform.forward.normalized*-1;
 
 
-
-		Debug.Log("name " + this.gameObject.name);
-		Debug.Log("vector " + this.gameObject.transform.up);
+		//Debug.Log("name " + this.gameObject.name);
+		//Debug.Log("vector " + this.gameObject.transform.up);
 		
 		
 		
@@ -126,6 +112,16 @@ public class ImpalaGeneralized : MonoBehaviour {
 		if (collider.gameObject.layer==11){
 			//Debug.Log ("z " + z);
 
+			Vector3 projected = collider.gameObject.transform.position;
+			Vector3 projector = this.gameObject.transform.position;
+			Vector3 projection = projected - projector;
+
+			//Debug.DrawLine(this.gameObject.transform.position, this.gameObject.transform.position + projection, Color.green);
+
+			Vector3 ProjectVec = Vector3.Project(projection, up);
+
+			Debug.DrawLine(this.gameObject.transform.position, this.gameObject.transform.position + ProjectVec, Color.magenta);
+
 			rbv = rb.velocity;
 			rbav = rb.angularVelocity;
 
@@ -134,12 +130,12 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 
 
-			///Vector3 Frb = (dn * CalcCz (z,m));
-			//rb.AddForce (Frb); //disable temporarily for debugging purpose
-			//Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
+			Vector3 Frb = (dn * CalcCz (z,m));
+			rb.AddForce (Frb); //disable temporarily for debugging purpose
+			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
 			//Debug.DrawLine(rb.position, rb.position + up, Color.green);
 			//Debug.DrawLine(rb.position, rb.position + rt, Color.red);
-			Debug.DrawLine(rb.position, rb.position + fw, Color.blue);
+			//Debug.DrawLine(rb.position, rb.position + up, Color.blue);
 
 
 			//Debug.Log ("boom ");

@@ -68,10 +68,15 @@ public class SphereColliderPopulate : MonoBehaviour
 
             //GameObject DSphere = new GameObject();
 
-            GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            DSphere.transform.parent = PopulateGO.transform;
-            DSphere.transform.position = VertList[i];
-            DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            //GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            //Destroy(GetComponent<Collider>());
+            //DSphere.transform.parent = PopulateGO.transform;
+            //DSphere.transform.position = VertList[i];
+            //DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+            //Debug.Log(PopulateGO.GetComponent<MeshRenderer>().materials[0].name);
+            Shader Green = Shader.Find("DRBN_STEAMVR/Material/Transparent Green (Instance)");
+            GetComponent<MeshRenderer>().material.shader = Green;
 
             //Debugsphere[i] = DSphere;
 
