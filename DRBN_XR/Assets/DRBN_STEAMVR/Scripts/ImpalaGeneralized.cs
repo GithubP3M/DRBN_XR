@@ -33,7 +33,7 @@ public class ImpalaGeneralized : MonoBehaviour {
 	}
 
 	float switchmod(){
-        Debug.Log("switch " + Trigger_z + " " + this.name);
+        //Debug.Log("switch " + Trigger_z + " " + this.name);
 
 		
 
@@ -85,32 +85,19 @@ public class ImpalaGeneralized : MonoBehaviour {
 		rb = collider.GetComponent<Rigidbody> ();
 		gotag = collider.gameObject.transform.GetComponentsInChildren<Transform> ();
 		var m = switchmod ();
-
 		
-
-		//Defined by the gameobject Z axis in generalized Impala
-		//Vector3 dn = new Vector3 (0f, -1f, 0f);
-		//Vector3 up = new Vector3 (0f, 1f, 0f);
-
-
-		//Vector3 up = this.gameObject.transform.up.normalized;
-		//Vector3 rt = this.gameObject.transform.right.normalized;
 		Vector3 up = this.gameObject.transform.forward.normalized; //because of course, up is forward... 
 		Vector3 dn = this.gameObject.transform.forward.normalized*-1;
-
-
-		//Debug.Log("name " + this.gameObject.name);
-		//Debug.Log("vector " + this.gameObject.transform.up);
-		
-		
-		
-
-		//Debug.Log(dn + " dn");
-		//Debug.Log(up + " up");
 
 		//if (collider.gameObject.tag=="helix"){
 		if (collider.gameObject.layer==11){
 			//Debug.Log ("z " + z);
+
+			rbv = rb.velocity;
+			rbav = rb.angularVelocity;
+
+			rb.velocity = rbv * 0.5f; // membrane is more viscous 
+			rb.angularVelocity = rbav * 0.5f; // membrane is more viscous 
 
 			Vector3 projected = collider.gameObject.transform.position;
 			Vector3 projector = this.gameObject.transform.position;
@@ -120,19 +107,16 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 			Vector3 ProjectVec = Vector3.Project(projection, up);
 
-			Debug.DrawLine(this.gameObject.transform.position, this.gameObject.transform.position + ProjectVec, Color.magenta);
+			//Debug.DrawLine(this.gameObject.transform.position, this.gameObject.transform.position + ProjectVec, Color.magenta);
 
-			rbv = rb.velocity;
-			rbav = rb.angularVelocity;
-
-			rb.velocity = rbv * 0.5f; // membrane is more viscous 
-			rb.angularVelocity = rbav * 0.5f; // membrane is more viscous 
+			
 
 
 
 			Vector3 Frb = (dn * CalcCz (z,m));
-			rb.AddForce (Frb); //disable temporarily for debugging purpose
+			rb.AddForce (Frb); 
 			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
+			
 			//Debug.DrawLine(rb.position, rb.position + up, Color.green);
 			//Debug.DrawLine(rb.position, rb.position + rt, Color.red);
 			//Debug.DrawLine(rb.position, rb.position + up, Color.blue);
@@ -146,18 +130,18 @@ public class ImpalaGeneralized : MonoBehaviour {
 					phobicpos = gotag [ht].position;
 					var zphob = phobicpos.y;
 
-					//Vector3 F = (dn * CalcCz (zphob,m));
-					//rb.AddForceAtPosition (F, phobicpos);
-					//Debug.DrawLine (phobicpos, phobicpos + F, Color.blue);
+					Vector3 F = (dn * CalcCz (zphob,m));
+					rb.AddForceAtPosition (F, phobicpos);
+					Debug.DrawLine (phobicpos, phobicpos + F, Color.blue);
 
 				}
 			}
 
 		}
 		else {
-			//Vector3 Frb = (up * CalcCz (z,m));
-			//rb.AddForce (Frb); //disable temporarily for debugging purpose
-			//Debug.DrawLine (rb.position, rb.position + Frb, Color.white);
+			Vector3 Frb = (up * CalcCz (z,m));
+			rb.AddForce (Frb); //disable temporarily for debugging purpose
+			Debug.DrawLine (rb.position, rb.position + Frb, Color.white);
 		}
 
 		//	void OnTriggerStay (Collider collider) {

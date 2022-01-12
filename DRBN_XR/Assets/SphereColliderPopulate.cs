@@ -29,6 +29,7 @@ public class SphereColliderPopulate : MonoBehaviour
     Vector3[] ExtractVert(GameObject PopulateGO) 
     {
         Mesh PopulateMesh = PopulateGO.GetComponent<MeshFilter>().mesh;
+        Debug.Log(PopulateMesh);
         VertList = PopulateMesh.vertices;
 
         Vector3[] vworld = new Vector3[VertList.Length];
@@ -56,26 +57,35 @@ public class SphereColliderPopulate : MonoBehaviour
             GameObject ColliderOrientation = new GameObject();
             ColliderOrientation.transform.parent=PopulateGO.transform;
             SphereCollider Sphere = ColliderOrientation.AddComponent<SphereCollider>();
-            Sphere.radius = 0.05f;
-            SphereCollider Sphere_Trig = ColliderOrientation.AddComponent<SphereCollider>();
-            Sphere_Trig.radius = 0.06f;
+            Sphere.radius = 0.03f;
+
+            GameObject TriggerOrientation = new GameObject("trigger");
+            TriggerOrientation.transform.parent = PopulateGO.transform;
+
+            SphereCollider Sphere_Trig = TriggerOrientation.AddComponent<SphereCollider>();
+            Sphere_Trig.radius = 0.03f;
             Sphere_Trig.isTrigger = true;
+            
 
             ColliderOrientation.transform.position = VertList[i];
             ColliderOrientation.transform.localRotation = Quaternion.LookRotation(NormList[i]);
 
-            ColliderOrientation.AddComponent<ImpalaGeneralized>();
+            TriggerOrientation.transform.position = VertList[i];
+            TriggerOrientation.transform.localRotation = Quaternion.LookRotation(NormList[i]);
+
+            TriggerOrientation.AddComponent<ImpalaGeneralized>();
 
             //GameObject DSphere = new GameObject();
 
-            //GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            //Destroy(GetComponent<Collider>());
-            //DSphere.transform.parent = PopulateGO.transform;
-            //DSphere.transform.position = VertList[i];
-            //DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            Destroy(GetComponent<Collider>());
+            DSphere.transform.parent = PopulateGO.transform;
+            DSphere.transform.position = VertList[i];
+            DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            DSphere.transform.localRotation = Quaternion.LookRotation(NormList[i]);
 
             //Debug.Log(PopulateGO.GetComponent<MeshRenderer>().materials[0].name);
-            Shader Green = Shader.Find("DRBN_STEAMVR/Material/Transparent Green (Instance)");
+            Shader Green = Shader.Find("DRBN_STEAMVR/Material/Transparent Green");
             GetComponent<MeshRenderer>().material.shader = Green;
 
             //Debugsphere[i] = DSphere;
