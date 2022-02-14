@@ -2680,12 +2680,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!4 &716134551 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1670256625, guid: ecdbf3dc6204e7a46943712ecfb94c12,
-    type: 3}
-  m_PrefabInstance: {fileID: 985166751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &718206187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,6 +3427,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wristUI: {fileID: 1391590173}
   activeWristUI: 1
+--- !u!4 &985166767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: ecdbf3dc6204e7a46943712ecfb94c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 985166751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1006352746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +5139,7 @@ GameObject:
   - component: {fileID: 1391590176}
   - component: {fileID: 1391590175}
   m_Layer: 0
-  m_Name: WristUICanvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6837,12 +6837,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768947793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.36144, z: 0.67999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1391590174}
-  m_Father: {fileID: 716134551}
+  m_Father: {fileID: 985166767}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1768947795
@@ -6858,6 +6858,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowCam: {fileID: 1893328905}
+  timer: 0
+  waitingTime: 3
 --- !u!1 &1784686648
 GameObject:
   m_ObjectHideFlags: 0
