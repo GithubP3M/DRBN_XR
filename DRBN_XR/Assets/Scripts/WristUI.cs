@@ -26,6 +26,12 @@ public class WristUI : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void SpawnMolecule()
+    {
+        spawn = Instantiate(prefab, loc, rot);
+        spawn.name = prefab.name + "_" + counter.ToString();
+    }
+
     public void MenuPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
