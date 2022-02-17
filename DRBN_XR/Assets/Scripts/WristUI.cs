@@ -9,6 +9,11 @@ public class WristUI : MonoBehaviour
     public GameObject wristUI;
     public bool activeWristUI = true;
 
+    public Transform prefab;
+    private Transform spawn;
+    public GameObject spawnpoint;
+    private MolSpawn spawnGO;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +33,22 @@ public class WristUI : MonoBehaviour
 
     public void SpawnMolecule()
     {
-        spawn = Instantiate(prefab, loc, rot);
-        spawn.name = prefab.name + "_" + counter.ToString();
+        int counter;
+        counter = molcounter.molecules.Count;
+        List<Transform> MolCount;
+        MolCount = molcounter.molecules;
+        spawnGO = this.gameObject.GetComponent<MolSpawn>();
+        Debug.Log(spawnGO.gameObject.name + " name !!!");
+        spawnpoint = spawnGO.spawnpoint;
+        Debug.Log(spawnGO.gameObject.name+" name !!!");
+        
+        if (counter < molcounter.limit)
+        {
+            Vector3 loc = spawnpoint.transform.position;
+            Quaternion rot = gameObject.transform.rotation;
+            spawn = Instantiate(prefab, loc, rot);
+            spawn.name = prefab.name + "_" + counter.ToString();
+        }
     }
 
     public void MenuPressed(InputAction.CallbackContext context)
