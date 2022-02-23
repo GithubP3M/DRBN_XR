@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class WristUI : MonoBehaviour
 {
@@ -14,11 +15,17 @@ public class WristUI : MonoBehaviour
     public GameObject spawnpoint;
     private MolSpawn spawnGO;
 
+    Dropdown mdropdown;
 
     // Start is called before the first frame update
     void Start()
     {
         DisplayWristUI();
+
+        mdropdown = this.gameObject.GetComponent<Dropdown>();
+        mdropdown.onValueChanged.AddListener(delegate {
+            SpawnSelected(mdropdown);
+        });
     }
 
     public void ExitGame()
@@ -31,6 +38,29 @@ public class WristUI : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void SpawnSelected(Dropdown change)
+    {
+        Debug.Log(mdropdown.value);
+        
+        int counter;
+        counter = molcounter.molecules.Count;
+        List<Transform> MolCount;
+        MolCount = molcounter.molecules;
+        spawnGO = this.gameObject.GetComponent<MolSpawn>();
+        Debug.Log(this.gameObject.name + " name");
+        Debug.Log(spawnpoint.name);
+
+
+
+        if (counter < molcounter.limit)
+        {
+            Vector3 loc = spawnpoint.transform.position;
+            Quaternion rot = gameObject.transform.rotation;
+            spawn = Instantiate(prefab, loc, rot);
+            spawn.name = prefab.name + "_" + counter.ToString();
+        }
+    }
+
     public void SpawnMolecule()
     {
         int counter;
@@ -38,9 +68,8 @@ public class WristUI : MonoBehaviour
         List<Transform> MolCount;
         MolCount = molcounter.molecules;
         spawnGO = this.gameObject.GetComponent<MolSpawn>();
-        Debug.Log(spawnGO.gameObject.name + " name !!!");
-        spawnpoint = spawnGO.spawnpoint;
-        Debug.Log(spawnGO.gameObject.name+" name !!!");
+        Debug.Log(this.gameObject.name +" name");
+        Debug.Log(spawnpoint.name);
         
         if (counter < molcounter.limit)
         {
