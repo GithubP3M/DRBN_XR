@@ -891,7 +891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338342155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.61, z: 0}
+  m_LocalPosition: {x: 0, y: 1.608, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1342,10 +1342,10 @@ MonoBehaviour:
       - m_Target: {fileID: 665018102}
         m_TargetAssemblyTypeName: WristUI, Assembly-CSharp
         m_MethodName: SpawnSelected
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 407490964}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3462,6 +3462,7 @@ MonoBehaviour:
   activeWristUI: 1
   prefab: {fileID: 4133089792975476, guid: 9a07749c9059de64180efaa2335a29d7, type: 3}
   spawnpoint: {fileID: 338342155}
+  mdropdown: {fileID: 0}
 --- !u!1 &713118334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,6 +4492,7 @@ MonoBehaviour:
   activeWristUI: 1
   prefab: {fileID: 4133089792975476, guid: 9a07749c9059de64180efaa2335a29d7, type: 3}
   spawnpoint: {fileID: 338342155}
+  mdropdown: {fileID: 0}
 --- !u!1 &1006352746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8941,6 +8943,7 @@ GameObject:
   - component: {fileID: 1881114552}
   - component: {fileID: 1881114554}
   - component: {fileID: 1881114555}
+  - component: {fileID: 1881114553}
   m_Layer: 0
   m_Name: Simulation
   m_TagString: Physics_Sim
@@ -8997,6 +9000,26 @@ MonoBehaviour:
   MaxForce: 10000
   floor: 0
   UseScaleForDebugDraw: 0
+--- !u!114 &1881114553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881114549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e896748f1a4d845924eaa67b5f1365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOList:
+  - {fileID: 1139134237179190, guid: 1044da26bbc99684f92e4f0baa8eeaf1, type: 3}
+  - {fileID: 1139134237179190, guid: 7685ab050a11ddd459221ec3d038471d, type: 3}
+  - {fileID: 1139134237179190, guid: 9a07749c9059de64180efaa2335a29d7, type: 3}
+  - {fileID: 1049614508444186, guid: e5a5e6d52608b9945a86a99282ad0809, type: 3}
+  - {fileID: 8996431935918390605, guid: 62de4d14663498843bd64afa549c7fb0, type: 3}
+  - {fileID: 3011891873972996688, guid: c39cb2ee209a0664ab7bfada76bcbc7b, type: 3}
+  - {fileID: 3562581995336005509, guid: 95a6f110a370f824bb034b665134617a, type: 3}
 --- !u!95 &1881114554
 Animator:
   serializedVersion: 3

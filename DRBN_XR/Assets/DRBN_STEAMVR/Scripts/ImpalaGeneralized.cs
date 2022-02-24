@@ -48,11 +48,11 @@ public class ImpalaGeneralized : MonoBehaviour {
         return modifier;
 	}
 
-    private void OnDrawGizmos()
-    {
-		Gizmos.color = Color.yellow;
-		Gizmos.DrawSphere(new Vector3(0, Trigger_z, 0), 0.1f);
-	}
+ //   private void OnDrawGizmos()
+ //   {
+	//	Gizmos.color = Color.yellow;
+	//	Gizmos.DrawSphere(new Vector3(0, Trigger_z, 0), 0.1f);
+	//}
     
 
 	float CalcCz(float z,float modifier){

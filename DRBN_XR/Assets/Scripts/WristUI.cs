@@ -4,28 +4,34 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class WristUI : MonoBehaviour
 {
     public GameObject wristUI;
     public bool activeWristUI = true;
-
     public Transform prefab;
-    private Transform spawn;
     public GameObject spawnpoint;
-    private MolSpawn spawnGO;
+    public TMP_Dropdown mdropdown;
 
-    Dropdown mdropdown;
+    private Transform spawn;
+    private MolSpawn spawnGO;
+    private int DropdownValue;
+
+    
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
         DisplayWristUI();
 
-        mdropdown = this.gameObject.GetComponent<Dropdown>();
-        mdropdown.onValueChanged.AddListener(delegate {
-            SpawnSelected(mdropdown);
-        });
+        //mdropdown = this.gameObject.GetComponent<Dropdown>();
+        //Debug.Log(this.gameObject.name);
+        //mdropdown.onValueChanged.AddListener(delegate {
+        //    SpawnSelected(mdropdown);
+        //});
     }
 
     public void ExitGame()
@@ -38,9 +44,10 @@ public class WristUI : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void SpawnSelected(Dropdown change)
+    public void SpawnSelected(TMP_Dropdown change)
     {
-        Debug.Log(mdropdown.value);
+        Debug.Log(change.value);
+        DropdownValue = change.value;
         
         int counter;
         counter = molcounter.molecules.Count;
@@ -63,14 +70,16 @@ public class WristUI : MonoBehaviour
 
     public void SpawnMolecule()
     {
+        Debug.Log(DropdownValue);
+
         int counter;
         counter = molcounter.molecules.Count;
         List<Transform> MolCount;
         MolCount = molcounter.molecules;
         spawnGO = this.gameObject.GetComponent<MolSpawn>();
-        Debug.Log(this.gameObject.name +" name");
+        Debug.Log(this.gameObject.name + " name");
         Debug.Log(spawnpoint.name);
-        
+
         if (counter < molcounter.limit)
         {
             Vector3 loc = spawnpoint.transform.position;
@@ -79,6 +88,25 @@ public class WristUI : MonoBehaviour
             spawn.name = prefab.name + "_" + counter.ToString();
         }
     }
+
+    //public void SpawnMolecule()
+    //{
+    //    int counter;
+    //    counter = molcounter.molecules.Count;
+    //    List<Transform> MolCount;
+    //    MolCount = molcounter.molecules;
+    //    spawnGO = this.gameObject.GetComponent<MolSpawn>();
+    //    Debug.Log(this.gameObject.name +" name");
+    //    Debug.Log(spawnpoint.name);
+
+    //    if (counter < molcounter.limit)
+    //    {
+    //        Vector3 loc = spawnpoint.transform.position;
+    //        Quaternion rot = gameObject.transform.rotation;
+    //        spawn = Instantiate(prefab, loc, rot);
+    //        spawn.name = prefab.name + "_" + counter.ToString();
+    //    }
+    //}
 
     public void MenuPressed(InputAction.CallbackContext context)
     {
