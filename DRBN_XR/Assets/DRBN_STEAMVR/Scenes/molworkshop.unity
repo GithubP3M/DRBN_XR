@@ -3462,7 +3462,13 @@ MonoBehaviour:
   activeWristUI: 1
   prefab: {fileID: 4133089792975476, guid: 9a07749c9059de64180efaa2335a29d7, type: 3}
   spawnpoint: {fileID: 338342155}
-  mdropdown: {fileID: 0}
+  mdropdown: {fileID: 407490964}
+  PrefabList:
+  - {fileID: 1139134237179190, guid: 9a07749c9059de64180efaa2335a29d7, type: 3}
+  - {fileID: 1049614508444186, guid: e5a5e6d52608b9945a86a99282ad0809, type: 3}
+  - {fileID: 8996431935918390605, guid: 62de4d14663498843bd64afa549c7fb0, type: 3}
+  - {fileID: 3011891873972996688, guid: c39cb2ee209a0664ab7bfada76bcbc7b, type: 3}
+  - {fileID: 3562581995336005509, guid: 95a6f110a370f824bb034b665134617a, type: 3}
 --- !u!1 &713118334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,29 +4476,6 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!1 &985166754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 705080845, guid: ecdbf3dc6204e7a46943712ecfb94c12,
-    type: 3}
-  m_PrefabInstance: {fileID: 985166751}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &985166755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985166754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56319e4eb0536046ad5a06a89f9edd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wristUI: {fileID: 1391590173}
-  activeWristUI: 1
-  prefab: {fileID: 4133089792975476, guid: 9a07749c9059de64180efaa2335a29d7, type: 3}
-  spawnpoint: {fileID: 338342155}
-  mdropdown: {fileID: 0}
 --- !u!1 &1006352746
 GameObject:
   m_ObjectHideFlags: 0

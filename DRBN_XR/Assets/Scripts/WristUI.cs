@@ -13,6 +13,7 @@ public class WristUI : MonoBehaviour
     public Transform prefab;
     public GameObject spawnpoint;
     public TMP_Dropdown mdropdown;
+    public List<GameObject> PrefabList; //using GameObject type for ease of selection in assets, but don't forget that Instantiate uses Transform and not GameObject
 
     private Transform spawn;
     private MolSpawn spawnGO;
@@ -48,24 +49,6 @@ public class WristUI : MonoBehaviour
     {
         Debug.Log(change.value);
         DropdownValue = change.value;
-        
-        int counter;
-        counter = molcounter.molecules.Count;
-        List<Transform> MolCount;
-        MolCount = molcounter.molecules;
-        spawnGO = this.gameObject.GetComponent<MolSpawn>();
-        Debug.Log(this.gameObject.name + " name");
-        Debug.Log(spawnpoint.name);
-
-
-
-        if (counter < molcounter.limit)
-        {
-            Vector3 loc = spawnpoint.transform.position;
-            Quaternion rot = gameObject.transform.rotation;
-            spawn = Instantiate(prefab, loc, rot);
-            spawn.name = prefab.name + "_" + counter.ToString();
-        }
     }
 
     public void SpawnMolecule()
@@ -84,8 +67,8 @@ public class WristUI : MonoBehaviour
         {
             Vector3 loc = spawnpoint.transform.position;
             Quaternion rot = gameObject.transform.rotation;
-            spawn = Instantiate(prefab, loc, rot);
-            spawn.name = prefab.name + "_" + counter.ToString();
+            spawn = Instantiate(PrefabList[DropdownValue].transform, loc, rot);
+            spawn.name = PrefabList[DropdownValue].name + "_" + counter.ToString();
         }
     }
 
