@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor; // can't use UnityEditor in android
 
 public class ElectrostaticWorld : MonoBehaviour
 {
@@ -95,69 +95,69 @@ public class ElectrostaticWorld : MonoBehaviour
 		}
 	}
 
-	void OnDrawGizmos()
-	{
-		var electros = FindObjectsOfType<Electrostatic>();
-		var electroCount = electros.Length;
-		var randPts = new List<Vector3>();
+//	void OnDrawGizmos()
+//	{
+//		var electros = FindObjectsOfType<Electrostatic>();
+//		var electroCount = electros.Length;
+//		var randPts = new List<Vector3>();
 
-		for (int i = 0; i < 100; i++)
-		{
-			var unitPt = Random.insideUnitSphere;
+//		for (int i = 0; i < 100; i++)
+//		{
+//			var unitPt = Random.insideUnitSphere;
 
-		}
+//		}
 
-		if (Selection.activeTransform == null)
-			return;
-		var selectedelectros = Selection.activeTransform.gameObject.GetComponentsInChildren<Electrostatic>();
-		if (selectedelectros.Length == 0 || selectedelectros.Length > 20)
-			return;
-		for (int i = 0; i < selectedelectros.Length; i++)
-		{
-			var c1 = selectedelectros[i];
-			var scale1 = 0.35f / 0.5f;
-			if (UseScaleForDebugDraw)
-				scale1 *= c1.transform.parent.lossyScale.x * (c1.ChargeForce / 50.0f);
-			if (c1.Pole == Electrostatic.Charge.plus)
-			{
-				Gizmos.color = new Color(0.0f, 0.0f, 1.0f, 0.25f);
-				Gizmos.DrawSphere(c1.transform.position, scale1);
+//		if (Selection.activeTransform == null)
+//			return;
+//		var selectedelectros = Selection.activeTransform.gameObject.GetComponentsInChildren<Electrostatic>();
+//		if (selectedelectros.Length == 0 || selectedelectros.Length > 20)
+//			return;
+//		for (int i = 0; i < selectedelectros.Length; i++)
+//		{
+//			var c1 = selectedelectros[i];
+//			var scale1 = 0.35f / 0.5f;
+//			if (UseScaleForDebugDraw)
+//				scale1 *= c1.transform.parent.lossyScale.x * (c1.ChargeForce / 50.0f);
+//			if (c1.Pole == Electrostatic.Charge.plus)
+//			{
+//				Gizmos.color = new Color(0.0f, 0.0f, 1.0f, 0.25f);
+//				Gizmos.DrawSphere(c1.transform.position, scale1);
 
-			}
-			else
-			{
-				Gizmos.color = new Color(1.0f, 0.0f, 0.0f, 0.25f);
-				Gizmos.DrawSphere(c1.transform.position, scale1);
+//			}
+//			else
+//			{
+//				Gizmos.color = new Color(1.0f, 0.0f, 0.0f, 0.25f);
+//				Gizmos.DrawSphere(c1.transform.position, scale1);
 
-			}
+//			}
 
-			for (int j = 0; j < electroCount; j++)
-			{
-				var c2 = electros[j];
+//			for (int j = 0; j < electroCount; j++)
+//			{
+//				var c2 = electros[j];
 
-				if (c1 == c2)
-					continue;
-
-//				if (c2.ChargeForce < 5.0f)
+//				if (c1 == c2)
 //					continue;
 
-				if (c1.transform.parent == c2.transform.parent)
-					continue;
+////				if (c2.ChargeForce < 5.0f)
+////					continue;
 
-				//var f = CalculateGilbertForce(c1, c2);
-				var f = Calculateelectrostatic(c1, c2);
+//				if (c1.transform.parent == c2.transform.parent)
+//					continue;
 
-				if (c2.Pole == Electrostatic.Charge.plus)
-				{
-					Gizmos.color = Color.cyan;
-				}
-				else
-				{
-					Gizmos.color = Color.red;
-				}
+//				//var f = CalculateGilbertForce(c1, c2);
+//				var f = Calculateelectrostatic(c1, c2);
 
-				Gizmos.DrawLine(c1.transform.position, c1.transform.position + f);
-			}
-		}
-	}
+//				if (c2.Pole == Electrostatic.Charge.plus)
+//				{
+//					Gizmos.color = Color.cyan;
+//				}
+//				else
+//				{
+//					Gizmos.color = Color.red;
+//				}
+
+//				Gizmos.DrawLine(c1.transform.position, c1.transform.position + f);
+//			}
+//		}
+//	}
 }
