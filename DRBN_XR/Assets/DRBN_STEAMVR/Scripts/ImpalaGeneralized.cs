@@ -89,6 +89,8 @@ public class ImpalaGeneralized : MonoBehaviour {
 		Vector3 up = this.gameObject.transform.forward.normalized; //because of course, up is forward... 
 		Vector3 dn = this.gameObject.transform.forward.normalized*-1;
 
+		
+
 		//if (collider.gameObject.tag=="helix"){
 		if (collider.gameObject.layer==11){
 			//Debug.Log ("z " + z);
@@ -113,7 +115,7 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 
 
-			Vector3 Frb = (dn * CalcCz (z,m));
+			Vector3 Frb = (up * CalcCz (z,m));
 			rb.AddForce (Frb); 
 			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
 			
@@ -139,45 +141,9 @@ public class ImpalaGeneralized : MonoBehaviour {
 
 		}
 		else {
-			Vector3 Frb = (up * CalcCz (z,m));
+			Vector3 Frb = (dn * CalcCz (z,m));
 			rb.AddForce (Frb); //disable temporarily for debugging purpose
 			Debug.DrawLine (rb.position, rb.position + Frb, Color.white);
 		}
-
-		//	void OnTriggerStay (Collider collider) {
-		//		z = collider.gameObject.transform.position.y;
-		//		rb = collider.GetComponent<Rigidbody> ();
-		//		gotag = collider.gameObject.transform.GetComponentsInChildren<Transform> ();
-		//		var m = switchmod ();
-		//		//Debug.Log ("z " + z);
-		//
-		//		rbv = rb.velocity;
-		//		rbav = rb.angularVelocity;
-		//
-		//		rb.velocity = rbv * 0.5f; // membrane is more viscous 
-		//		rb.angularVelocity = rbav * 0.5f; // membrane is more viscous 
-		//
-		//		Vector3 dn = new Vector3 (0f, -1f, 0f);
-		//		Vector3 up = new Vector3 (0f, 1f, 0f);
-		//
-		//		Vector3 Frb = (dn * CalcCz (z,m));
-		//		rb.AddForce (Frb);
-		//		Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
-		//		//Debug.Log ("boom ");
-		//		//Debug.Log (rb.position-(rb.position + Frb));
-		//
-		//		for (int ht = 0; ht < gotag.Length; ht++) {
-		//			if (gotag [ht].tag == "hydrophobic") {
-		//				phobicpos = gotag [ht].position;
-		//				var zphob = phobicpos.y;
-		//				if (Mathf.Abs(zphob) < 1.8) {
-		//					Vector3 F = (dn * CalcCz (zphob,m));
-		//					rb.AddForceAtPosition (F, phobicpos);
-		//					Debug.DrawLine (phobicpos, phobicpos + F, Color.blue);
-		//				}
-		//			}
-		//		}
-		//
-		//	}
 	}
 }

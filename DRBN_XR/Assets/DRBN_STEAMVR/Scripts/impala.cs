@@ -90,8 +90,8 @@ public class impala : MonoBehaviour {
 		Vector3 dn = new Vector3 (0f, -1f, 0f);
 		Vector3 up = new Vector3 (0f, 1f, 0f);
 
-		if (collider.gameObject.tag=="helix"){
-		//if (collider.gameObject.layer==11){
+		//if (collider.gameObject.tag=="helix"){
+		if (collider.gameObject.layer==11){
 			//Debug.Log ("z " + z);
 
 			rbv = rb.velocity;

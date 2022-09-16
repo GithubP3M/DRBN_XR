@@ -54,12 +54,13 @@ public class SphereColliderPopulate : MonoBehaviour
     {
         for (int i =0; i<VertList.Length; i++)
         {
-            GameObject ColliderOrientation = new GameObject();
+            GameObject ColliderOrientation = new GameObject("impala collider");
             ColliderOrientation.transform.parent=PopulateGO.transform;
             SphereCollider Sphere = ColliderOrientation.AddComponent<SphereCollider>();
+            ColliderOrientation.layer = LayerMask.NameToLayer("Impala");
             Sphere.radius = 0.03f;
 
-            GameObject TriggerOrientation = new GameObject("trigger");
+            GameObject TriggerOrientation = new GameObject("impala trigger");
             TriggerOrientation.transform.parent = PopulateGO.transform;
 
             SphereCollider Sphere_Trig = TriggerOrientation.AddComponent<SphereCollider>();
@@ -78,11 +79,14 @@ public class SphereColliderPopulate : MonoBehaviour
             //GameObject DSphere = new GameObject();
 
             GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            Destroy(GetComponent<Collider>());
+            DSphere.gameObject.name = "Impala Renderer";
+
+            Collider DSphereCollider = DSphere.GetComponent<Collider>();
+            Destroy(DSphereCollider);
             DSphere.transform.parent = PopulateGO.transform;
             DSphere.transform.position = VertList[i];
             DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            DSphere.transform.localRotation = Quaternion.LookRotation(NormList[i]);
+            DSphere.transform.localRotation = Quaternion.LookRotation(NormList[i],Vector3.up);
 
             //Debug.Log(PopulateGO.GetComponent<MeshRenderer>().materials[0].name);
             Shader Green = Shader.Find("DRBN_STEAMVR/Material/Transparent Green");
