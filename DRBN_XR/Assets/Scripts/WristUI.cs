@@ -14,6 +14,10 @@ public class WristUI : MonoBehaviour
     public GameObject spawnpoint;
     public TMP_Dropdown mdropdown;
     public List<GameObject> PrefabList; //using GameObject type for ease of selection in assets, but don't forget that Instantiate uses Transform and not GameObject
+    public Slider TempSlider;
+    public Text temperature;
+    public Langevin_dial langevin_Dial;
+
 
     private Transform spawn;
     private MolSpawn spawnGO;
@@ -70,6 +74,16 @@ public class WristUI : MonoBehaviour
             spawn = Instantiate(PrefabList[DropdownValue].transform, loc, rot);
             spawn.name = PrefabList[DropdownValue].name + "_" + counter.ToString();
         }
+    }
+
+    public void ChangeTemp()
+    {
+        //temperature.text = TempSlider.value.ToString();
+        Debug.Log(TempSlider.value);
+        langevin_Dial.Temp = 0;
+        Debug.Log("langevin_Dial.Temp " + langevin_Dial.Temp);
+        langevin_Dial.Temp = Mathf.Lerp(0f, 10000f, TempSlider.value / 100f); ;
+        
     }
 
     //public void SpawnMolecule()
