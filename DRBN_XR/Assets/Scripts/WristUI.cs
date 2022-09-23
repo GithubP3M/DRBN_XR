@@ -80,10 +80,8 @@ public class WristUI : MonoBehaviour
     {
         //temperature.text = TempSlider.value.ToString();
         Debug.Log(TempSlider.value);
-        langevin_Dial.Temp = 0;
-        Debug.Log("langevin_Dial.Temp " + langevin_Dial.Temp);
         langevin_Dial.Temp = Mathf.Lerp(0f, 10000f, TempSlider.value / 100f); ;
-        
+        Debug.Log("langevin_Dial.Temp " + langevin_Dial.Temp);
     }
 
     //public void SpawnMolecule()
