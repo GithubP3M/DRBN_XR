@@ -3575,7 +3575,7 @@ MonoBehaviour:
   - {fileID: 3011891873972996688, guid: c39cb2ee209a0664ab7bfada76bcbc7b, type: 3}
   - {fileID: 3562581995336005509, guid: 95a6f110a370f824bb034b665134617a, type: 3}
   TempSlider: {fileID: 1437627897}
-  temperature: {fileID: 0}
+  temperature: {fileID: 1632884293}
   langevin_Dial: {fileID: 0}
 --- !u!1 &671490850
 GameObject:
@@ -7436,7 +7436,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1437627896}
   - component: {fileID: 1437627897}
-  - component: {fileID: 1437627898}
   m_Layer: 0
   m_Name: Temperature Slider
   m_TagString: Untagged
@@ -7511,26 +7510,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 979128011}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 300
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1437627898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437627895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3f829d57cf4934d9caf035307a1096, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myText: {fileID: 1632884293}
-  tempslider: {fileID: 1437627897}
+      m_Calls:
+      - m_Target: {fileID: 665018102}
+        m_TargetAssemblyTypeName: WristUI, Assembly-CSharp
+        m_MethodName: ChangeTemp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1455597856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9665,6 +9662,7 @@ GameObject:
   - component: {fileID: 1881114555}
   - component: {fileID: 1881114553}
   - component: {fileID: 1881114556}
+  - component: {fileID: 1881114557}
   m_Layer: 0
   m_Name: Simulation
   m_TagString: Physics_Sim
@@ -9779,12 +9777,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881114549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 735fd17ad141f3946b3d91901fe6aee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RBS: []
+--- !u!114 &1881114557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881114549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5bcc3c03bae9b46a0c13ce682019bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOS: []
+  GOmolist: []
 --- !u!1 &1963005430
 GameObject:
   m_ObjectHideFlags: 0
