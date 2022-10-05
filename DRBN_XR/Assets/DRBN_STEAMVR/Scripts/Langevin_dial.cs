@@ -14,7 +14,7 @@ public class Langevin_dial : MonoBehaviour
     /*Langevin variables*/
     public static double temp = 000.0f;
     //public double temp { get; set; }
-    public double Temp
+    public static double Temp
     {
         get
         {
@@ -49,6 +49,11 @@ public class Langevin_dial : MonoBehaviour
         return RBS;
     }
 
+    public void CountMOFOS()
+    {
+        CountObjects();
+        Debug.Log("mofos");
+    }
 
     Vector3 langevin_tr(Rigidbody arg1, float arg2, float arg3)
     {
@@ -121,7 +126,7 @@ public class Langevin_dial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //CountObjects();
+        CountObjects(); // works, but try calling CountObjects upon instantiating to save resources. 
         //Debug.Log("oy!");
         RndF();
     }

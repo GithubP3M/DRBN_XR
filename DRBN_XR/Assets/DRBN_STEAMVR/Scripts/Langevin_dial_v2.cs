@@ -51,6 +51,7 @@ public class Langevin_dial_v2 : MonoBehaviour
         return (GOS, GOmolist);
     }
 
+    
 
     Vector3 langevin_tr(Rigidbody arg1, float arg2, float arg3)
     {
@@ -143,7 +144,7 @@ public class Langevin_dial_v2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //CountObjects();
+        CountObjects();  //<---- should be used when instantating instead?
         //Debug.Log("oy!");
         RndF();
     }

@@ -12,15 +12,16 @@ public class WristUI : MonoBehaviour
     public bool activeWristUI = true;
     public Transform prefab;
     public GameObject spawnpoint;
+    public GameObject simulation;
     public TMP_Dropdown mdropdown;
     public List<GameObject> PrefabList; //using GameObject type for ease of selection in assets, but don't forget that Instantiate uses Transform and not GameObject
     public Slider TempSlider;
     public Text temperature;
-    public Langevin_dial_v2 langevin_Dial;
+    public Langevin_dial langevin_Dial;
+    public double Temp;
 
-    private static double Temp;
     private Transform spawn;
-    private MolSpawn spawnGO;
+    private MolSpawn_dial spawnGO;
     private int DropdownValue;
 
     
@@ -63,9 +64,11 @@ public class WristUI : MonoBehaviour
         counter = molcounter.molecules.Count;
         List<Transform> MolCount;
         MolCount = molcounter.molecules;
-        spawnGO = this.gameObject.GetComponent<MolSpawn>();
+        spawnGO = this.gameObject.GetComponent<MolSpawn_dial>();
         Debug.Log(this.gameObject.name + " name");
         Debug.Log(spawnpoint.name);
+
+        //simulation.GetComponent<Langevin_dial_v2>().
 
         if (counter < molcounter.limit)
         {
@@ -78,10 +81,12 @@ public class WristUI : MonoBehaviour
 
     public void ChangeTemp()
     {
-        temperature.text = TempSlider.value.ToString();
-        Temp = Langevin_dial_v2.Temp;
+        Temp = Langevin_dial.Temp;
         Debug.Log(TempSlider.value);
-        Langevin_dial_v2.Temp = Mathf.Lerp(0f, 10000f, TempSlider.value / 100f);
+        Langevin_dial.Temp = Mathf.Lerp(TempSlider.minValue, TempSlider.maxValue, TempSlider.normalizedValue / 100f);
+        temperature.text = Langevin_dial.Temp.ToString();
+        //temperature.text = TempSlider.value.ToString();
+        //Mathf.Lerp(0f, 10000f, e.normalizedValue / 100f);
         Debug.Log("langevin_Dial.Temp " + Temp);
     }
 
@@ -91,7 +96,7 @@ public class WristUI : MonoBehaviour
     //    counter = molcounter.molecules.Count;
     //    List<Transform> MolCount;
     //    MolCount = molcounter.molecules;
-    //    spawnGO = this.gameObject.GetComponent<MolSpawn>();
+    //    spawnGO = this.gameObject.GetComponent<MolSpawn_dial>();
     //    Debug.Log(this.gameObject.name +" name");
     //    Debug.Log(spawnpoint.name);
 
