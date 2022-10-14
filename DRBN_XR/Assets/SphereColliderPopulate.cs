@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class SphereColliderPopulate : MonoBehaviour
 {
+    public Transform Prefab;
     public GameObject PopulateGO;
     private Vector3[] VertList;
     private Vector3[] NormList;
     private SphereCollider[] Population;
     private GameObject[] Debugsphere;
+
     
+
     // Start is called before the first frame update
     void Start()
     {
         VertList = ExtractVert(PopulateGO);
         NormList = ExtractNorm(PopulateGO);
-        Debug.Log(VertList.Length + " Length");
+        //Debug.Log(VertList.Length + " Length");
 
         Populate(VertList, NormList);
     }
@@ -29,8 +32,10 @@ public class SphereColliderPopulate : MonoBehaviour
     Vector3[] ExtractVert(GameObject PopulateGO) 
     {
         Mesh PopulateMesh = PopulateGO.GetComponent<MeshFilter>().mesh;
-        Debug.Log(PopulateMesh);
+        Debug.Log("PopulateMesh " + PopulateMesh);
+        Debug.Log("PopulateGO " + PopulateGO);
         VertList = PopulateMesh.vertices;
+        Debug.Log(VertList.Length + " Length");
 
         Vector3[] vworld = new Vector3[VertList.Length];
         for (int i = 0; i<VertList.Length; i++)
@@ -78,8 +83,13 @@ public class SphereColliderPopulate : MonoBehaviour
 
             //GameObject DSphere = new GameObject();
 
-            GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            DSphere.gameObject.name = "Impala Renderer";
+            //GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            //DSphere.gameObject.name = "Impala Renderer"; //change to something lighter in polygons
+
+            Transform DSphere = Instantiate(Prefab); // lighter in polygons, maybe change to particles in the future
+
+            //Losphere = DSphere.gameObject.GetComponent<MeshFilter>();
+            //Losphere.sharedMesh = Resources.Load<Mesh>("Impalasphere");
 
             Collider DSphereCollider = DSphere.GetComponent<Collider>();
             Destroy(DSphereCollider);
@@ -89,7 +99,7 @@ public class SphereColliderPopulate : MonoBehaviour
             DSphere.transform.localRotation = Quaternion.LookRotation(NormList[i],Vector3.up);
 
             //Debug.Log(PopulateGO.GetComponent<MeshRenderer>().materials[0].name);
-            Shader Green = Shader.Find("DRBN_STEAMVR/Material/Transparent Green");
+            Shader Green = Shader.Find("resources/Transparent Green");
             GetComponent<MeshRenderer>().material.shader = Green;
 
             //Debugsphere[i] = DSphere;

@@ -43,7 +43,7 @@ public class resetLocation : MonoBehaviour {
             //Debug.Log(initpos+" initpos");
             //Debug.Log(this.gameObject.transform.position+" localpos");
             notimeLeft -= Time.deltaTime;
-            Debug.Log("timeleft " + notimeLeft);
+            //Debug.Log("timeleft " + notimeLeft);
             if (notimeLeft < 0)
             {
                 this.gameObject.transform.position = initpos;

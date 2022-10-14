@@ -28,10 +28,12 @@ public class MolSpawn_dial : MonoBehaviour {
         {
             //Vector3 loc = gameObject.transform.position;
             Vector3 loc = spawnpoint.transform.position;
-            Quaternion rot = gameObject.transform.rotation;
+            //Quaternion rot = gameObject.transform.rotation;
+            Quaternion rot = spawnpoint.transform.rotation;
             spawn = Instantiate(prefab, loc, rot);
             spawn.name = prefab.name+"_"+counter.ToString();
             Debug.Log("plop");
+            Debug.Log("rot " + rot);
 
             // recover Langevin GOS gameobject list and append the spawned gameobjects
             Langevin_dial Lange = GameObject.FindGameObjectWithTag("Physics_Sim").GetComponent<Langevin_dial>();

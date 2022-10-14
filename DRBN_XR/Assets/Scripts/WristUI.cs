@@ -73,7 +73,8 @@ public class WristUI : MonoBehaviour
         if (counter < molcounter.limit)
         {
             Vector3 loc = spawnpoint.transform.position;
-            Quaternion rot = gameObject.transform.rotation;
+            //Quaternion rot = gameObject.transform.rotation;
+            Quaternion rot = spawnpoint.transform.rotation;
             spawn = Instantiate(PrefabList[DropdownValue].transform, loc, rot);
             spawn.name = PrefabList[DropdownValue].name + "_" + counter.ToString();
         }

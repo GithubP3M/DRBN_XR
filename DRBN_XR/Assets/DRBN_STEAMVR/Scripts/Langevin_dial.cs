@@ -126,7 +126,7 @@ public class Langevin_dial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CountObjects(); // works, but try calling CountObjects upon instantiating to save resources. 
+        //CountObjects(); // works, but try calling CountObjects upon instantiating to save resources. 
         //Debug.Log("oy!");
         RndF();
     }

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: URCA
-  productName: DRBN_XR
+  productName: DRBN_PASSIVE
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -168,6 +168,25 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -86109880397656815, guid: f70e260cda6467b49946a5123599b0ed, type: 2}
+  - {fileID: -4207305599078990882, guid: e40c0f2f5f6c5c546af6e402288bed10, type: 2}
+  - {fileID: 11400000, guid: 403af6ded35d42e4aa73276b8bad383a, type: 2}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -185,13 +204,13 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.URCA.DRBN_XR
+    Android: com.URCA.DRBN_PASSIVE
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 0
-  AndroidBundleVersionCode: 3
+  overrideDefaultApplicationIdentifier: 1
+  AndroidBundleVersionCode: 10
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
@@ -278,8 +297,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Demos/DRBNSTEAMVR2_ANDROID/urca.keystore
-  AndroidKeyaliasName: urca
+  AndroidKeystoreName: D:/Demos/DRBNSTEAMVR2_ANDROID/urca2.keystore
+  AndroidKeyaliasName: urca2
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
