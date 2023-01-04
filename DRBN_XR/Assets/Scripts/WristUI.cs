@@ -45,10 +45,17 @@ public class WristUI : MonoBehaviour
         Application.Quit();
     }
 
-    public void ReturnToMenu()
+    public void GoActive()
     {
         SceneManager.LoadScene(0);
     }
+
+    public void GoPassive()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+
 
     public void SpawnSelected(TMP_Dropdown change)
     {
