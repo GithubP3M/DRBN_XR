@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using System;
 using System.Linq;
@@ -48,6 +49,21 @@ public class Langevin_dial : MonoBehaviour
         }
         return RBS;
     }
+
+    //List<Rigidbody> CountObjects()
+    //{
+    //    GOS = GameObject.FindGameObjectsWithTag("molecule") as GameObject[];
+
+    //    for (int i = 0; i <= GOS.Length - 1; i++)
+    //    {
+    //        Rigidbody[] RB = (GOS[i].GetComponentsInChildren<Rigidbody>());
+
+    //        List<Rigidbody> RBList = RB.ToList<Rigidbody>();
+    //        RBS.AddRange(RBList);
+    //        //Debug.Log("RBS Count " + RBS.Count);
+    //    }
+    //    return RBS;
+    //}
 
     public void CountMOFOS()
     {
@@ -130,4 +146,11 @@ public class Langevin_dial : MonoBehaviour
         //Debug.Log("oy!");
         RndF();
     }
+
+    public void Refresh(InputAction.CallbackContext context)
+    {
+        Debug.Log("balibalo");
+        CountObjects();
+    }
 }
+
