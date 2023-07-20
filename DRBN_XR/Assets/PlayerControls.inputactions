@@ -11,7 +11,8 @@
                     "id": "9b8d1972-9c66-4f70-bcdd-1229e29b6ad5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -45,6 +46,54 @@
                     "processors": "",
                     "groups": "",
                     "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Refresh Rigidbodies Count",
+            "id": "0ffbeea4-7088-4397-bda9-723d4173a334",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "9e5dcb06-5b7a-48e5-b60c-47263fc7584b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Refresh RigidBodyCount",
+                    "type": "Button",
+                    "id": "c8f0900a-f09f-4b3d-afd4-4b7eaf05e0e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "24487ef0-f08c-40d4-ab7e-64eedadcbcb4",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24f84f27-47c9-4503-88e1-69849b348464",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Refresh RigidBodyCount",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
