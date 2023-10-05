@@ -10,6 +10,7 @@ public class SphereColliderPopulate : MonoBehaviour
     private Vector3[] NormList;
     private SphereCollider[] Population;
     private GameObject[] Debugsphere;
+    public float sphradius = 0.03f;
 
     
 
@@ -63,13 +64,15 @@ public class SphereColliderPopulate : MonoBehaviour
             ColliderOrientation.transform.parent=PopulateGO.transform;
             SphereCollider Sphere = ColliderOrientation.AddComponent<SphereCollider>();
             ColliderOrientation.layer = LayerMask.NameToLayer("Impala");
-            Sphere.radius = 0.03f;
+            //Sphere.radius = 0.03f;
+            Sphere.radius = sphradius/2;
 
             GameObject TriggerOrientation = new GameObject("impala trigger");
             TriggerOrientation.transform.parent = PopulateGO.transform;
 
             SphereCollider Sphere_Trig = TriggerOrientation.AddComponent<SphereCollider>();
-            Sphere_Trig.radius = 0.03f;
+            //Sphere_Trig.radius = 0.03f;
+            Sphere_Trig.radius = sphradius/2;
             Sphere_Trig.isTrigger = true;
             
 
@@ -83,10 +86,12 @@ public class SphereColliderPopulate : MonoBehaviour
 
             //GameObject DSphere = new GameObject();
 
-            //GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            //DSphere.gameObject.name = "Impala Renderer"; //change to something lighter in polygons
+            GameObject DSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            
 
-            Transform DSphere = Instantiate(Prefab); // lighter in polygons, maybe change to particles in the future
+            DSphere.gameObject.name = "Impala Renderer"; //change to something lighter in polygons
+
+            //Transform DSphere = Instantiate(Prefab); // lighter in polygons, maybe change to particles in the future
 
             //Losphere = DSphere.gameObject.GetComponent<MeshFilter>();
             //Losphere.sharedMesh = Resources.Load<Mesh>("Impalasphere");
@@ -95,7 +100,8 @@ public class SphereColliderPopulate : MonoBehaviour
             Destroy(DSphereCollider);
             DSphere.transform.parent = PopulateGO.transform;
             DSphere.transform.position = VertList[i];
-            DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            ///DSphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            DSphere.transform.localScale = new Vector3(sphradius, sphradius, sphradius);
             DSphere.transform.localRotation = Quaternion.LookRotation(NormList[i],Vector3.up);
 
             //Debug.Log(PopulateGO.GetComponent<MeshRenderer>().materials[0].name);
