@@ -6,7 +6,13 @@ public class randomizer : MonoBehaviour
 {
     public GameObject[] GOList;
     public int repeat;
-    
+    public float xmin = -1;
+    public float xmax = 1;
+    public float ymin = -1;
+    public float ymax = 1;
+    public float zmin = -1;
+    public float zmax = 1;
+
     // Start is called before the first frame update
     void Start()
     {

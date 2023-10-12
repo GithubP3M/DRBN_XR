@@ -2629,7 +2629,7 @@ ConfigurableJoint:
   m_Anchor: {x: 6.59, y: 0, z: -47.2}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0010000229, y: -0.17000039, z: -0.04003502}
+  m_ConnectedAnchor: {x: -0.0010000229, y: -0.17000039, z: -0.039997447}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -4018,6 +4018,7 @@ GameObject:
   - component: {fileID: 7320207492937835689}
   - component: {fileID: 4128642857341087166}
   - component: {fileID: 1301002757284418144}
+  - component: {fileID: 6178265880380387049}
   m_Layer: 13
   m_Name: 1TEN_Fibronectin (3)
   m_TagString: Untagged
@@ -4228,6 +4229,26 @@ CapsuleCollider:
   m_Height: 39.8
   m_Direction: 2
   m_Center: {x: 4.35, y: 1.4106234, z: 1.28}
+--- !u!114 &6178265880380387049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701049277923084076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_int_beta
+  - mol_int_alpha
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &2701049278020956542
 GameObject:
   m_ObjectHideFlags: 0
@@ -10132,7 +10153,7 @@ ConfigurableJoint:
   m_Anchor: {x: 6.59, y: 0, z: -47.2}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0010079384, y: -0.17000039, z: -0.039993253}
+  m_ConnectedAnchor: {x: -0.001000309, y: -0.17000039, z: -0.039997447}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -11138,7 +11159,7 @@ ConfigurableJoint:
   m_Anchor: {x: 6.59, y: 0, z: -47.2}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0010406495, y: -0.17000039, z: -0.040020715}
+  m_ConnectedAnchor: {x: -0.0010001183, y: -0.17000039, z: -0.039997447}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -12331,7 +12352,7 @@ ConfigurableJoint:
   m_Anchor: {x: 6.59, y: 0, z: -47.2}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0010406495, y: -0.17000039, z: -0.040020715}
+  m_ConnectedAnchor: {x: -0.0010001183, y: -0.17000039, z: -0.039997447}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -12865,6 +12886,7 @@ GameObject:
   - component: {fileID: 6639483698890003677}
   - component: {fileID: 6639483698890003666}
   - component: {fileID: 6639483698890003667}
+  - component: {fileID: 426473396790043818}
   m_Layer: 13
   m_Name: 1TEN_Fibronectin (3)
   m_TagString: Untagged
@@ -13075,6 +13097,26 @@ CapsuleCollider:
   m_Height: 39.8
   m_Direction: 2
   m_Center: {x: 4.35, y: 1.4106234, z: 1.28}
+--- !u!114 &426473396790043818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639483698890003665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_int_beta
+  - mol_int_alpha
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &6639483698893766515
 GameObject:
   m_ObjectHideFlags: 0
@@ -15094,6 +15136,7 @@ GameObject:
   - component: {fileID: 6639483699060512775}
   - component: {fileID: 6639483699060512772}
   - component: {fileID: 6639483699060512773}
+  - component: {fileID: 5211322998640324812}
   m_Layer: 13
   m_Name: 1TEN_Fibronectin (3)
   m_TagString: Untagged
@@ -15304,6 +15347,26 @@ CapsuleCollider:
   m_Height: 39.8
   m_Direction: 2
   m_Center: {x: 4.35, y: 1.4106234, z: 1.28}
+--- !u!114 &5211322998640324812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639483699060512891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_int_beta
+  - mol_int_alpha
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &6639483699079142288
 GameObject:
   m_ObjectHideFlags: 0
@@ -26446,6 +26509,7 @@ GameObject:
   - component: {fileID: 6639483700138164947}
   - component: {fileID: 6639483700138164944}
   - component: {fileID: 6639483700138164945}
+  - component: {fileID: 4663269268186703400}
   m_Layer: 13
   m_Name: 1TEN_Fibronectin (3)
   m_TagString: Untagged
@@ -26656,6 +26720,26 @@ CapsuleCollider:
   m_Height: 39.8
   m_Direction: 2
   m_Center: {x: 4.35, y: 1.4106234, z: 1.28}
+--- !u!114 &4663269268186703400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639483700138164951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_int_beta
+  - mol_int_alpha
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &6639483700141752147
 GameObject:
   m_ObjectHideFlags: 0
@@ -26671,6 +26755,7 @@ GameObject:
   - component: {fileID: 6639483700141752159}
   - component: {fileID: 6639483700141752156}
   - component: {fileID: 6639483700141752157}
+  - component: {fileID: 8692190785538442925}
   m_Layer: 13
   m_Name: 1TEN_Fibronectin (3)
   m_TagString: Untagged
@@ -26881,6 +26966,26 @@ CapsuleCollider:
   m_Height: 39.8
   m_Direction: 2
   m_Center: {x: 4.35, y: 1.4106234, z: 1.28}
+--- !u!114 &8692190785538442925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639483700141752147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_int_beta
+  - mol_int_alpha
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &6639483700152695044
 GameObject:
   m_ObjectHideFlags: 0
@@ -27314,7 +27419,7 @@ ConfigurableJoint:
   m_Anchor: {x: 6.59, y: 0, z: -47.2}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0010000229, y: -0.17000039, z: -0.04003502}
+  m_ConnectedAnchor: {x: -0.0010000229, y: -0.17000039, z: -0.039997447}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -28251,7 +28356,7 @@ ConfigurableJoint:
   m_Anchor: {x: 6.59, y: 0, z: -47.2}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0010080338, y: -0.17000039, z: -0.03999287}
+  m_ConnectedAnchor: {x: -0.0010001183, y: -0.17000039, z: -0.039997447}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -28350,6 +28455,7 @@ GameObject:
   - component: {fileID: 6639483700232809458}
   - component: {fileID: 6639483700232809459}
   - component: {fileID: 6639483700232809456}
+  - component: {fileID: 7128683434724599123}
   m_Layer: 13
   m_Name: 1TEN_Fibronectin (3)
   m_TagString: Untagged
@@ -28560,6 +28666,26 @@ CapsuleCollider:
   m_Height: 39.8
   m_Direction: 2
   m_Center: {x: 4.35, y: 1.4106234, z: 1.28}
+--- !u!114 &7128683434724599123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639483700232809462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_int_beta
+  - mol_int_alpha
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &6639483700242693100
 GameObject:
   m_ObjectHideFlags: 0
