@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SphereColliderPopulate : MonoBehaviour
 {
-    public Transform Prefab;
+    //public Transform Prefab;
     public GameObject PopulateGO;
     private Vector3[] VertList;
     private Vector3[] NormList;
