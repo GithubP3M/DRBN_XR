@@ -20,7 +20,7 @@ public class randomizer : MonoBehaviour
         {
             for (int i =0; i<=repeat; i++)
             {
-                var randomPosition = new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
+                var randomPosition = new Vector3(Random.Range(xmin,xmax), Random.Range(ymin,ymax), Random.Range(zmin,zmax));
                 var randomRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
 
                 Instantiate(go, randomPosition, randomRotation);

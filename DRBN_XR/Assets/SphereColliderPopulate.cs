@@ -11,6 +11,7 @@ public class SphereColliderPopulate : MonoBehaviour
     private SphereCollider[] Population;
     private GameObject[] Debugsphere;
     public float sphradius = 0.03f;
+    public Material sphmat; 
 
     
 
@@ -82,7 +83,7 @@ public class SphereColliderPopulate : MonoBehaviour
             TriggerOrientation.transform.position = VertList[i];
             TriggerOrientation.transform.localRotation = Quaternion.LookRotation(NormList[i]);
 
-            TriggerOrientation.AddComponent<ImpalaGeneralized>();
+            //TriggerOrientation.AddComponent<ImpalaGeneralized>(); //commented because it is causing some trouble with sticky molecules
 
             //GameObject DSphere = new GameObject();
 
@@ -90,6 +91,7 @@ public class SphereColliderPopulate : MonoBehaviour
             
 
             DSphere.gameObject.name = "Impala Renderer"; //change to something lighter in polygons
+            DSphere.GetComponent<Renderer>().material = sphmat;
 
             //Transform DSphere = Instantiate(Prefab); // lighter in polygons, maybe change to particles in the future
 

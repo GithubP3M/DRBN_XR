@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9061672107102672638}
   - component: {fileID: 1463545747383663663}
   - component: {fileID: 511336268735942680}
+  - component: {fileID: 316643306544253603}
   m_Layer: 13
   m_Name: 1CS4_heparansulf
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +186,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &316643306544253603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54318074041129661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &185692176778489633
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,9 +218,10 @@ GameObject:
   - component: {fileID: 1062853980462776684}
   - component: {fileID: 6647913279481504471}
   - component: {fileID: 3098791861082618687}
+  - component: {fileID: 8517292363760490420}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (11)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,6 +488,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8517292363760490420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185692176778489633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &235989834622050589
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,9 +682,10 @@ GameObject:
   - component: {fileID: 2476432625949884394}
   - component: {fileID: 8795263432089058535}
   - component: {fileID: 3303480038342212265}
+  - component: {fileID: 1478774976637867853}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (31)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,6 +952,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1478774976637867853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375522590179851926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &401898755120478644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,9 +1227,10 @@ GameObject:
   - component: {fileID: 7981138636259621352}
   - component: {fileID: 8380799279031531760}
   - component: {fileID: 5082606081289427720}
+  - component: {fileID: 6131385697834440582}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (3)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1436,6 +1497,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &6131385697834440582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557271341698356857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &597573832921478562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,9 +1774,10 @@ GameObject:
   - component: {fileID: 949213218831646912}
   - component: {fileID: 2482893814934683223}
   - component: {fileID: 5301368836935256619}
+  - component: {fileID: 2494573707915905888}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (1)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1963,6 +2044,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &2494573707915905888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851270599380398064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &879101151727545361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,9 +2975,10 @@ GameObject:
   - component: {fileID: 3166772995796381969}
   - component: {fileID: 798330696673612801}
   - component: {fileID: 5355643489402914690}
+  - component: {fileID: 7634704891941322868}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (23)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3144,6 +3245,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7634704891941322868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483176369070338841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &1510747022740447616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,9 +3453,10 @@ GameObject:
   - component: {fileID: 8276743759064727194}
   - component: {fileID: 4377295681606068241}
   - component: {fileID: 7095113331119020911}
+  - component: {fileID: 1207992595467547449}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (12)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3602,6 +3723,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1207992595467547449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755638315271778100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &1788021641528717967
 GameObject:
   m_ObjectHideFlags: 0
@@ -4591,9 +4731,10 @@ GameObject:
   - component: {fileID: 1990831816344694035}
   - component: {fileID: 5482344064599152895}
   - component: {fileID: 6308721108317062779}
+  - component: {fileID: 3349840446076692007}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (20)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4860,6 +5001,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3349840446076692007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2383317650897976336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &2402624606565463144
 GameObject:
   m_ObjectHideFlags: 0
@@ -4873,9 +5033,10 @@ GameObject:
   - component: {fileID: 3182120853553961712}
   - component: {fileID: 5652475881410125660}
   - component: {fileID: 6003789821506794753}
+  - component: {fileID: 1157630039260345345}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (4)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5142,6 +5303,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1157630039260345345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402624606565463144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &2508372055197180362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,9 +5740,10 @@ GameObject:
   - component: {fileID: 807054996589506342}
   - component: {fileID: 1772578081088306438}
   - component: {fileID: 1813106260274654293}
+  - component: {fileID: 5831499721693061602}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (24)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5829,6 +6010,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5831499721693061602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057059527430496213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3090859401873010216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5842,9 +6042,10 @@ GameObject:
   - component: {fileID: 5224087256793921339}
   - component: {fileID: 3170981843359534662}
   - component: {fileID: 7569709880529117726}
+  - component: {fileID: 1458403978101695760}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (13)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6111,6 +6312,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1458403978101695760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090859401873010216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3116411053269181127
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,9 +6510,10 @@ GameObject:
   - component: {fileID: 6544063427591185016}
   - component: {fileID: 6344348256052544678}
   - component: {fileID: 3404696299620395309}
+  - component: {fileID: 6137697176579124570}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (15)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6559,6 +6780,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &6137697176579124570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169225896481754444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3174432904359020019
 GameObject:
   m_ObjectHideFlags: 0
@@ -6572,9 +6812,10 @@ GameObject:
   - component: {fileID: 6277338388817310966}
   - component: {fileID: 4398301910830678887}
   - component: {fileID: 8675420899801737300}
+  - component: {fileID: 453485727210408866}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (7)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6841,6 +7082,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &453485727210408866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174432904359020019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3236463042411768110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7018,9 +7278,10 @@ GameObject:
   - component: {fileID: 7333204168172239389}
   - component: {fileID: 3801332082917178289}
   - component: {fileID: 4703695034462383302}
+  - component: {fileID: 3742469186613586522}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (10)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7287,6 +7548,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3742469186613586522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245096547010360039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3267633829997208147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8116,9 +8396,10 @@ GameObject:
   - component: {fileID: 8709921268873696951}
   - component: {fileID: 2884673390624386912}
   - component: {fileID: 4877401532965312437}
+  - component: {fileID: 2228966951884442686}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (27)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8385,6 +8666,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &2228966951884442686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3731966140946058517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3743716507462584013
 GameObject:
   m_ObjectHideFlags: 0
@@ -8481,9 +8781,10 @@ GameObject:
   - component: {fileID: 8907364828681292289}
   - component: {fileID: 1003973667040600882}
   - component: {fileID: 777316188576996590}
+  - component: {fileID: 6345239676218459877}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (18)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8750,6 +9051,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &6345239676218459877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937766842888560309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &3986691709254431009
 GameObject:
   m_ObjectHideFlags: 0
@@ -8763,9 +9083,10 @@ GameObject:
   - component: {fileID: 5014380706526630624}
   - component: {fileID: 1407039234384046749}
   - component: {fileID: 7412004889624950148}
+  - component: {fileID: 3733776387403553309}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (17)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9032,6 +9353,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3733776387403553309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986691709254431009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &4073766257247155122
 GameObject:
   m_ObjectHideFlags: 0
@@ -9126,9 +9466,10 @@ GameObject:
   - component: {fileID: 7025902760305042970}
   - component: {fileID: 7775480171024897743}
   - component: {fileID: 872000407111390091}
+  - component: {fileID: 2750155753947975786}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (5)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9395,6 +9736,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &2750155753947975786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215718929435098977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &4216633530249310530
 GameObject:
   m_ObjectHideFlags: 0
@@ -9489,9 +9849,10 @@ GameObject:
   - component: {fileID: 6752808486311378129}
   - component: {fileID: 6601871492142397269}
   - component: {fileID: 4249253739448127418}
+  - component: {fileID: 2864485919737075895}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (16)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9758,6 +10119,25 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2864485919737075895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378744709968698932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &4453557646416809951
 GameObject:
   m_ObjectHideFlags: 0
@@ -10506,9 +10886,10 @@ GameObject:
   - component: {fileID: 6513032309009766395}
   - component: {fileID: 8704025648799949592}
   - component: {fileID: 9020767896134688841}
+  - component: {fileID: 2007320876164616224}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (19)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10775,6 +11156,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &2007320876164616224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5460107594018946071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &5493355004372645804
 GameObject:
   m_ObjectHideFlags: 0
@@ -11193,9 +11593,10 @@ GameObject:
   - component: {fileID: 5738564687640174883}
   - component: {fileID: 6678438821431080814}
   - component: {fileID: 3545911682152946015}
+  - component: {fileID: 4945929750540964215}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (28)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11462,6 +11863,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &4945929750540964215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892210690819959554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &5977090779393060021
 GameObject:
   m_ObjectHideFlags: 0
@@ -13196,9 +13616,10 @@ GameObject:
   - component: {fileID: 6459051295084593023}
   - component: {fileID: 5169011266458176359}
   - component: {fileID: 8763988340545112189}
+  - component: {fileID: 6224700148010609792}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (25)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13465,6 +13886,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &6224700148010609792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6982283572204345387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &6988824871749264878
 GameObject:
   m_ObjectHideFlags: 0
@@ -13964,9 +14404,10 @@ GameObject:
   - component: {fileID: 582220782921582485}
   - component: {fileID: 1291647178559085946}
   - component: {fileID: 6821876632890261576}
+  - component: {fileID: 9152747597080191264}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (29)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14233,6 +14674,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &9152747597080191264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113777065701513306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &7133991866509538375
 GameObject:
   m_ObjectHideFlags: 0
@@ -14491,9 +14951,10 @@ GameObject:
   - component: {fileID: 6982486988887059789}
   - component: {fileID: 3288403823142631667}
   - component: {fileID: 7706960819432895518}
+  - component: {fileID: 4663430797756819468}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (30)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14760,6 +15221,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &4663430797756819468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518157326985200232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &7531519054726789736
 GameObject:
   m_ObjectHideFlags: 0
@@ -14854,9 +15334,10 @@ GameObject:
   - component: {fileID: 6269982921551958320}
   - component: {fileID: 7181379358275291845}
   - component: {fileID: 269210597324712842}
+  - component: {fileID: 2628184773171845052}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (22)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15123,6 +15604,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &2628184773171845052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630941400832760908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &7693923883781473845
 GameObject:
   m_ObjectHideFlags: 0
@@ -15462,9 +15962,10 @@ GameObject:
   - component: {fileID: 8365697401011750244}
   - component: {fileID: 3909739288039832469}
   - component: {fileID: 5429950131589164963}
+  - component: {fileID: 8694535511811257261}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (9)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15731,6 +16232,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8694535511811257261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875321846831809938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &7907626834578679272
 GameObject:
   m_ObjectHideFlags: 0
@@ -16068,9 +16588,10 @@ GameObject:
   - component: {fileID: 6855155443707194017}
   - component: {fileID: 1288955540997733872}
   - component: {fileID: 5495182971936547851}
+  - component: {fileID: 3025793658061976628}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (6)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16337,6 +16858,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3025793658061976628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166085763961327150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &8289698074039422595
 GameObject:
   m_ObjectHideFlags: 0
@@ -16593,9 +17133,10 @@ GameObject:
   - component: {fileID: 9177715363310709147}
   - component: {fileID: 8985305284244797804}
   - component: {fileID: 6314556515679438859}
+  - component: {fileID: 3493402545531704116}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (8)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16862,6 +17403,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3493402545531704116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335963163486566332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &8364238201309953631
 GameObject:
   m_ObjectHideFlags: 0
@@ -17037,9 +17597,10 @@ GameObject:
   - component: {fileID: 2301466505570786102}
   - component: {fileID: 7579246550010218014}
   - component: {fileID: 171621306522302671}
+  - component: {fileID: 1261965354722297792}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (2)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17306,6 +17867,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1261965354722297792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8436191527403215470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &8466888322688433036
 GameObject:
   m_ObjectHideFlags: 0
@@ -17319,9 +17899,10 @@ GameObject:
   - component: {fileID: 4885752760403327019}
   - component: {fileID: 425704288018852043}
   - component: {fileID: 5524666554968985451}
+  - component: {fileID: 1596507233463096910}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (21)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17588,6 +18169,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1596507233463096910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466888322688433036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &8521982551343228859
 GameObject:
   m_ObjectHideFlags: 0
@@ -18089,9 +18689,10 @@ GameObject:
   - component: {fileID: 5824601037317754983}
   - component: {fileID: 2419762282228332080}
   - component: {fileID: 4957452602146198979}
+  - component: {fileID: 1053398733589725461}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (14)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18358,6 +18959,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1053398733589725461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8671689340409645849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &8789490523793318830
 GameObject:
   m_ObjectHideFlags: 0
@@ -18780,9 +19400,10 @@ GameObject:
   - component: {fileID: 7062613623238878494}
   - component: {fileID: 7973508845706391599}
   - component: {fileID: 4662352155817134472}
+  - component: {fileID: 5193611877169006176}
   m_Layer: 13
   m_Name: 1CS4_heparansulf (26)
-  m_TagString: Untagged
+  m_TagString: molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19049,6 +19670,25 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5193611877169006176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952520511176344734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - fibrinogen
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &8973908413724620199
 GameObject:
   m_ObjectHideFlags: 0
