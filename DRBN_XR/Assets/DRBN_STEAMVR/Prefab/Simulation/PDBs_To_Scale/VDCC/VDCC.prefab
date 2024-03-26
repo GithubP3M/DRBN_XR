@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 7458244556054483120}
   - component: {fileID: 5777795605683330837}
   - component: {fileID: 8631761337967553503}
+  - component: {fileID: 3311099114220168465}
+  - component: {fileID: 6026123957379699881}
+  - component: {fileID: 470919352}
   m_Layer: 0
   m_Name: vdcc
-  m_TagString: Untagged
+  m_TagString: mol_VDCC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +85,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3311099114220168465
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839308191802198538}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &6026123957379699881
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839308191802198538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 65.420586
+  m_Height: 130.84116
+  m_Direction: 2
+  m_Center: {x: -1.5095248, y: -0.25578776, z: -5.9564877}
+--- !u!114 &470919352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839308191802198538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db7d5a9cbb2744eadef48977b19d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GOTag:
+  - mol_ten_fibro
+  maxjoints: 1
+  timer: 0
+  countjoints: 0
+  Change_Color: 0
+  Allow_Self: 0
 --- !u!1 &9132730457134541110
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +147,7 @@ GameObject:
   - component: {fileID: 3530273282938191962}
   m_Layer: 0
   m_Name: VDCC
-  m_TagString: Untagged
+  m_TagString: mol_VDCC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
