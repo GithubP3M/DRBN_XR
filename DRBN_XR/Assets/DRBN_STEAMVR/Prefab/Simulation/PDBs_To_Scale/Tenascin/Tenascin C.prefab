@@ -487,6 +487,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -943,6 +944,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -1819,6 +1821,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -2065,6 +2068,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -3248,6 +3252,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -3494,6 +3499,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -4371,6 +4377,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -5265,6 +5272,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -5297,7 +5305,7 @@ Transform:
   m_GameObject: {fileID: 4520914170619918189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0001, y: 0.0001, z: 0.0001}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children:
   - {fileID: 987935993850442025}
   - {fileID: 6639483700418501936}
@@ -5316,7 +5324,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4520914170619918189}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0da4af878a026094cbc6652e14b76dce, type: 3}
   m_Name: 
@@ -5331,7 +5339,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4520914170619918189}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d85e36a393bef64459209fa688ad2504, type: 3}
   m_Name: 
@@ -5904,6 +5912,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -6150,6 +6159,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -7866,6 +7876,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -8454,6 +8465,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -9330,6 +9342,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -10237,6 +10250,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -11000,6 +11014,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -12447,6 +12462,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -13031,6 +13047,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -13488,6 +13505,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -13752,6 +13770,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -14418,6 +14437,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -15348,6 +15368,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -15594,6 +15615,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -15841,6 +15863,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -16105,6 +16128,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -17642,6 +17666,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -18518,6 +18543,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -19736,6 +19762,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -20324,6 +20351,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -20601,6 +20629,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -20847,6 +20876,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -21513,6 +21543,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -22840,6 +22871,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -23428,6 +23460,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -23674,6 +23707,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -23974,6 +24008,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -24220,6 +24255,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -25263,6 +25299,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -25719,6 +25756,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -26175,6 +26213,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -26973,6 +27012,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -27219,6 +27259,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -27465,6 +27506,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -27712,6 +27754,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -27977,6 +28020,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -29696,6 +29740,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -29960,6 +30005,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -31707,6 +31753,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0
@@ -32163,6 +32210,7 @@ MonoBehaviour:
   GOTag:
   - mol_int_alpha
   - mol_VDCC
+  - mol_int_beta
   maxjoints: 1
   timer: 0
   countjoints: 0

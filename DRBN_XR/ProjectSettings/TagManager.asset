@@ -20,6 +20,10 @@ TagManager:
   - mol_coll_coil
   - teleportation
   - fibrinogen
+  - Mover
+  - Street
+  - mol_VDCC
+  - mol_ten_fibro
   layers:
   - Default
   - TransparentFX

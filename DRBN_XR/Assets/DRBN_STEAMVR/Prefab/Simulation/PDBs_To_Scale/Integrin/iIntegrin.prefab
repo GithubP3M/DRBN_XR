@@ -2565,7 +2565,7 @@ GameObject:
   - component: {fileID: 8633947932643125461}
   m_Layer: 13
   m_Name: integrin_beta_1_476_BetaA_bric
-  m_TagString: Physics_Sim
+  m_TagString: mol_int_beta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

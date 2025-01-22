@@ -10102,7 +10102,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520699447265280068}
-  m_Mesh: {fileID: 6737525741325938234, guid: 6d75d689221726c47915b12e570cfd93, type: 3}
+  m_Mesh: {fileID: 8506794258692308259, guid: 944412d40fc52884e8ba9dcd07fa0286, type: 3}
 --- !u!23 &1016230662141567377
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10320,7 +10320,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.4999991, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.142, y: 0.26099998, z: 0}
+  m_ConnectedAnchor: {x: -1.202, y: 0.26099998, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -10548,7 +10548,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.4999991, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.17800009, y: 0.26099998, z: 0}
+  m_ConnectedAnchor: {x: 0.35800004, y: 0.26099998, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
