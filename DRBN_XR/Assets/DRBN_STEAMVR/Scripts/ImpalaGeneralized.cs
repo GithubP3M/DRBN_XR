@@ -93,10 +93,10 @@ public class ImpalaGeneralized : MonoBehaviour {
 		if (collider.gameObject.layer==11){
 			//Debug.Log ("z " + z);
 
-			rbv = rb.velocity;
+			rbv = rb.linearVelocity;
 			rbav = rb.angularVelocity;
 
-			rb.velocity = rbv * 0.5f; // membrane is more viscous 
+			rb.linearVelocity = rbv * 0.5f; // membrane is more viscous 
 			rb.angularVelocity = rbav * 0.5f; // membrane is more viscous 
 
 			Vector3 projected = collider.gameObject.transform.position;
