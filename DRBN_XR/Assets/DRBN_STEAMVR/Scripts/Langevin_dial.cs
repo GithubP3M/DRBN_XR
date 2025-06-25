@@ -73,7 +73,7 @@ public class Langevin_dial : MonoBehaviour
 
     Vector3 langevin_tr(Rigidbody arg1, float arg2, float arg3)
     {
-        Vector3 argvb = arg1.velocity;
+        Vector3 argvb = arg1.linearVelocity;
         Vector3 randvec = UnityEngine.Random.insideUnitSphere;
 
         float rx = randvec[0];

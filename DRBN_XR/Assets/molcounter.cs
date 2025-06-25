@@ -15,7 +15,7 @@ public class molcounter : MonoBehaviour
     //destroy molecule if list goes above N
     private void Update()
     {
-        Langevin_v2 Lange = GameObject.Find("Simulation").GetComponent<Langevin_v2>();
+        Langevin_v3 Lange = GameObject.Find("Simulation").GetComponent<Langevin_v3>();
         if (limit!=0)
         {
             if (molecules.Count > limit)

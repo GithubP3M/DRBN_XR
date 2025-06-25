@@ -34,7 +34,7 @@ public class MolSpawn : MonoBehaviour {
             Debug.Log("plop");
 
             // recover Langevin GOS gameobject list and append the spawned gameobjects
-            Langevin_v2 Lange = GameObject.FindGameObjectWithTag("Physics_Sim").GetComponent<Langevin_v2>();
+            Langevin_v3 Lange = GameObject.FindGameObjectWithTag("Physics_Sim").GetComponent<Langevin_v3>();
 
             // add line for mol counter
             //List<Transform> MolCount = GameObject.Find("Simulation").GetComponent<molcounter>().molecules;

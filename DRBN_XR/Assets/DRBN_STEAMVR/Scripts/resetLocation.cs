@@ -48,7 +48,7 @@ public class resetLocation : MonoBehaviour {
             {
                 this.gameObject.transform.position = initpos;
                 this.gameObject.transform.eulerAngles = initrot;
-                this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                this.gameObject.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
                 notimeLeft = timeLeft;
             }
         }

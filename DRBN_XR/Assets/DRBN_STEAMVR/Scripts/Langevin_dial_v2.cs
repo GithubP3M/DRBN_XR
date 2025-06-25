@@ -55,7 +55,7 @@ public class Langevin_dial_v2 : MonoBehaviour
 
     Vector3 langevin_tr(Rigidbody arg1, float arg2, float arg3)
     {
-        Vector3 argvb = arg1.velocity;
+        Vector3 argvb = arg1.linearVelocity;
         Vector3 randvec = UnityEngine.Random.insideUnitSphere;
 
         float rx = randvec[0];
@@ -103,11 +103,11 @@ public class Langevin_dial_v2 : MonoBehaviour
 
                 GO.AddForce(addF);
 
-                if (GO.velocity.magnitude > maxSpeed)
+                if (GO.linearVelocity.magnitude > maxSpeed)
                 {
-                    Debug.LogWarning("adjusting speed " + GO.velocity);
-                    GO.velocity = GO.velocity.normalized * maxSpeed;
-                    Debug.LogWarning("adjusted speed " + GO.velocity);
+                    Debug.LogWarning("adjusting speed " + GO.linearVelocity);
+                    GO.linearVelocity = GO.linearVelocity.normalized * maxSpeed;
+                    Debug.LogWarning("adjusted speed " + GO.linearVelocity);
                 }
                 //Debug.Log(addF+GO.name);
 

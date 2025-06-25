@@ -425,8 +425,9 @@ public class SaveSnapShot : MonoBehaviour
 
     public void periodicsaveJSON(int step)
     {
-        Langevin_dial Lange = GetComponent<Langevin_dial>();
-
+        Langevin_v3 Lange = GameObject.FindGameObjectWithTag("Physics_Sim").GetComponent<Langevin_v3>();
+  
+        //List<Savedata> savefile = new List<Savedata>();
         List<SavedataHierarchy> savefile = new List<SavedataHierarchy>();
 
         List<Rigidbody> RBlist = new List<Rigidbody>();
@@ -437,18 +438,18 @@ public class SaveSnapShot : MonoBehaviour
 
         List<Coords> GOVertscoords = new List<Coords>();
 
-        int max = Lange.RBS.Count;
-        
+        int max = Lange.GOS.Count;
+        //int mol = Lange.GOmolist.Count;
+
         for (int i = 0; i < max; i++)
         {
-            RBlist.Add(Lange.RBS[i]);
+            RBlist.Add(Lange.GOS[i]);
         }
 
         int rbmax = RBlist.Count;
         for (int i = 0; i < rbmax; i++)
         {
-            //savefile.Add(new SavedataHierarchy(RBlist[i].transform.parent.name,RBlist[i].name, RBlist[i].position, RBlist[i].rotation.eulerAngles));
-            savefile.Add(new SavedataHierarchy(RBlist[i].transform.parent.name, RBlist[i].name, RBlist[i].position, RBlist[i].rotation));
+            savefile.Add(new SavedataHierarchy(RBlist[i].transform.parent.name,RBlist[i].name, RBlist[i].position, RBlist[i].rotation));
         }
 
         RBListContainerHierarchy container = new RBListContainerHierarchy(savefile);
@@ -461,46 +462,6 @@ public class SaveSnapShot : MonoBehaviour
         File.WriteAllText("D:/trajectory_data/gamesave_list_test_"+ step.ToString() + ".jsonbrn", json);
 
     }
-
-    //public void periodicsaveJSON(int step)
-    //{
-    //    Langevin_v2 Lange = GameObject.FindGameObjectWithTag("Physics_Sim").GetComponent<Langevin_v2>();
-
-    //    //List<Savedata> savefile = new List<Savedata>();
-    //    List<SavedataHierarchy> savefile = new List<SavedataHierarchy>();
-
-    //    List<Rigidbody> RBlist = new List<Rigidbody>();
-
-    //    Debug.Log("fark!" + gameObject.transform.position + " " + transform.localScale);
-
-    //    Debug.Log("gameObject.transform.position " + gameObject.transform.position + " transform.localScale " + transform.localScale);
-
-    //    List<Coords> GOVertscoords = new List<Coords>();
-
-    //    int max = Lange.GOS.Count;
-    //    int mol = Lange.GOmolist.Count;
-
-    //    for (int i = 0; i < max; i++)
-    //    {
-    //        RBlist.Add(Lange.GOS[i]);
-    //    }
-
-    //    int rbmax = RBlist.Count;
-    //    for (int i = 0; i < rbmax; i++)
-    //    {
-    //        savefile.Add(new SavedataHierarchy(RBlist[i].transform.parent.name, RBlist[i].name, RBlist[i].position, RBlist[i].rotation.eulerAngles));
-    //    }
-
-    //    RBListContainerHierarchy container = new RBListContainerHierarchy(savefile);
-
-    //    string json = JsonUtility.ToJson(container, true);
-
-    //    Debug.Log("json " + json);
-    //    Debug.Log("step " + step);
-
-    //    File.WriteAllText("D:/trajectory_data/gamesave_list_test_" + step.ToString() + ".jsonbrn", json);
-
-    //}
 
     //public void saveJSON()
     //{
@@ -611,7 +572,6 @@ public struct SavedataHierarchy
     public string root;
     public string name;
     public Vector3 pos;
-    //public Vector3 rot;
     public Quaternion rot;
 
     public SavedataHierarchy(

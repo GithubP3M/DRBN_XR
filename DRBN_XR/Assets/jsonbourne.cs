@@ -38,6 +38,7 @@ public class jsonbourne : MonoBehaviour
 
 		// Outputs: {"dataList":[{"ID":0,"Name":"Entry 1"},{"ID":1,"Name":"Entry 2"},{"ID":2,"Name":"Entry 3"}]}
 		Debug.Log(json);
+		Debug.Log(Application.persistentDataPath);
 		File.WriteAllText(Application.persistentDataPath + "/gamesave_list_test.jsonbrn",json);
 
 		return json;
