@@ -107,6 +107,8 @@ public class Langevin : MonoBehaviour {
             {
                 //GO.AddForce(UnityEngine.Random.insideUnitSphere * thrust);
                 /*Your Langevin code here*/
+                Debug.Log("sigmaf " + sigmaf);
+                Debug.Log("frictionf " + frictionf);
                 Vector3 addF = langevin_tr(GO,sigmaf,frictionf);
                 GO.AddForce(addF);
                 //Debug.Log(addF+GO.name);
@@ -199,7 +201,7 @@ public class Langevin : MonoBehaviour {
         {
             if (temp >= 0.0f && temp < 10000)
             {
-                temp = temp+100;
+                temp = temp+1;
                 sigma = Math.Sqrt(6.0f * friction * kB * temp / dt);
                 sigmaf = (float)sigma;
                 //Debug.Log("popo touche + " + temp);
@@ -216,7 +218,7 @@ public class Langevin : MonoBehaviour {
                 }
                 else
                 {
-                    temp = temp - 100;
+                    temp = temp - 1;
                 }
                 sigma = Math.Sqrt(6.0f * friction * kB * temp / dt);
                 sigmaf = (float)sigma;

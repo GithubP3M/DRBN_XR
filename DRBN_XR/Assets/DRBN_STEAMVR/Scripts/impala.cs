@@ -124,7 +124,7 @@ public class impala : MonoBehaviour {
 		else {
 			Vector3 Frb = (up * CalcCz (z,m));
 			rb.AddForce (Frb);
-			Debug.DrawLine (rb.position, rb.position + Frb, Color.white);
+			Debug.DrawLine (rb.position, rb.position + Frb, Color.black);
 		}
 
 		//	void OnTriggerStay (Collider collider) {

@@ -29,22 +29,43 @@ public class distance_mesh : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 origin=transform.position;
-        Vector3 direction = new Vector3(0, -1, 0);
+        Vector3 dn = new Vector3(0f, -1f, 0f);
+        Vector3 up = new Vector3(0f, 1f, 0f);
+
+        int impaLayer = 1 << LayerMask.NameToLayer("Impala");
+        float maxDistance = 0.1f;
+        Ray ray = new Ray(origin, dn);
 
         //if (Physics.Raycast(origin, direction, out hit, maxDistance))
-        if (Physics.Raycast(origin, direction, out hit))
+        //if (Physics.Raycast(origin, dn, out hit,impaLayer,maxDistance))
+        if (Physics.Raycast(origin, dn, out hit, maxDistance, impaLayer    ))
+        //if (Physics.Raycast(origin, dn, out hit, impaLayer))
             {
             Rigidbody rb = GetComponent<Rigidbody>();
 
             float D = Vector3.Distance(origin, hit.point);
             Vector3 N = hit.normal;
 
-            if (D > 0.18)
+            Debug.DrawLine(origin, hit.point, Color.blue);
+            Debug.DrawLine(hit.point, hit.normal, Color.green);
+            Debug.Log(D);
+
+            //if (D > 0.12)
+            //{
+            //    Vector3 Frb = N * CalcCz(D, 1f);
+            //    Debug.DrawLine(origin, hit.point, Color.blue);
+            //    Debug.DrawLine(hit.point, hit.normal, Color.green);
+            //    Debug.DrawLine(origin, origin+Frb, Color.red);
+            //    rb.AddForceAtPosition(origin, Frb);
+            //}
+
+            if (D < 0.12)
             {
-                Vector3 Frb = N * CalcCz(D, 1f);
+                Vector3 Frb = N * CalcCz(D, -1f);
                 Debug.DrawLine(origin, hit.point, Color.blue);
                 Debug.DrawLine(hit.point, hit.normal, Color.green);
                 Debug.DrawLine(origin, origin+Frb, Color.red);
+                //Debug.DrawLine(origin, origin + Frb, Color.red);
                 rb.AddForceAtPosition(origin, Frb);
             }
         }
