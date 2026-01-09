@@ -121,7 +121,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 67c45f78-2993-47df-a4dd-a3864cfdd036
+      m_Id: b0baf05d-f451-42cd-a9ff-c336f8cbdcde
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -220,7 +220,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: fba487c0-0b54-4d09-98bb-a99f428a20ef
+      m_Id: 5f435130-f759-4602-97a7-546ebcabcf6b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -258,7 +258,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 5ffa5337-5495-4b7c-9fa4-b271f74368d6
+      m_Id: 5c287610-6414-4aab-b35f-1f5fb669aeed
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -283,7 +283,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 33264663-ed94-4f40-8495-75d89a400f12
+      m_Id: 9d5052d8-70ea-4b68-b2bd-c127f527e13c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -295,7 +295,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 12954678-763d-4e93-b93b-db745a72b61d
+      m_Id: 395f8310-5133-4593-8bed-c32c5c27cd09
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -342,7 +342,7 @@ MonoBehaviour:
       m_Name: Select
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: c8682b19-1829-443d-954b-20e363c537ec
+      m_Id: 49c3c0d3-be4a-432f-8832-ee7db321d787
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -351,7 +351,7 @@ MonoBehaviour:
       m_Name: Select Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 5c5b8ce4-3642-4ecc-ac30-32cb1fda73f6
+      m_Id: 40e8be9b-6281-43bd-9476-89250493e52c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -372,7 +372,7 @@ MonoBehaviour:
       m_Name: Activate
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 459d950a-51ea-4328-aa5c-af05ef8930ff
+      m_Id: 52213279-05ff-4a35-85c2-813b41c7c6ef
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -381,7 +381,7 @@ MonoBehaviour:
       m_Name: Activate Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: a6f440bf-af04-4207-adef-993aa2b5f5e0
+      m_Id: 54a367d3-4176-410b-a685-c1c3656cb2ae
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -486,7 +486,7 @@ MonoBehaviour:
       m_Name: UI Press
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 8b4a4d44-eba9-4aa9-a0dc-9d6e7805718d
+      m_Id: 396de093-25d7-4d57-ad77-83fcb054aac2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -495,7 +495,7 @@ MonoBehaviour:
       m_Name: UI Press Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: e77d5cd3-a514-4277-9f13-b7cd4ea87b96
+      m_Id: 222015e6-4cad-4765-938f-c34803852281
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -516,7 +516,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 4dfe3f90-86f0-4c47-a0ff-1a7eaa70b3a9
+      m_Id: d0d1f774-aa95-4503-b9dd-d297f872ddf1
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -530,7 +530,7 @@ MonoBehaviour:
       m_Name: Translate Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 824807c5-f467-4d77-a96f-b44a906dd26c
+      m_Id: 35c71f20-c0fd-4649-9b61-4246ca99ec1b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -544,7 +544,7 @@ MonoBehaviour:
       m_Name: Rotate Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 7391999b-9f08-4c8c-8404-1ffc7043afc9
+      m_Id: 553ba972-e4bb-4297-b572-c4f597e254bc
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -558,7 +558,7 @@ MonoBehaviour:
       m_Name: Directional Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 396e83a6-7e0f-4b57-bffa-acdf0954d1f1
+      m_Id: 19801d46-489e-49ec-b525-2a807c4ec740
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -572,7 +572,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 90834c5c-b265-4259-bd8d-417e25ed400e
+      m_Id: 9465864b-fa3e-4966-9c2b-4d487028c3bc
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -581,7 +581,7 @@ MonoBehaviour:
       m_Name: Scale Toggle Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: e9028f85-7d14-4d3e-9353-6deef9cc4e75
+      m_Id: fd0b4279-d969-4c77-a779-6f84cafa60ed
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -602,7 +602,7 @@ MonoBehaviour:
       m_Name: Scale Over Time
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 9c0928a3-6d00-422a-a2d4-9ce3bd567822
+      m_Id: a9395d41-1eef-48fe-b538-68c08cdfc730
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -616,7 +616,7 @@ MonoBehaviour:
       m_Name: Scale Distance Delta
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: d6d9633d-6357-4eb2-ace4-3ff9280d4cdf
+      m_Id: 0b2983df-d363-4590-8797-fd610e063a55
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1014,7 +1014,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: ecb9152e-8777-4305-85af-801602debc6c
+      m_Id: e3cbca70-89da-4c6d-bca6-050ae0680a02
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1113,7 +1113,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 30c27d14-4cde-4dec-a347-f6411461a201
+      m_Id: 7d26a22e-78bb-4b81-bca1-ab4eeb1eb122
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1151,7 +1151,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: dc56af16-b3b9-4f5b-a9b6-5da3d1996f69
+      m_Id: 7f5100b7-b433-44ec-aea7-74b23f4b5d2f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1176,7 +1176,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: de804e12-ce6c-4b87-ad4f-15d5d492f85e
+      m_Id: 8c2a0989-49e1-45f4-9cf0-67c90456f06c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1188,7 +1188,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: fc993ac9-2f59-4699-a511-408e7c81dfd1
+      m_Id: 46bf21e3-c815-4f03-83c1-a1e1e1b13447
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1235,7 +1235,7 @@ MonoBehaviour:
       m_Name: Select
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 5f8c677b-f255-43e7-b1ce-39ccd65b4533
+      m_Id: 9e9e8a69-a692-4a7f-a3ca-035dfbd13f9c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1244,7 +1244,7 @@ MonoBehaviour:
       m_Name: Select Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 138941ec-a56c-47fa-b9d1-c23cb3f9ec07
+      m_Id: bed71f22-e960-4f70-ba0b-77d610b37816
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1265,7 +1265,7 @@ MonoBehaviour:
       m_Name: Activate
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: d751a0a5-7e8e-46ef-8159-7a4a764817ba
+      m_Id: 19c1a5ce-3712-430f-9872-e2e83f333cba
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1274,7 +1274,7 @@ MonoBehaviour:
       m_Name: Activate Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 4ad13202-48e4-4865-bdba-da8fe6ba1b8a
+      m_Id: cb9ffeca-6284-4614-839a-6128fd07c15a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1379,7 +1379,7 @@ MonoBehaviour:
       m_Name: UI Press
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 8e0dfdd1-ef8d-406e-97da-aeff52d76348
+      m_Id: abef9521-34ee-4ce7-90ad-bba712d0e682
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1388,7 +1388,7 @@ MonoBehaviour:
       m_Name: UI Press Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 010a0163-9788-4de3-8125-f36f4a1fac2c
+      m_Id: 5f03d38d-45a7-4e82-b073-a0c13b2014bc
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1409,7 +1409,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 064df04e-44df-4f49-ad34-c5b1a449d56c
+      m_Id: 61ece70b-37d9-4973-b7d8-ac1668152394
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1423,7 +1423,7 @@ MonoBehaviour:
       m_Name: Translate Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 1a375428-3ffa-4606-aa84-a9313f8e1867
+      m_Id: 910f1085-598c-4780-b679-043494204192
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1437,7 +1437,7 @@ MonoBehaviour:
       m_Name: Rotate Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 63b11f34-e102-450a-a5b1-8e4fa4c4b398
+      m_Id: 884172e7-7236-497e-ae82-a8ee2351f431
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1451,7 +1451,7 @@ MonoBehaviour:
       m_Name: Directional Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: a0835dda-6dd2-44ba-a9f3-d2ac430f14ce
+      m_Id: 53d4cc6e-d0ad-4bff-8d94-ee88d2f2780c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1465,7 +1465,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: fa83cf11-8e8b-49e8-9235-e7b3eb5683ff
+      m_Id: 1a722f16-2328-483f-b4b1-2ae6f077eb25
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1474,7 +1474,7 @@ MonoBehaviour:
       m_Name: Scale Toggle Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 9e6ecb0e-2e37-42ac-9e6b-67085306d896
+      m_Id: 0023519d-4067-4198-bf64-8e09dd8051d3
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1495,7 +1495,7 @@ MonoBehaviour:
       m_Name: Scale Over Time
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 5fba4b67-1962-49e3-a38a-99d568bdd4dc
+      m_Id: 8e6ee548-64fc-4dc5-b0af-5a3687f2df39
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1509,7 +1509,7 @@ MonoBehaviour:
       m_Name: Scale Distance Delta
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 98575e2a-7a8b-4290-a542-b6272c3f5a6f
+      m_Id: 88464f09-a029-4a45-9246-0e4401d667e7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2064,7 +2064,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 9ddd3ff2-db60-4318-9894-15141a22ce40
+      m_Id: f48ad37b-e88b-4fcb-8207-f20479ad22b7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2163,7 +2163,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 14ec54c6-02b4-4e21-909f-f191e93f91b2
+      m_Id: 444d21fa-78b2-4bdd-be01-09d5e939f247
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2201,7 +2201,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 0e76178e-9c91-45d9-924e-8563cc1ea71b
+      m_Id: 737a19f2-505b-4e23-8218-eb9d82c5cc42
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2226,7 +2226,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: db55cc7b-7b67-4f77-8a73-7ddc2c54937e
+      m_Id: 1e33727c-323d-4353-be35-b4e6bb563101
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2238,7 +2238,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 06a145d0-9d50-4831-ad5a-a47661fb2d5e
+      m_Id: 0e3f1405-f364-4069-800f-8d2d694907f3
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2285,7 +2285,7 @@ MonoBehaviour:
       m_Name: Select
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: af9a524e-e584-496b-a6a7-216baa87845d
+      m_Id: 8ae158dd-ae3a-4a8f-84e1-d69b6c118ae4
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2294,7 +2294,7 @@ MonoBehaviour:
       m_Name: Select Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 3e54bd87-3d2d-4758-815f-0871c3560410
+      m_Id: 2227450e-d357-4d96-9802-1a8d814f9f60
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2315,7 +2315,7 @@ MonoBehaviour:
       m_Name: Activate
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: ec1c67e2-c42e-407d-a608-1ff7acd9a6d0
+      m_Id: 411a1f1a-d634-4de0-a3db-723301d203d7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2324,7 +2324,7 @@ MonoBehaviour:
       m_Name: Activate Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: ae437f40-7909-4766-974a-48c431bccb50
+      m_Id: 93a289de-74e3-41f8-8ee0-dfe59543d308
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2429,7 +2429,7 @@ MonoBehaviour:
       m_Name: UI Press
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 8efa36d0-a69e-4761-bfe1-f132bcd19b80
+      m_Id: 8a90f2b6-dc8a-4ea1-b292-cf45a0d577b5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2438,7 +2438,7 @@ MonoBehaviour:
       m_Name: UI Press Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 269ca0bd-2b96-4236-88f6-9ebe857248b5
+      m_Id: 6016064b-4190-4c4b-ad88-6844c308dbb8
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2459,7 +2459,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: ffe0651e-a2fc-4001-a9c0-5f91e85b6d1d
+      m_Id: bca789d2-a3ae-4efb-bd42-6f5fc30590dd
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2473,7 +2473,7 @@ MonoBehaviour:
       m_Name: Translate Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 83e75025-60ad-4774-abdd-58caa3843b4c
+      m_Id: c70ff88c-c971-49c5-9796-98f0d21f1ea2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2487,7 +2487,7 @@ MonoBehaviour:
       m_Name: Rotate Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: c9304663-726d-4a37-a66d-de8b253210fd
+      m_Id: ec9e511a-317b-4da1-a8c3-84fb1da8b8e2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2501,7 +2501,7 @@ MonoBehaviour:
       m_Name: Directional Manipulation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 730aa1fe-1c57-41de-b16e-d5b21b6f62e9
+      m_Id: 07865347-fc7a-4e8c-80b8-355f3e120276
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2515,7 +2515,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: cfe503c6-0948-481c-8688-00e9342f914b
+      m_Id: 54aedf4e-8ba8-4f21-b6f2-377e27753d94
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2524,7 +2524,7 @@ MonoBehaviour:
       m_Name: Scale Toggle Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 839c5d70-9abf-4df9-9331-5be46bb9a983
+      m_Id: f67cc504-1a58-4160-a9c5-0d4c68347260
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2545,7 +2545,7 @@ MonoBehaviour:
       m_Name: Scale Over Time
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: efc7b7ad-c26d-4b9b-b665-b6f2775e3952
+      m_Id: 39a8657d-773f-4fb0-b32a-d627dc9379e0
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2559,7 +2559,7 @@ MonoBehaviour:
       m_Name: Scale Distance Delta
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: b607b42a-a1a4-4997-9c4e-de171349d0b8
+      m_Id: e67d809e-4c4c-4ad6-92a7-7ef4da92b32f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2953,7 +2953,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 98de2435-313e-446d-9b10-8a0c5a5e8db6
+      m_Id: e5360f19-df88-460b-9965-d48efe3b7ece
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3052,7 +3052,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 19932cd4-287c-4389-9914-c48359f26051
+      m_Id: 04a9bb39-c997-4df5-b8d7-9cf197bcb834
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3090,7 +3090,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 0fdbc82a-374d-4150-90fa-14b27f809dcc
+      m_Id: a1d104c8-3d83-4f51-8b19-ebd31eaad7f6
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3115,7 +3115,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: b6a5327a-84f2-4f0e-974e-b6f52776ce22
+      m_Id: c91116d8-2434-4817-951a-31241a275eb0
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3127,7 +3127,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: bfef88a1-6ed5-43c0-9a77-b9cf161b1e6b
+      m_Id: 7d7e8d7a-9cc8-4603-bacf-80cc8b174e86
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3174,7 +3174,7 @@ MonoBehaviour:
       m_Name: Select
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: acd8846d-d8c7-4f30-86fe-bfdd490c9ef0
+      m_Id: 9cf0d517-0008-4e98-b244-21f1ea3f71b5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3183,7 +3183,7 @@ MonoBehaviour:
       m_Name: Select Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 8aa554b7-9e3e-4d5c-8a35-0755f09346dd
+      m_Id: 341d274f-93fe-4637-81e8-297226e8965b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3204,7 +3204,7 @@ MonoBehaviour:
       m_Name: Activate
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 993eac4f-cfd1-4f9e-ab9e-dc8064bceba5
+      m_Id: 6985c51e-fcc4-42a7-9983-201b2fb750b5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3213,7 +3213,7 @@ MonoBehaviour:
       m_Name: Activate Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 73d061a3-63fd-4427-b789-80c440440ca9
+      m_Id: 5e3c48b0-899e-4174-a13c-10935202d3cd
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3533,7 +3533,7 @@ MonoBehaviour:
       m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: b97b8943-9484-45cf-ad2a-1a9c44ff08e1
+      m_Id: ec4d0fd8-9cf0-4e5f-bb3f-05fd03144010
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
