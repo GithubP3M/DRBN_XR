@@ -1,0 +1,74 @@
+\doxysection{hankpym\+\_\+v2 Class Reference}
+\hypertarget{classhankpym__v2}{}\label{classhankpym__v2}\index{hankpym\_v2@{hankpym\_v2}}
+
+
+Maintains joint anchor positions for child objects during scaling operations (v2).  
+
+
+Inheritance diagram for hankpym\+\_\+v2:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhankpym__v2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classhankpym__v2_aebe2a43ab835b028dcf6bc982445eb0b}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initializes child references and caches all joint anchor positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classhankpym__v2_aff81ca132a22f4394f61d083460c6653}\label{classhankpym__v2_aff81ca132a22f4394f61d083460c6653} 
+Transform\+[$\,$]\+ {\bfseries children}
+\begin{DoxyCompactList}\small\item\em Array of all child Transform components in the hierarchy. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_ad67810b64b2477e169ad2856524b7c0b}\label{classhankpym__v2_ad67810b64b2477e169ad2856524b7c0b} 
+List$<$ Vector3 $>$ {\bfseries \+\_\+connected\+Anchor}
+\begin{DoxyCompactList}\small\item\em List of cached connected anchor positions for all joints. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_a305e93c47447242623cd8634de16ab27}\label{classhankpym__v2_a305e93c47447242623cd8634de16ab27} 
+List$<$ Vector3 $>$ {\bfseries \+\_\+anchor}
+\begin{DoxyCompactList}\small\item\em List of cached anchor positions for all joints. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_a3f759fccf3e02125b1e8881700c9cfc8}\label{classhankpym__v2_a3f759fccf3e02125b1e8881700c9cfc8} 
+List$<$ int $>$ {\bfseries \+\_\+index}
+\begin{DoxyCompactList}\small\item\em List of child indices corresponding to each anchor entry. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_a5f6ffdcd4791e278d8a89a7dc842707c}\label{classhankpym__v2_a5f6ffdcd4791e278d8a89a7dc842707c} 
+Dictionary$<$ int, Joint\+[$\,$]\+$>$ {\bfseries \+\_\+joints\+\_\+dic} = new Dictionary$<$int, Joint\+[$\,$]\+$>$()
+\begin{DoxyCompactList}\small\item\em Dictionary mapping child index to array of Joint components on that child. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_a58ecf359f068a2ddd0f7306584ddc527}\label{classhankpym__v2_a58ecf359f068a2ddd0f7306584ddc527} 
+Dictionary$<$ int, Vector3\+[$\,$]\+$>$ {\bfseries \+\_\+connected\+Anchor\+\_\+dic} = new Dictionary$<$int, Vector3\+[$\,$]\+$>$()
+\begin{DoxyCompactList}\small\item\em Dictionary mapping child index to array of connected anchor positions. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_abf2df547c1370e3b904d0895e3fb37db}\label{classhankpym__v2_abf2df547c1370e3b904d0895e3fb37db} 
+Dictionary$<$ int, Vector3\+[$\,$]\+$>$ {\bfseries \+\_\+anchor\+\_\+dic} = new Dictionary$<$int, Vector3\+[$\,$]\+$>$()
+\begin{DoxyCompactList}\small\item\em Dictionary mapping child index to array of anchor positions. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym__v2_aee6a7929a11a45c2788c848e93f6a6a7}\label{classhankpym__v2_aee6a7929a11a45c2788c848e93f6a6a7} 
+float {\bfseries maxscale}
+\begin{DoxyCompactList}\small\item\em Maximum scale threshold at which this script disables itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Maintains joint anchor positions for child objects during scaling operations (v2). 
+
+Named after Hank Pym (Ant-\/\+Man), this improved version handles multiple joints per child.
+
+The physics system calculates anchors at start but doesn\textquotesingle{}t update them during scaling, causing models to fall apart. This script saves and reapplies anchor positions.
+
+Requires a \doxylink{class_mol_scale}{Mol\+Scale} component on the same Game\+Object.
+
+\label{doc-func-members}
+\Hypertarget{classhankpym__v2_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classhankpym__v2_aebe2a43ab835b028dcf6bc982445eb0b}\index{hankpym\_v2@{hankpym\_v2}!Start@{Start}}
+\index{Start@{Start}!hankpym\_v2@{hankpym\_v2}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{classhankpym__v2_aebe2a43ab835b028dcf6bc982445eb0b} 
+void hankpym\+\_\+v2::\+\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes child references and caches all joint anchor positions. 
+
+Iterates through all children, building dictionaries of joints and lists of anchor positions indexed by child transform index. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+\doxymbox{\hyperlink{hankpym__v2_8cs}{hankpym\+\_\+v2.\+cs}}\end{DoxyCompactItemize}

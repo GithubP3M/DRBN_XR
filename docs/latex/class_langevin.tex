@@ -1,0 +1,131 @@
+\doxysection{Langevin Class Reference}
+\hypertarget{class_langevin}{}\label{class_langevin}\index{Langevin@{Langevin}}
+
+
+Implements a \doxylink{class_langevin}{Langevin} thermostat for molecular dynamics simulation. Applies stochastic and friction forces to all Rigidbody objects in the scene.  
+
+
+Inheritance diagram for Langevin:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_langevin}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Engine Rigidbody\+[$\,$]\+ \doxymbox{\hyperlink{class_langevin_a3e038676410fc2b336ac21c08c45d387}{Count\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Finds and stores all Rigidbody objects in the scene. \end{DoxyCompactList}\item 
+Vector3 \doxymbox{\hyperlink{class_langevin_aac0e0d3cfbdb36b24cc971a7853b8a63}{langevin\+\_\+tr}} (Rigidbody arg1, float arg2, float arg3)
+\begin{DoxyCompactList}\small\item\em Calculates the \doxylink{class_langevin}{Langevin} force for a single Rigidbody. Combines stochastic thermal noise with velocity-\/dependent friction. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_ae08dfdcb288ea4cddadb10877dff1a83}\label{class_langevin_ae08dfdcb288ea4cddadb10877dff1a83} 
+void {\bfseries On\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Displays temperature, sigma, and friction values on screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_af03815d9560f457f7c37748db2b72885}\label{class_langevin_af03815d9560f457f7c37748db2b72885} 
+void {\bfseries RndF} ()
+\begin{DoxyCompactList}\small\item\em Applies \doxylink{class_langevin}{Langevin} forces to all Rigidbodies except those under "{}char\+\_\+shadow"{}. Called every frame to maintain thermal equilibrium. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_af322cc4bb9c33587db49b6c298a94e05}\label{class_langevin_af322cc4bb9c33587db49b6c298a94e05} 
+void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Initializes the simulation by finding all Rigidbodies. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_ab40709fc6ca9de4b8c0b17c1c8757141}\label{class_langevin_ab40709fc6ca9de4b8c0b17c1c8757141} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Called on the frame when the script is enabled (currently unused). \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a56924e32fe4c11336dd6dee2514ba42b}\label{class_langevin_a56924e32fe4c11336dd6dee2514ba42b} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Called every frame. Handles keyboard input for simulation control and applies \doxylink{class_langevin}{Langevin} forces to all objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin_abc350a2dbffe19e07a84ef3e9586581b}\label{class_langevin_abc350a2dbffe19e07a84ef3e9586581b} 
+Rigidbody\+[$\,$]\+ {\bfseries GOS}
+\begin{DoxyCompactList}\small\item\em Array of all Rigidbody objects in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin_a68fb82de8cc194878414aa10e6847713}\label{class_langevin_a68fb82de8cc194878414aa10e6847713} 
+static float {\bfseries thrust} = 100
+\begin{DoxyCompactList}\small\item\em Thrust magnitude (unused legacy parameter). \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_ade3263aae01c4ebdbe4918d46e204f91}\label{class_langevin_ade3263aae01c4ebdbe4918d46e204f91} 
+static double {\bfseries temp} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Simulation temperature in Kelvin. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a1f4c4ced8c1f83f25593dce6fccca5df}\label{class_langevin_a1f4c4ced8c1f83f25593dce6fccca5df} 
+static double {\bfseries kB} = 1.\+38f \texorpdfstring{$\ast$}{*} Math.\+Pow(10.\+0f, 23.\+0f)
+\begin{DoxyCompactList}\small\item\em Boltzmann constant in simulation units. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_ad584360404c29f3536f4f9a04601c6ff}\label{class_langevin_ad584360404c29f3536f4f9a04601c6ff} 
+static double {\bfseries viscosity} = 6.\+6e-\/3
+\begin{DoxyCompactList}\small\item\em Viscosity of the medium. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a49189d2cf82c45d654e8be86348db160}\label{class_langevin_a49189d2cf82c45d654e8be86348db160} 
+static double {\bfseries Ma} = (13e6f \texorpdfstring{$\ast$}{*} 1.\+7f \texorpdfstring{$\ast$}{*} Math.\+Pow(10.\+0f, -\/1f)) /\+ 2.\+0f
+\begin{DoxyCompactList}\small\item\em Effective mass parameter. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a23540b86d0d3a6c774bc19a9e11466d0}\label{class_langevin_a23540b86d0d3a6c774bc19a9e11466d0} 
+static double {\bfseries friction} = 6f \texorpdfstring{$\ast$}{*} Math.\+PI \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_langevin_ad584360404c29f3536f4f9a04601c6ff}{viscosity}} \texorpdfstring{$\ast$}{*} 20f \texorpdfstring{$\ast$}{*} Math.\+Pow(10f, -\/9f)
+\begin{DoxyCompactList}\small\item\em Friction coefficient derived from Stokes drag. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a3e07c2b14ed6a00817fd7e6e915c2f4f}\label{class_langevin_a3e07c2b14ed6a00817fd7e6e915c2f4f} 
+static double {\bfseries dt} = \doxymbox{\hyperlink{class_langevin_a49189d2cf82c45d654e8be86348db160}{Ma}} /\+ \doxymbox{\hyperlink{class_langevin_a23540b86d0d3a6c774bc19a9e11466d0}{friction}}
+\begin{DoxyCompactList}\small\item\em Characteristic timescale (mass/\+friction). \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a67bee5f9c32c597b4a41c83441985779}\label{class_langevin_a67bee5f9c32c597b4a41c83441985779} 
+static double {\bfseries sigma} = Math.\+Sqrt(6.\+0f \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_langevin_a23540b86d0d3a6c774bc19a9e11466d0}{friction}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_langevin_a1f4c4ced8c1f83f25593dce6fccca5df}{kB}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_langevin_ade3263aae01c4ebdbe4918d46e204f91}{temp}} /\+ \doxymbox{\hyperlink{class_langevin_a3e07c2b14ed6a00817fd7e6e915c2f4f}{dt}})
+\begin{DoxyCompactList}\small\item\em Standard deviation of stochastic force from fluctuation-\/dissipation theorem. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a8ef50ffb7737d67b1e8ef2ca573ef6f9}\label{class_langevin_a8ef50ffb7737d67b1e8ef2ca573ef6f9} 
+static float {\bfseries sigmaf} = (float)\doxymbox{\hyperlink{class_langevin_a67bee5f9c32c597b4a41c83441985779}{sigma}}
+\begin{DoxyCompactList}\small\item\em Float cast of sigma for use with Unity Vector3. \end{DoxyCompactList}\item 
+\Hypertarget{class_langevin_a22504bb57d01ed18f34d05bea6d9abde}\label{class_langevin_a22504bb57d01ed18f34d05bea6d9abde} 
+static float {\bfseries frictionf} = (float)\doxymbox{\hyperlink{class_langevin_a23540b86d0d3a6c774bc19a9e11466d0}{friction}}
+\begin{DoxyCompactList}\small\item\em Float cast of friction for use with Unity Vector3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements a \doxylink{class_langevin}{Langevin} thermostat for molecular dynamics simulation. Applies stochastic and friction forces to all Rigidbody objects in the scene. 
+
+Keyboard controls:\+
+\begin{DoxyItemize}
+\item O:\+ Unfreeze all objects (disable is\+Kinematic)
+\item P:\+ Freeze all objects (enable is\+Kinematic)
+\item I:\+ Toggle between normal and 30x time scale
+\item \+[+]\+:\+ Increase temperature by 100K
+\item \+[-\/]\+:\+ Decrease temperature by 100K 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_langevin_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_langevin_a3e038676410fc2b336ac21c08c45d387}\index{Langevin@{Langevin}!CountObjects@{CountObjects}}
+\index{CountObjects@{CountObjects}!Langevin@{Langevin}}
+\doxysubsubsection{\texorpdfstring{CountObjects()}{CountObjects()}}
+{\footnotesize\ttfamily \label{class_langevin_a3e038676410fc2b336ac21c08c45d387} 
+Unity\+Engine Rigidbody\+[$\,$]\+ Langevin::\+\+Count\+Objects (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds and stores all Rigidbody objects in the scene. 
+
+\begin{DoxyReturn}{Returns}
+Array of all Rigidbody components found.
+\end{DoxyReturn}
+\Hypertarget{class_langevin_aac0e0d3cfbdb36b24cc971a7853b8a63}\index{Langevin@{Langevin}!langevin\_tr@{langevin\_tr}}
+\index{langevin\_tr@{langevin\_tr}!Langevin@{Langevin}}
+\doxysubsubsection{\texorpdfstring{langevin\_tr()}{langevin\_tr()}}
+{\footnotesize\ttfamily \label{class_langevin_aac0e0d3cfbdb36b24cc971a7853b8a63} 
+Vector3 Langevin::\+langevin\+\_\+tr (\begin{DoxyParamCaption}\item[{Rigidbody}]{arg1}{, }\item[{float}]{arg2}{, }\item[{float}]{arg3}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the \doxylink{class_langevin}{Langevin} force for a single Rigidbody. Combines stochastic thermal noise with velocity-\/dependent friction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg1} & The Rigidbody to calculate forces for.\\
+\hline
+{\em arg2} & Sigma -\/ standard deviation of stochastic force.\\
+\hline
+{\em arg3} & Friction coefficient.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The combined \doxylink{class_langevin}{Langevin} force vector to apply.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+Langevin.\+cs\end{DoxyCompactItemize}

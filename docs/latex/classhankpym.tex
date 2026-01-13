@@ -1,0 +1,60 @@
+\doxysection{hankpym Class Reference}
+\hypertarget{classhankpym}{}\label{classhankpym}\index{hankpym@{hankpym}}
+
+
+Maintains joint anchor positions for child objects during scaling operations.  
+
+
+Inheritance diagram for hankpym:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhankpym}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classhankpym_a6effe6ef0beaa05535901b43b15c83cc}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initializes child references and caches joint anchor positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classhankpym_abf580852852ba0ec93e742edafbdb9e3}\label{classhankpym_abf580852852ba0ec93e742edafbdb9e3} 
+Transform\+[$\,$]\+ {\bfseries children}
+\begin{DoxyCompactList}\small\item\em Array of all child Transform components. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym_a48439ce491d2c975907c257efa796fdc}\label{classhankpym_a48439ce491d2c975907c257efa796fdc} 
+Vector3\+[$\,$]\+ {\bfseries \+\_\+connected\+Anchor}
+\begin{DoxyCompactList}\small\item\em Cached connected anchor positions for each child\textquotesingle{}s joint. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym_ac9800e91e4dccff2f37b3f70e4ff2260}\label{classhankpym_ac9800e91e4dccff2f37b3f70e4ff2260} 
+Vector3\+[$\,$]\+ {\bfseries \+\_\+anchor}
+\begin{DoxyCompactList}\small\item\em Cached anchor positions for each child\textquotesingle{}s joint. \end{DoxyCompactList}\item 
+\Hypertarget{classhankpym_a2c55fd55b7b43967dc8b3e9fcda16dd3}\label{classhankpym_a2c55fd55b7b43967dc8b3e9fcda16dd3} 
+float {\bfseries maxscale}
+\begin{DoxyCompactList}\small\item\em Maximum scale threshold at which this script disables itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Maintains joint anchor positions for child objects during scaling operations. 
+
+Named after Hank Pym (Ant-\/\+Man) because of it\textquotesingle{}s ability to change size at will, this script handles the physics joint corrections needed when scaling objects. Automatically disables when max scale is reached. Requires a \doxylink{class_mol_scale}{Mol\+Scale} component on the same Game\+Object.
+
+Allows to insert big molecules in versy small space 
+
+\label{doc-func-members}
+\Hypertarget{classhankpym_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classhankpym_a6effe6ef0beaa05535901b43b15c83cc}\index{hankpym@{hankpym}!Start@{Start}}
+\index{Start@{Start}!hankpym@{hankpym}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{classhankpym_a6effe6ef0beaa05535901b43b15c83cc} 
+void hankpym::\+\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes child references and caches joint anchor positions. 
+
+Disables auto-\/configuration of connected anchors to prevent unwanted behavior. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+\doxymbox{\hyperlink{hankpym_8cs}{hankpym.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+/**
+ * @mainpage DURABIN Documentation
+ *
+ * Welcome to the DURABIN API documentation.
+ *
+ * Here you can find:
+ * - An overview of the DURABIN architecture.
+ * - Descriptions of the main systems and their responsibilities.
+ * - Guidance on how to get started integrating DURABIN into your project.
+ *
+ * Use the navigation panel on the left to explore namespaces, classes,
+ * and scripts that make up the DURABIN codebase.
+ */
+

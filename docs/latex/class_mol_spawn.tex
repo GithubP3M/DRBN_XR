@@ -1,0 +1,61 @@
+\doxysection{Mol\+Spawn Class Reference}
+\hypertarget{class_mol_spawn}{}\label{class_mol_spawn}\index{MolSpawn@{MolSpawn}}
+
+
+Handles spawning of molecule prefabs into the simulation. Instantiates molecules at a designated spawn point and registers them with the physics system.  
+
+
+Inheritance diagram for Mol\+Spawn:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mol_spawn}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_mol_spawn_ab2d077a2c1ef5f40f4ded2496a6082a2}{Spawn\+Molecule}} ()
+\begin{DoxyCompactList}\small\item\em Spawns a new molecule instance at the spawn point. Registers the molecule\textquotesingle{}s Rigidbodies with the \doxylink{class_langevin}{Langevin} physics system and adds it to the molecule counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mol_spawn_adedf98f253c7275846d7cbc0a691c431}\label{class_mol_spawn_adedf98f253c7275846d7cbc0a691c431} 
+Vector3 {\bfseries max\+Scale}
+\begin{DoxyCompactList}\small\item\em Maximum scale for spawn animation. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn_a8b02dd49a432143b663dfc84677b567a}\label{class_mol_spawn_a8b02dd49a432143b663dfc84677b567a} 
+float {\bfseries speed} = 2f
+\begin{DoxyCompactList}\small\item\em Speed of scale animation. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn_ac28ec78d9a9a173144de57e5bf07662c}\label{class_mol_spawn_ac28ec78d9a9a173144de57e5bf07662c} 
+float {\bfseries duration} = 5f
+\begin{DoxyCompactList}\small\item\em Duration of scale animation in seconds. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn_a1ac1ec5b115d5401da7b39da66d7c063}\label{class_mol_spawn_a1ac1ec5b115d5401da7b39da66d7c063} 
+Transform {\bfseries prefab}
+\begin{DoxyCompactList}\small\item\em The molecule prefab to instantiate. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn_ae7f99c92e275db6f97ee95c8441fa440}\label{class_mol_spawn_ae7f99c92e275db6f97ee95c8441fa440} 
+Game\+Object {\bfseries spawnpoint}
+\begin{DoxyCompactList}\small\item\em The Game\+Object defining the spawn location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles spawning of molecule prefabs into the simulation. Instantiates molecules at a designated spawn point and registers them with the physics system. 
+
+Requires a \doxylink{class_langevin__v2}{Langevin\+\_\+v2} component on a Game\+Object tagged "{}\+Physics\+\_\+\+Sim"{}. Spawning is limited by molcounter.\+limit. 
+
+\label{doc-func-members}
+\Hypertarget{class_mol_spawn_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mol_spawn_ab2d077a2c1ef5f40f4ded2496a6082a2}\index{MolSpawn@{MolSpawn}!SpawnMolecule@{SpawnMolecule}}
+\index{SpawnMolecule@{SpawnMolecule}!MolSpawn@{MolSpawn}}
+\doxysubsubsection{\texorpdfstring{SpawnMolecule()}{SpawnMolecule()}}
+{\footnotesize\ttfamily \label{class_mol_spawn_ab2d077a2c1ef5f40f4ded2496a6082a2} 
+void Mol\+Spawn::\+\+Spawn\+Molecule (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawns a new molecule instance at the spawn point. Registers the molecule\textquotesingle{}s Rigidbodies with the \doxylink{class_langevin}{Langevin} physics system and adds it to the molecule counter. 
+
+Only spawns if current molecule count is below molcounter.\+limit. Called from UI buttons. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+Mol\+Spawn.\+cs\end{DoxyCompactItemize}
