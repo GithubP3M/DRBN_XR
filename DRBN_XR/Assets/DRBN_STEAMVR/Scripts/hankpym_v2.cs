@@ -1,28 +1,66 @@
-﻿using System.Collections;
+﻿/// @file hankpym_v2.cs
+/// @brief Improved joint anchor management during object scaling (version 2).
+/// @details This script preserves joint anchor configurations for child objects
+///          while the parent object scales. Handles multiple joints per child object.
+///          The physics system calculates anchors at start but doesn't update them
+///          during scaling, causing models to fall apart. This script saves and
+///          reapplies anchor positions each frame.
+/// @warning Don't forget to disable Auto Configure Connected Anchor!
+
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-/* The problem seems to be that the physics system calculates the anchors and connected anchors at the start, but does not update them later, which is fine, as long as the scale is the same.
-
-But when you scale it, the joint system stays at the original size thus the model falls apart.
-
-What you need to do is save the anchor and connected anchor positions, and update it whenever you scale it. (It is in local space, so no need to scale it).
-
-Don't forget to disable Auto Configure Connected Anchor!!  */
-
+/// <summary>
+/// Maintains joint anchor positions for child objects during scaling operations (v2).
+/// </summary>
+/// <remarks>
+/// <para>Named after Hank Pym (Ant-Man), this improved version handles multiple joints per child.</para>
+/// <para>The physics system calculates anchors at start but doesn't update them during scaling,
+/// causing models to fall apart. This script saves and reapplies anchor positions.</para>
+/// <para>Requires a MolScale component on the same GameObject.</para>
+/// </remarks>
 public class hankpym_v2 : MonoBehaviour {
 
+	/// <summary>
+	/// Array of all child Transform components in the hierarchy.
+	/// </summary>
 	public Transform[] children;
 
+	/// <summary>
+	/// List of cached connected anchor positions for all joints.
+	/// </summary>
     public List<Vector3> _connectedAnchor;
+
+	/// <summary>
+	/// List of cached anchor positions for all joints.
+	/// </summary>
 	public List<Vector3> _anchor;
+
+	/// <summary>
+	/// List of child indices corresponding to each anchor entry.
+	/// </summary>
     public List<int> _index;
 
+	/// <summary>
+	/// Dictionary mapping child index to array of Joint components on that child.
+	/// </summary>
     public Dictionary<int, Joint[]> _joints_dic = new Dictionary<int, Joint[]>();
+
+	/// <summary>
+	/// Dictionary mapping child index to array of connected anchor positions.
+	/// </summary>
     public Dictionary<int, Vector3[]> _connectedAnchor_dic = new Dictionary<int, Vector3[]>();
+
+	/// <summary>
+	/// Dictionary mapping child index to array of anchor positions.
+	/// </summary>
     public Dictionary<int, Vector3[]> _anchor_dic = new Dictionary<int, Vector3[]>();
 
+	/// <summary>
+	/// Maximum scale threshold at which this script disables itself.
+	/// </summary>
     float maxscale;
 
 	//void Start()
@@ -83,6 +121,13 @@ public class hankpym_v2 : MonoBehaviour {
  //       }
 	//}
 
+	/// <summary>
+	/// Initializes child references and caches all joint anchor positions.
+	/// </summary>
+	/// <remarks>
+	/// Iterates through all children, building dictionaries of joints and
+	/// lists of anchor positions indexed by child transform index.
+	/// </remarks>
     void Start()
     {
         children = transform.GetComponentsInChildren<Transform>();
@@ -132,6 +177,13 @@ public class hankpym_v2 : MonoBehaviour {
         //Debug.Log("_index.Count "+ _index.Count);
     }
 
+	/// <summary>
+	/// Updates all joint anchors each frame and checks for max scale threshold.
+	/// </summary>
+	/// <remarks>
+	/// Disables itself when the object reaches or exceeds the maximum scale.
+	/// Reapplies cached anchor positions to all joints to maintain integrity during scaling.
+	/// </remarks>
     private void Update()
     {
         //check gameobject size and disable hankpym script if gameobject size is superior or equal to final size in 
