@@ -2,21 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles spawning of molecule prefabs into the simulation.
+/// Instantiates molecules at a designated spawn point and registers them with the physics system.
+/// </summary>
+/// <remarks>
+/// Requires a Langevin_v2 component on a GameObject tagged "Physics_Sim".
+/// Spawning is limited by molcounter.limit.
+/// </remarks>
 public class MolSpawn : MonoBehaviour {
-	//scaling part of the code 
+	
+	/// <summary>Minimum scale for spawn animation (unused).</summary>
 	Vector3 minScale;
+	
+	/// <summary>Maximum scale for spawn animation.</summary>
 	public Vector3 maxScale;
+	
+	/// <summary>Speed of scale animation.</summary>
 	public float speed = 2f;
+	
+	/// <summary>Duration of scale animation in seconds.</summary>
 	public float duration = 5f;
 
+	/// <summary>The molecule prefab to instantiate.</summary>
 	public Transform prefab;
+	
+	/// <summary>Reference to the most recently spawned molecule.</summary>
 	private Transform spawn;
+	
+	/// <summary>The GameObject defining the spawn location.</summary>
     public GameObject spawnpoint;
 
 
 	//Rigidbody[] children;
 
-	// code used for UI purpose
+	/// <summary>
+	/// Spawns a new molecule instance at the spawn point.
+	/// Registers the molecule's Rigidbodies with the Langevin physics system
+	/// and adds it to the molecule counter.
+	/// </summary>
+	/// <remarks>
+	/// Only spawns if current molecule count is below molcounter.limit.
+	/// Called from UI buttons.
+	/// </remarks>
 	public void SpawnMolecule()
 	{
         int counter;

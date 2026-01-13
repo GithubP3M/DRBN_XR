@@ -3,9 +3,24 @@
 using System;
 using System.Linq;
 
+/// <summary>
+/// Implements a Langevin thermostat for molecular dynamics simulation.
+/// Applies stochastic and friction forces to all Rigidbody objects in the scene.
+/// </summary>
+/// <remarks>
+/// Keyboard controls:
+/// - O: Unfreeze all objects (disable isKinematic)
+/// - P: Freeze all objects (enable isKinematic)
+/// - I: Toggle between normal and 30x time scale
+/// - [+]: Increase temperature by 100K
+/// - [-]: Decrease temperature by 100K
+/// </remarks>
 public class Langevin : MonoBehaviour {
 
+    /// <summary>Array of all Rigidbody objects in the scene.</summary>
     public Rigidbody[] GOS;
+    
+    /// <summary>Thrust magnitude (unused legacy parameter).</summary>
     static float thrust = 100;
 
     /*Langevin variables*/
@@ -20,17 +35,38 @@ public class Langevin : MonoBehaviour {
     public static float sigmaf = (float)sigma;
     public static float frictionf = (float)friction;
     */
+    
+    /// <summary>Simulation temperature in Kelvin.</summary>
     public static double temp = 0.0f;
+    
+    /// <summary>Boltzmann constant in simulation units.</summary>
     public static double kB = 1.38f * Math.Pow(10.0f, 23.0f);
+    
+    /// <summary>Viscosity of the medium.</summary>
     public static double viscosity = 6.6e-3;
+    
+    /// <summary>Effective mass parameter.</summary>
     public static double Ma = (13e6f * 1.7f * Math.Pow(10.0f, -1f)) / 2.0f;
+    
+    /// <summary>Friction coefficient derived from Stokes drag.</summary>
     public static double friction = 6f * Math.PI * viscosity * 20f * Math.Pow(10f, -9f);
+    
+    /// <summary>Characteristic timescale (mass/friction).</summary>
     public static double dt = Ma / friction;
+    
+    /// <summary>Standard deviation of stochastic force from fluctuation-dissipation theorem.</summary>
     public static double sigma = Math.Sqrt(6.0f * friction * kB * temp / dt);
+    
+    /// <summary>Float cast of sigma for use with Unity Vector3.</summary>
     public static float sigmaf = (float)sigma;
+    
+    /// <summary>Float cast of friction for use with Unity Vector3.</summary>
     public static float frictionf = (float)friction;
 
-    //make a list of objects that aren't 
+    /// <summary>
+    /// Finds and stores all Rigidbody objects in the scene.
+    /// </summary>
+    /// <returns>Array of all Rigidbody components found.</returns>
     UnityEngine.Rigidbody[] CountObjects()
     {
         //print("checking... ");
@@ -48,6 +84,14 @@ public class Langevin : MonoBehaviour {
     }
 
     
+    /// <summary>
+    /// Calculates the Langevin force for a single Rigidbody.
+    /// Combines stochastic thermal noise with velocity-dependent friction.
+    /// </summary>
+    /// <param name="arg1">The Rigidbody to calculate forces for.</param>
+    /// <param name="arg2">Sigma - standard deviation of stochastic force.</param>
+    /// <param name="arg3">Friction coefficient.</param>
+    /// <returns>The combined Langevin force vector to apply.</returns>
     Vector3 langevin_tr(Rigidbody arg1,float arg2,float arg3)
         {
             Vector3 argvb = arg1.linearVelocity;
@@ -87,6 +131,9 @@ public class Langevin : MonoBehaviour {
 	arg1.addForce((argfx,argfy,argfz))
     */
 
+    /// <summary>
+    /// Displays temperature, sigma, and friction values on screen.
+    /// </summary>
     void OnGUI()
     {
         GUI.Label(new Rect(0, 0, 1000, 100), "temp " + temp.ToString());
@@ -94,6 +141,10 @@ public class Langevin : MonoBehaviour {
         GUI.Label(new Rect(0, 20, 1000, 100), "friction " + frictionf.ToString("E3"));
     }
 
+    /// <summary>
+    /// Applies Langevin forces to all Rigidbodies except those under "char_shadow".
+    /// Called every frame to maintain thermal equilibrium.
+    /// </summary>
     void RndF()
     {
         //Debug.Log(GOS.Length+" HAHA");
@@ -118,18 +169,26 @@ public class Langevin : MonoBehaviour {
     }
 
 
-    // Use this for initialization
+    /// <summary>
+    /// Initializes the simulation by finding all Rigidbodies.
+    /// </summary>
     void Awake()
     {
         CountObjects();
     }
 
+    /// <summary>
+    /// Called on the frame when the script is enabled (currently unused).
+    /// </summary>
 	void Start ()
     {
         
 	}
 	
-	// Update is called once per frame
+    /// <summary>
+    /// Called every frame. Handles keyboard input for simulation control
+    /// and applies Langevin forces to all objects.
+    /// </summary>
 	void Update ()
     {
         //if (Input.GetMouseButtonDown(1))

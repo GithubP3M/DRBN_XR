@@ -2,36 +2,76 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Generalized IMPALA (Implicit Membrane Potential for Lipid Assembly) simulation.
+/// Applies position-dependent forces to simulate membrane insertion with arbitrary membrane orientation.
+/// </summary>
+/// <remarks>
+/// Unlike the base impala class, this version uses the GameObject's forward vector to define
+/// the membrane normal, allowing for non-horizontal membrane planes.
+/// Objects on layer 11 receive membrane-specific viscosity and hydrophobic forces.
+/// Child transforms tagged "hydrophobic" receive additional insertion forces.
+/// </remarks>
 public class ImpalaGeneralized : MonoBehaviour {
 
 	//public GameObject[] gotag;
 
+	/// <summary>Exponential decay constant for the membrane potential.</summary>
 	float a=1.99f;
+	
+	/// <summary>Current z-position (y in Unity) of the colliding object.</summary>
 	float z;
-	float z_0=1.575f; //nm
+	
+	/// <summary>Reference z-position for the membrane center in nm.</summary>
+	float z_0=1.575f;
+	
+	/// <summary>Calculated membrane insertion coefficient.</summary>
 	float C_z;
+	
+	/// <summary>Secondary membrane coefficient (unused).</summary>
 	float C_zb;
+	
+	/// <summary>Direction modifier based on which side of membrane the object is on.</summary>
 	float modifier;
+	
+	/// <summary>Y-position used as reference for the membrane plane.</summary>
 	float Trigger_z;
 
+	/// <summary>Rigidbody of the currently colliding object.</summary>
 	Rigidbody rb;
+	
+	/// <summary>Linear velocity of the colliding Rigidbody.</summary>
 	Vector3 rbv;
+	
+	/// <summary>Angular velocity of the colliding Rigidbody.</summary>
 	Vector3 rbav;
+	
+	/// <summary>Position of hydrophobic child transforms.</summary>
 	Vector3 phobicpos;
+	
+	/// <summary>Array of child transforms to check for hydrophobic tags.</summary>
 	Transform[] gotag;
 
-	// Use this for initialization
+	/// <summary>
+	/// Called when the script instance is being loaded (currently unused).
+	/// </summary>
 	void Start () {
 		
 
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+	/// Update is called once per frame (currently unused).
+	/// </summary>
 	void Update () {
 
 
 	}
 
+	/// <summary>
+	/// Determines the force direction modifier based on which side of the membrane the object is on.
+	/// </summary>
+	/// <returns>-1 if below membrane plane, +1 if above.</returns>
 	float switchmod(){
         //Debug.Log("switch " + Trigger_z + " " + this.name);
 
@@ -48,6 +88,9 @@ public class ImpalaGeneralized : MonoBehaviour {
         return modifier;
 	}
 
+	/// <summary>
+	/// Draws a yellow sphere gizmo at the membrane trigger position in the editor.
+	/// </summary>
     private void OnDrawGizmos()
     {
 		Gizmos.color = Color.yellow;
@@ -55,6 +98,13 @@ public class ImpalaGeneralized : MonoBehaviour {
 	}
     
 
+	/// <summary>
+	/// Calculates the membrane insertion coefficient based on z-position.
+	/// Uses an exponential profile to model the hydrophobic core region.
+	/// </summary>
+	/// <param name="z">The z-position (y in Unity) to evaluate.</param>
+	/// <param name="modifier">Direction modifier from switchmod().</param>
+	/// <returns>The calculated insertion force coefficient.</returns>
 	float CalcCz(float z,float modifier){
 		if (Mathf.Abs(z) > 1.35f+Trigger_z && Mathf.Abs(z) < 1.8f+Trigger_z) {
 			C_z = 0.5f - 11f + Mathf.Exp (a * (z - z_0));
@@ -72,7 +122,13 @@ public class ImpalaGeneralized : MonoBehaviour {
 
     
 
-	//bool triggered = false; 
+	//bool triggered = false;
+	/// <summary>
+	/// Called every frame while a collider stays in the membrane trigger.
+	/// Applies viscosity damping and membrane insertion forces using the GameObject's forward vector
+	/// as the membrane normal direction. Objects on layer 11 receive hydrophobic forces.
+	/// </summary>
+	/// <param name="collider">The collider that is inside the membrane trigger.</param>
     void OnTriggerStay (Collider collider) {
 		//triggered = true;
 		z = collider.gameObject.transform.position.y;
