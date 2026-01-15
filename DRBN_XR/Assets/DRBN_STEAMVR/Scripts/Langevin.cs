@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 //using System.Collections;
 using System;
 using System.Linq;
@@ -34,7 +34,7 @@ public class Langevin : MonoBehaviour {
     UnityEngine.Rigidbody[] CountObjects()
     {
         //print("checking... ");
-        GOS = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
+        GOS = FindObjectsByType<Rigidbody>(FindObjectsSortMode.InstanceID);
         //Rigidbody[] GOS = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
         /*
         foreach (Rigidbody GO in GOS)
