@@ -16,6 +16,7 @@
     "com.unity.timeline": "1.8.9",
     "com.unity.toolchain.win-x86_64-linux-x86_64": "2.0.10",
     "com.unity.ugui": "2.0.0",
+    "com.unity.xr.arcore": "6.0.6",
     "com.unity.xr.hands": "1.7.1",
     "com.unity.xr.interaction.toolkit": "3.0.10",
     "com.unity.xr.management": "4.5.4",
