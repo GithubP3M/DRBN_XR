@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "PlayerControls",
     "maps": [
         {
@@ -9,9 +10,10 @@
                     "name": "Menu",
                     "type": "Button",
                     "id": "9b8d1972-9c66-4f70-bcdd-1229e29b6ad5",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -41,6 +43,17 @@
                     "name": "",
                     "id": "971be96e-1dcc-4e61-9500-d8042ea168bb",
                     "path": "<XRController>{LeftHand}/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "809c51e6-0c26-4c1f-8194-453bcf58d941",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
