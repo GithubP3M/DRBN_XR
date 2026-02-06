@@ -49,16 +49,26 @@ public class JSLangevin_v3 : MonoBehaviour {
         return (GOS,GOmol);
     }
     /// <summary>
+    /// Generates a random number from a standard normal distribution using Box-Muller transform.
+    /// </summary>
+    /// <returns>A random value from N(0,1).</returns>
+    float RandomGaussian()
+    {
+        float u1 = 1.0f - UnityEngine.Random.value;
+        float u2 = 1.0f - UnityEngine.Random.value;
+        return Mathf.Sqrt(-2.0f * Mathf.Log(u1)) * Mathf.Sin(2.0f * Mathf.PI * u2);
+    }
+
+    /// <summary>
     /// Applies a single Langevin integration step to a Rigidbody.
     /// Adds stochastic and friction forces according to the Langevin equation.
     /// </summary>
     /// <param name="domain">The Rigidbody to integrate.</param>
     void integrate(Rigidbody domain)
     {
-        MathNet.Numerics.Distributions.Normal normalDist = new MathNet.Numerics.Distributions.Normal(0,1);
         float coll_constant = friction/domain.mass;
         float sigma = (float)Math.Sqrt(2*kB*temp*coll_constant/domain.mass);
-        Vector3 randomVector = new Vector3((float)normalDist.Sample(),(float)normalDist.Sample(),(float)normalDist.Sample());
+        Vector3 randomVector = new Vector3(RandomGaussian(), RandomGaussian(), RandomGaussian());
         domain.AddForce((float)Math.Sqrt(dt)*sigma*randomVector-dt*coll_constant*domain.linearVelocity,ForceMode.VelocityChange);
     }
     
@@ -110,9 +120,8 @@ public class JSLangevin_v3 : MonoBehaviour {
         CountObjects();
         foreach (Rigidbody GO in GOS)
         {
-          var std = Math.Sqrt(kB*temp/GO.mass);
-          MathNet.Numerics.Distributions.Normal normalDist = new MathNet.Numerics.Distributions.Normal(0,std);
-          Vector3 newVelocity = new Vector3((float)normalDist.Sample(),(float)normalDist.Sample(),(float)normalDist.Sample());
+          float std = (float)Math.Sqrt(kB*temp/GO.mass);
+          Vector3 newVelocity = new Vector3(RandomGaussian()*std, RandomGaussian()*std, RandomGaussian()*std);
           GO.AddForce(newVelocity,ForceMode.VelocityChange);
         }
     }
