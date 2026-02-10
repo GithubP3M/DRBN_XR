@@ -15,6 +15,8 @@ public class impala : MonoBehaviour {
 
 	//public GameObject[] gotag;
 
+	public float viscosity = 0.5f;
+
 	/// <summary>Exponential decay constant for the membrane potential.</summary>
 	float a=1.99f;
 	
@@ -51,6 +53,18 @@ public class impala : MonoBehaviour {
 	/// <summary>Array of child transforms to check for hydrophobic tags.</summary>
 	Transform[] gotag;
 
+	[Header("Membrane damping")]
+	public float membraneLinearDamping = 5.0f;
+	public float membraneAngularDamping = 5.0f;
+
+	struct DampingState
+	{
+		public float linear;
+		public float angular;
+	}
+
+	readonly Dictionary<Rigidbody, DampingState> originalDamping = new Dictionary<Rigidbody, DampingState>();
+
 	/// <summary>
 	/// Initializes the membrane trigger position.
 	/// </summary>
@@ -63,6 +77,41 @@ public class impala : MonoBehaviour {
 	/// </summary>
 	void Update () {
 		
+	}
+
+	void OnTriggerEnter(Collider collider)
+	{
+		if (!collider) return;
+		if (collider.gameObject.tag != "helix") return;
+
+		Rigidbody enteredRb = collider.GetComponent<Rigidbody>();
+		if (!enteredRb) return;
+
+		if (!originalDamping.ContainsKey(enteredRb))
+		{
+			originalDamping[enteredRb] = new DampingState
+			{
+				linear = enteredRb.linearDamping,
+				angular = enteredRb.angularDamping
+			};
+		}
+
+		enteredRb.linearDamping = membraneLinearDamping;
+		enteredRb.angularDamping = membraneAngularDamping;
+	}
+
+	void OnTriggerExit(Collider collider)
+	{
+		if (!collider) return;
+		Rigidbody exitedRb = collider.GetComponent<Rigidbody>();
+		if (!exitedRb) return;
+
+		if (originalDamping.TryGetValue(exitedRb, out var state))
+		{
+			exitedRb.linearDamping = state.linear;
+			exitedRb.angularDamping = state.angular;
+			originalDamping.Remove(exitedRb);
+		}
 	}
 
 	/// <summary>
@@ -136,6 +185,7 @@ public class impala : MonoBehaviour {
 	void OnTriggerStay (Collider collider) {
 		z = collider.gameObject.transform.position.y;
 		rb = collider.GetComponent<Rigidbody> ();
+		if (!rb) return;
 		gotag = collider.gameObject.transform.GetComponentsInChildren<Transform> ();
 		var m = switchmod ();
 
@@ -145,14 +195,6 @@ public class impala : MonoBehaviour {
 		if (collider.gameObject.tag=="helix"){
 		//if (collider.gameObject.layer==11){
 			//Debug.Log ("z " + z);
-
-			rbv = rb.linearVelocity;
-			rbav = rb.angularVelocity;
-
-			rb.linearVelocity = rbv * 0.5f; // membrane is more viscous 
-			rb.angularVelocity = rbav * 0.5f; // membrane is more viscous 
-
-
 
 			Vector3 Frb = (dn * CalcCz (z,m));
 			rb.AddForce (Frb);
