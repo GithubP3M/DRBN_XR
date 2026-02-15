@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "DRBN_XR.sln"
+    "dotnet.defaultSolution": "DRBN_XR.slnx"
 }
