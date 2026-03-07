@@ -3,6 +3,8 @@ using UnityEngine;
 using MarchingCubing.V2;
 using WeightPainting;
 using WeightGeneration;
+#if UNITY_EDITOR
+using UnityEditor;
 
 public class ImpalaMeshController2 : MonoBehaviour
 {
@@ -77,3 +79,4 @@ public class ImpalaMeshController2 : MonoBehaviour
             $"Assets/DRBN_STEAMVR/Resources/{meshName}.asset");
     }
 }
+#endif

@@ -1,8 +1,9 @@
 using UnityEngine;
-using UnityEditor;
 using System.Xml;
 using System.IO;
 using System.Reflection;
+#if UNITY_EDITOR
+using UnityEditor;
 /// <summary>
 /// PrefabOutlineFixer class to add outlines to the molecules in the XML
 /// It will check if the prefab already has an outline and if not, it will add one and precompute it.
@@ -85,3 +86,4 @@ public class PrecomputeOutline : MonoBehaviour
         Debug.Log("Outline precomputation completed, " + outlineGenerationCount + " prefabs updated.");
     }
 }
+#endif

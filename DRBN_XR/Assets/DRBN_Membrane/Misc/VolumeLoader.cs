@@ -1,4 +1,6 @@
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 
 public class VolumeLoader
 {
@@ -21,9 +23,9 @@ public class VolumeLoader
         var assetPath =
             path.EndsWith(".asset") ? path :
             System.IO.Path.Combine(path, $"{texture.name}.asset");
-        UnityEditor.AssetDatabase.CreateAsset(texture, assetPath);
-        UnityEditor.AssetDatabase.SaveAssets();
-        UnityEditor.AssetDatabase.Refresh();
+        AssetDatabase.CreateAsset(texture, assetPath);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
 
         Debug.Log($"RenderTexture saved to {assetPath}");
     }
@@ -38,7 +40,7 @@ public class VolumeLoader
         }
 
         // Load the mesh asset from the specified path
-        var texture = UnityEditor.AssetDatabase.LoadAssetAtPath<RenderTexture>(path);
+        var texture = AssetDatabase.LoadAssetAtPath<RenderTexture>(path);
         if (texture == null)
         {
             Debug.LogError($"No mesh found at {path}");
@@ -49,3 +51,4 @@ public class VolumeLoader
         return texture;
     }
 }
+#endif

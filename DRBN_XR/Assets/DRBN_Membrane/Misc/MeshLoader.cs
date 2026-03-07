@@ -1,4 +1,6 @@
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 
 public class MeshLoader
 {
@@ -21,9 +23,9 @@ public class MeshLoader
         var assetPath =
             path.EndsWith(".asset") ? path :
             System.IO.Path.Combine(path, $"{mesh.name}.asset");
-        UnityEditor.AssetDatabase.CreateAsset(mesh, assetPath);
-        UnityEditor.AssetDatabase.SaveAssets();
-        UnityEditor.AssetDatabase.Refresh();
+        AssetDatabase.CreateAsset(mesh, assetPath);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
 
         Debug.Log($"Mesh saved to {assetPath}");
     }
@@ -38,7 +40,7 @@ public class MeshLoader
         }
 
         // Load the mesh asset from the specified path
-        var mesh = UnityEditor.AssetDatabase.LoadAssetAtPath<Mesh>(path);
+        var mesh = AssetDatabase.LoadAssetAtPath<Mesh>(path);
         if (mesh == null)
         {
             Debug.LogError($"No mesh found at {path}");
@@ -48,4 +50,6 @@ public class MeshLoader
         Debug.Log($"Mesh loaded from {path}");
         return mesh;
     }
-};
+}
+
+#endif
