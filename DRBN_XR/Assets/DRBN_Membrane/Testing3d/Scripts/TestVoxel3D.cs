@@ -2,12 +2,7 @@ using System.Collections.Generic;
 using MarchingCubing.V2;
 using UnityEngine;
 using Voxelization;
-<<<<<<< HEAD
-
 #if UNITY_EDITOR
-
-=======
->>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35
 using UnityEditor;
 
 public class TestVoxel3D : MonoBehaviour
@@ -138,10 +133,5 @@ public class TestVoxel3DEditor : Editor
                 $"Assets/DRBN_Membrane/Testing3d/mesh.asset");
         }
     }
-<<<<<<< HEAD
 }
-
 #endif
-=======
-}
->>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35

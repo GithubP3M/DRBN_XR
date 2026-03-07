@@ -1,13 +1,8 @@
 using TMPro;
-<<<<<<< HEAD
 using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
-=======
-using UnityEditor;
-using UnityEngine;
->>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35
 
 public class NormalArrow1 : MonoBehaviour
 {
@@ -47,7 +42,4 @@ public class NormalArrow1 : MonoBehaviour
         }
     }
 }
-<<<<<<< HEAD
 #endif
-=======
->>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35

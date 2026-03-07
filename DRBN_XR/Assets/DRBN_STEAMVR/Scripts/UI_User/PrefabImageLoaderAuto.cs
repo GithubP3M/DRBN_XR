@@ -2,10 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Xml;
 using System.IO;
-<<<<<<< HEAD
 #if UNITY_EDITOR
-=======
->>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35
 using UnityEditor;
 
 /// <summary>
@@ -168,7 +165,4 @@ public class PrefabImageLoaderAuto : MonoBehaviour
         return bounds;
     }
 }
-<<<<<<< HEAD
 #endif
-=======
->>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35
