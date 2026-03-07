@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+using UnityEditor.EditorTools;
+>>>>>>> ddcde55e08fbd0616c86f97205f00e80ee169f35
 using UnityEngine;
 
 /// <summary>
