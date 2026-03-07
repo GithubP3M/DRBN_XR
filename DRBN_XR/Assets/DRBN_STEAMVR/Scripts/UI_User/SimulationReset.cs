@@ -14,7 +14,7 @@ public class SimulationReset : MonoBehaviour
     public GameObject settings;
     private Interface_Size interfaceSize;   //conserved his value even if reset executed
 
-    void Awake()
+    /*void Awake()
     {
         interfaceSize = slider.GetComponent<Interface_Size>();
 
@@ -37,16 +37,16 @@ public class SimulationReset : MonoBehaviour
         {
             settings.SetActive(false);
         }
-    }
+    }*/
 
     public void ResetSimulation()
     {
         // Save actual value
-        float currentSliderValue = slider.value;
+        /*float currentSliderValue = slider.value;
         PlayerPrefs.SetFloat("SliderValue", currentSliderValue);
 
         // Prevent scale update
-        interfaceSize.shouldUpdateScale = false;
+        interfaceSize.shouldUpdateScale = false;*/
 
         // Reload the scene
         Scene currentScene = SceneManager.GetActiveScene();
