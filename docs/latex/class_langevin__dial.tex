@@ -1,0 +1,101 @@
+\doxysection{Langevin\+\_\+dial Class Reference}
+\hypertarget{class_langevin__dial}{}\label{class_langevin__dial}\index{Langevin\_dial@{Langevin\_dial}}
+Inheritance diagram for Langevin\+\_\+dial:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_langevin__dial}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin__dial_aafc38d0cf842154feeecfba3319d8008}\label{class_langevin__dial_aafc38d0cf842154feeecfba3319d8008} 
+List$<$ Rigidbody $>$ {\bfseries Count\+Objects} ()
+\item 
+\Hypertarget{class_langevin__dial_aed0440e2c0f9a4a398bc8d8ebead5b0f}\label{class_langevin__dial_aed0440e2c0f9a4a398bc8d8ebead5b0f} 
+void {\bfseries Count\+MOFOS} ()
+\item 
+\Hypertarget{class_langevin__dial_a0c059d1a521c45243eed0ff5bb878afd}\label{class_langevin__dial_a0c059d1a521c45243eed0ff5bb878afd} 
+Vector3 {\bfseries langevin\+\_\+tr} (Rigidbody arg1, float arg2, float arg3)
+\item 
+\Hypertarget{class_langevin__dial_aec22b2505ea5c18120d2cbe810718a1b}\label{class_langevin__dial_aec22b2505ea5c18120d2cbe810718a1b} 
+void {\bfseries On\+GUI} ()
+\item 
+\Hypertarget{class_langevin__dial_ab2be67bb31d177e076d212fe65359915}\label{class_langevin__dial_ab2be67bb31d177e076d212fe65359915} 
+void {\bfseries RndF} ()
+\item 
+\Hypertarget{class_langevin__dial_ad130d33542a0640f647de32afc65715f}\label{class_langevin__dial_ad130d33542a0640f647de32afc65715f} 
+void {\bfseries Awake} ()
+\item 
+\Hypertarget{class_langevin__dial_acc4b82d08d79b8a6f5d7d86049d73cd9}\label{class_langevin__dial_acc4b82d08d79b8a6f5d7d86049d73cd9} 
+void {\bfseries Start} ()
+\item 
+\Hypertarget{class_langevin__dial_ab0b9ab1a50551df0eaffa868965f7f4e}\label{class_langevin__dial_ab0b9ab1a50551df0eaffa868965f7f4e} 
+void {\bfseries Update} ()
+\item 
+\Hypertarget{class_langevin__dial_ab80f659a6d5864f40201d4e82f226b1a}\label{class_langevin__dial_ab80f659a6d5864f40201d4e82f226b1a} 
+void {\bfseries Refresh} (Input\+Action.\+Callback\+Context context)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin__dial_a4c6e343733acd89da31f495133180514}\label{class_langevin__dial_a4c6e343733acd89da31f495133180514} 
+List$<$ Rigidbody $>$ {\bfseries RBS}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin__dial_a7b3aba6b9f48378288b54c33c31e9828}\label{class_langevin__dial_a7b3aba6b9f48378288b54c33c31e9828} 
+static float {\bfseries thrust} = 100
+\item 
+\Hypertarget{class_langevin__dial_afd2cab824f60b6595251376caeaf8afa}\label{class_langevin__dial_afd2cab824f60b6595251376caeaf8afa} 
+static double {\bfseries temp} = 000.\+0f
+\item 
+static double \doxymbox{\hyperlink{class_langevin__dial_a510b786ce6c5b9085221d49be1b9674b}{Temp}}
+\item 
+\Hypertarget{class_langevin__dial_a10621d84a91223a413e3341b80e0027a}\label{class_langevin__dial_a10621d84a91223a413e3341b80e0027a} 
+static double {\bfseries viscosity} = 6.\+6e-\/3
+\item 
+\Hypertarget{class_langevin__dial_a9596d6d72fea39c1200d2c60baf62515}\label{class_langevin__dial_a9596d6d72fea39c1200d2c60baf62515} 
+static double {\bfseries Ma} = (13e6f \texorpdfstring{$\ast$}{*} 1.\+7f \texorpdfstring{$\ast$}{*} Math.\+Pow(10.\+0f, -\/1f)) /\+ 2.\+0f
+\item 
+\Hypertarget{class_langevin__dial_af7aae3a80fc27e971e6e035216673dcb}\label{class_langevin__dial_af7aae3a80fc27e971e6e035216673dcb} 
+static double {\bfseries friction} = 6f \texorpdfstring{$\ast$}{*} Math.\+PI \texorpdfstring{$\ast$}{*} viscosity \texorpdfstring{$\ast$}{*} 20f \texorpdfstring{$\ast$}{*} Math.\+Pow(10f, -\/9f)
+\item 
+\Hypertarget{class_langevin__dial_ab03d2810269fbb2b31f1680312323967}\label{class_langevin__dial_ab03d2810269fbb2b31f1680312323967} 
+static double {\bfseries dt} = Ma /\+ friction
+\item 
+\Hypertarget{class_langevin__dial_a5291839fff8bfed11ed23168804033f2}\label{class_langevin__dial_a5291839fff8bfed11ed23168804033f2} 
+static float {\bfseries frictionf} = (float)friction
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_langevin__dial_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_langevin__dial_a510b786ce6c5b9085221d49be1b9674b}\index{Langevin\_dial@{Langevin\_dial}!Temp@{Temp}}
+\index{Temp@{Temp}!Langevin\_dial@{Langevin\_dial}}
+\doxysubsubsection{\texorpdfstring{Temp}{Temp}}
+{\footnotesize\ttfamily \label{class_langevin__dial_a510b786ce6c5b9085221d49be1b9674b} 
+double Langevin\+\_\+dial::\+\+Temp\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ get}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ temp;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ set}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ value;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ kB\ =\ 1.38f\ *\ Math.Pow(10.0f,\ 23.0f)}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+Langevin\+\_\+dial.\+cs\end{DoxyCompactItemize}

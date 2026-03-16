@@ -1,0 +1,65 @@
+\doxysection{Mol\+Spawn\+\_\+dial Class Reference}
+\hypertarget{class_mol_spawn__dial}{}\label{class_mol_spawn__dial}\index{MolSpawn\_dial@{MolSpawn\_dial}}
+
+
+Manages molecule spawning through UI dial interactions.  
+
+
+Inheritance diagram for Mol\+Spawn\+\_\+dial:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mol_spawn__dial}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_mol_spawn__dial_a1af9880e7427b5a46e0b4190e65e37c3}{Spawn\+Molecule}} ()
+\begin{DoxyCompactList}\small\item\em Spawns a new molecule instance at the spawn point location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mol_spawn__dial_a34b9aab6833ffa64732f0dbe60a90bda}\label{class_mol_spawn__dial_a34b9aab6833ffa64732f0dbe60a90bda} 
+Vector3 {\bfseries max\+Scale}
+\begin{DoxyCompactList}\small\item\em The target scale for spawned molecules. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn__dial_a41546d3c6e4a601cee06526a49587c2b}\label{class_mol_spawn__dial_a41546d3c6e4a601cee06526a49587c2b} 
+float {\bfseries speed} = 2f
+\begin{DoxyCompactList}\small\item\em Speed multiplier for scaling operations. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn__dial_afb6358edbf7cdb6ff1da67e28fa09598}\label{class_mol_spawn__dial_afb6358edbf7cdb6ff1da67e28fa09598} 
+float {\bfseries duration} = 5f
+\begin{DoxyCompactList}\small\item\em Duration in seconds for scaling transitions. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn__dial_a0b0d1adf83976112344243f274d32962}\label{class_mol_spawn__dial_a0b0d1adf83976112344243f274d32962} 
+Transform {\bfseries prefab}
+\begin{DoxyCompactList}\small\item\em The molecule prefab to instantiate when spawning. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_spawn__dial_a9e6095cc1668ef3d7b79992a6e126a37}\label{class_mol_spawn__dial_a9e6095cc1668ef3d7b79992a6e126a37} 
+Game\+Object {\bfseries spawnpoint}
+\begin{DoxyCompactList}\small\item\em The Game\+Object defining the spawn location and rotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages molecule spawning through UI dial interactions. 
+
+Spawns molecule prefabs at a designated spawn point, tracks molecule counts, and registers spawned objects with the \doxylink{class_langevin}{Langevin} physics simulation. 
+
+\label{doc-func-members}
+\Hypertarget{class_mol_spawn__dial_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mol_spawn__dial_a1af9880e7427b5a46e0b4190e65e37c3}\index{MolSpawn\_dial@{MolSpawn\_dial}!SpawnMolecule@{SpawnMolecule}}
+\index{SpawnMolecule@{SpawnMolecule}!MolSpawn\_dial@{MolSpawn\_dial}}
+\doxysubsubsection{\texorpdfstring{SpawnMolecule()}{SpawnMolecule()}}
+{\footnotesize\ttfamily \label{class_mol_spawn__dial_a1af9880e7427b5a46e0b4190e65e37c3} 
+void Mol\+Spawn\+\_\+dial::\+\+Spawn\+Molecule (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawns a new molecule instance at the spawn point location. 
+
+Only spawns if the current molecule count is below the limit defined in molcounter.
+
+Registers the spawned molecule\textquotesingle{}s Rigidbodies with the \doxylink{class_langevin__dial}{Langevin\+\_\+dial} physics simulation.
+
+Assigns a unique name to each spawned molecule based on the counter.
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+\doxymbox{\hyperlink{_mol_spawn__dial_8cs}{Mol\+Spawn\+\_\+dial.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\doxysection{Mol\+Scale Class Reference}
+\hypertarget{class_mol_scale}{}\label{class_mol_scale}\index{MolScale@{MolScale}}
+
+
+Manages smooth scaling transitions for molecular Game\+Objects.  
+
+
+Inheritance diagram for Mol\+Scale:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mol_scale}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \doxymbox{\hyperlink{class_mol_scale_a3cf1f7190c93ba2a4035f1332b33b7d5}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initializes scaling parameters and starts the scale coroutine. \end{DoxyCompactList}\item 
+IEnumerator \doxymbox{\hyperlink{class_mol_scale_a34a891e32cd5b37f59bb9947b0a44e5f}{Scale\+Lerp}} (Vector3 a, Vector3 b, float time)
+\begin{DoxyCompactList}\small\item\em Smoothly interpolates the object\textquotesingle{}s scale between two values over time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mol_scale_ae5bc2fb077e4d385cbf30f218e84124a}\label{class_mol_scale_ae5bc2fb077e4d385cbf30f218e84124a} 
+Vector3 {\bfseries max\+Scale}
+\begin{DoxyCompactList}\small\item\em The target scale to reach after scaling completes. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_scale_ad7bc4de1ace87ecde2b82af5e85e841b}\label{class_mol_scale_ad7bc4de1ace87ecde2b82af5e85e841b} 
+float {\bfseries speed} = 2f
+\begin{DoxyCompactList}\small\item\em Speed multiplier for the scaling operation. \end{DoxyCompactList}\item 
+\Hypertarget{class_mol_scale_a4e6c8a1345c3990ec892eb7b273702cb}\label{class_mol_scale_a4e6c8a1345c3990ec892eb7b273702cb} 
+float {\bfseries duration} = 50f
+\begin{DoxyCompactList}\small\item\em Duration in seconds for the scaling operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages smooth scaling transitions for molecular Game\+Objects. 
+
+Uses coroutines to lerp between scale values over time. Works in conjunction with hankpym scripts to maintain joint integrity during scaling. 
+
+\label{doc-func-members}
+\Hypertarget{class_mol_scale_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mol_scale_a34a891e32cd5b37f59bb9947b0a44e5f}\index{MolScale@{MolScale}!ScaleLerp@{ScaleLerp}}
+\index{ScaleLerp@{ScaleLerp}!MolScale@{MolScale}}
+\doxysubsubsection{\texorpdfstring{ScaleLerp()}{ScaleLerp()}}
+{\footnotesize\ttfamily \label{class_mol_scale_a34a891e32cd5b37f59bb9947b0a44e5f} 
+IEnumerator Mol\+Scale::\+\+Scale\+Lerp (\begin{DoxyParamCaption}\item[{Vector3}]{a}{, }\item[{Vector3}]{b}{, }\item[{float}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Smoothly interpolates the object\textquotesingle{}s scale between two values over time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The starting scale vector.\\
+\hline
+{\em b} & The target scale vector.\\
+\hline
+{\em time} & Duration of the scaling transition in seconds.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+IEnumerator for coroutine execution.
+\end{DoxyReturn}
+\Hypertarget{class_mol_scale_a3cf1f7190c93ba2a4035f1332b33b7d5}\index{MolScale@{MolScale}!Start@{Start}}
+\index{Start@{Start}!MolScale@{MolScale}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_mol_scale_a3cf1f7190c93ba2a4035f1332b33b7d5} 
+IEnumerator Mol\+Scale::\+\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes scaling parameters and starts the scale coroutine. 
+
+\begin{DoxyReturn}{Returns}
+IEnumerator for coroutine execution.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+\doxymbox{\hyperlink{_mol_scale_8cs}{Mol\+Scale.\+cs}}\end{DoxyCompactItemize}

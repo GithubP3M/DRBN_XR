@@ -1,0 +1,88 @@
+\doxysection{Langevin\+\_\+v2 Class Reference}
+\hypertarget{class_langevin__v2}{}\label{class_langevin__v2}\index{Langevin\_v2@{Langevin\_v2}}
+Inheritance diagram for Langevin\+\_\+v2:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_langevin__v2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin__v2_a903fe98f3c3770322f6f51f23b573656}\label{class_langevin__v2_a903fe98f3c3770322f6f51f23b573656} 
+List$<$ Game\+Object $>$ {\bfseries Count\+Objects} ()
+\item 
+\Hypertarget{class_langevin__v2_a932885efb7a2a2adaa4981084325f384}\label{class_langevin__v2_a932885efb7a2a2adaa4981084325f384} 
+Vector3 {\bfseries langevin\+\_\+tr} (Rigidbody arg1, float arg2, float arg3)
+\item 
+\Hypertarget{class_langevin__v2_a69f4ecc82f470a2a20b6d61716fee2ae}\label{class_langevin__v2_a69f4ecc82f470a2a20b6d61716fee2ae} 
+void {\bfseries On\+GUI} ()
+\item 
+\Hypertarget{class_langevin__v2_a5ffd73421ff8e4e14a474fccb936d822}\label{class_langevin__v2_a5ffd73421ff8e4e14a474fccb936d822} 
+void {\bfseries RndF} ()
+\item 
+\Hypertarget{class_langevin__v2_a5243fae7809f8227f621a6244c73bd57}\label{class_langevin__v2_a5243fae7809f8227f621a6244c73bd57} 
+void {\bfseries Awake} ()
+\item 
+\Hypertarget{class_langevin__v2_a3b344392f5708cabf419eb736121c384}\label{class_langevin__v2_a3b344392f5708cabf419eb736121c384} 
+void {\bfseries Start} ()
+\item 
+\Hypertarget{class_langevin__v2_a722aea36de4ce41954fd2cf9b6592180}\label{class_langevin__v2_a722aea36de4ce41954fd2cf9b6592180} 
+void {\bfseries Update} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin__v2_a1f4edc89bd174f5d72cd947a4cd65205}\label{class_langevin__v2_a1f4edc89bd174f5d72cd947a4cd65205} 
+List$<$ Rigidbody $>$ {\bfseries GOS}
+\item 
+\Hypertarget{class_langevin__v2_aacebdf6406d2cb320faf51a710077e03}\label{class_langevin__v2_aacebdf6406d2cb320faf51a710077e03} 
+Game\+Object\+[$\,$]\+ {\bfseries GOmol}
+\item 
+\Hypertarget{class_langevin__v2_aa3dcec1e3da9d78c9c724f08dfa41999}\label{class_langevin__v2_aa3dcec1e3da9d78c9c724f08dfa41999} 
+List$<$ Game\+Object $>$ {\bfseries GOmolist}
+\item 
+\Hypertarget{class_langevin__v2_a22307786df8d01c502fb810a8eae8dbd}\label{class_langevin__v2_a22307786df8d01c502fb810a8eae8dbd} 
+{\bfseries List$<$ Rigidbody $>$}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_langevin__v2_a1ab4cf324ae6fae1dd401c815c5c79e2}\label{class_langevin__v2_a1ab4cf324ae6fae1dd401c815c5c79e2} 
+static float {\bfseries thrust} = 100
+\item 
+\Hypertarget{class_langevin__v2_a7e591016a9921f501e9abeeb40c81d61}\label{class_langevin__v2_a7e591016a9921f501e9abeeb40c81d61} 
+static double {\bfseries temp} = 300.\+0f
+\item 
+\Hypertarget{class_langevin__v2_adbdd3839b93388a4787910a7346e8043}\label{class_langevin__v2_adbdd3839b93388a4787910a7346e8043} 
+static double {\bfseries kB} = 1.\+38f \texorpdfstring{$\ast$}{*} Math.\+Pow(10.\+0f, 23.\+0f)
+\item 
+\Hypertarget{class_langevin__v2_aea3437ccd79894efc5c97ea18a66b622}\label{class_langevin__v2_aea3437ccd79894efc5c97ea18a66b622} 
+static double {\bfseries viscosity} = 6.\+6e-\/3
+\item 
+\Hypertarget{class_langevin__v2_a957b5b6437898d667b00b391c518c623}\label{class_langevin__v2_a957b5b6437898d667b00b391c518c623} 
+static double {\bfseries Ma} = (13e6f \texorpdfstring{$\ast$}{*} 1.\+7f \texorpdfstring{$\ast$}{*} Math.\+Pow(10.\+0f, -\/1f)) /\+ 2.\+0f
+\item 
+\Hypertarget{class_langevin__v2_a2d002e87f65dfe7c47f84f9ffca78309}\label{class_langevin__v2_a2d002e87f65dfe7c47f84f9ffca78309} 
+static double {\bfseries friction} = 6f \texorpdfstring{$\ast$}{*} Math.\+PI \texorpdfstring{$\ast$}{*} viscosity \texorpdfstring{$\ast$}{*} 20f \texorpdfstring{$\ast$}{*} Math.\+Pow(10f, -\/9f)
+\item 
+\Hypertarget{class_langevin__v2_a98ec8bfb4749f5e5e41cb57271901265}\label{class_langevin__v2_a98ec8bfb4749f5e5e41cb57271901265} 
+static double {\bfseries dt} = Ma /\+ friction
+\item 
+\Hypertarget{class_langevin__v2_aece0fb4211b86d63f6df2a53d84844c9}\label{class_langevin__v2_aece0fb4211b86d63f6df2a53d84844c9} 
+static double {\bfseries sigma} = Math.\+Sqrt(6.\+0f \texorpdfstring{$\ast$}{*} friction \texorpdfstring{$\ast$}{*} kB \texorpdfstring{$\ast$}{*} temp /\+ dt)
+\item 
+\Hypertarget{class_langevin__v2_a040a74737eda062f40afed626fa76280}\label{class_langevin__v2_a040a74737eda062f40afed626fa76280} 
+static float {\bfseries sigmaf} = (float)sigma
+\item 
+\Hypertarget{class_langevin__v2_af887b242722753f94d424e997fb80025}\label{class_langevin__v2_af887b242722753f94d424e997fb80025} 
+static float {\bfseries frictionf} = (float)friction
+\item 
+\Hypertarget{class_langevin__v2_a868396143d97a9f16c11f3a35050a744}\label{class_langevin__v2_a868396143d97a9f16c11f3a35050a744} 
+static float {\bfseries max\+Speed} = 0.\+01f
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+Langevin\+\_\+v2.\+cs\end{DoxyCompactItemize}

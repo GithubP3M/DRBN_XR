@@ -1,0 +1,14 @@
+/**
+ * @mainpage DRBN_XR Documentation
+ *
+ * Welcome to the DRBN_XR API documentation.
+ *
+ * Here you can find:
+ * - An overview of the DRBN_XR architecture.
+ * - Descriptions of the main systems and their responsibilities.
+ * - Guidance on how to get started integrating DRBN_XR into your project.
+ *
+ * Use the navigation panel on the left to explore namespaces, classes,
+ * and scripts that make up the DRBN_XR codebase.
+ */
+

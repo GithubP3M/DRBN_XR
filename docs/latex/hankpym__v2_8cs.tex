@@ -1,0 +1,20 @@
+\doxysection{DRBN\+\_\+\+XR/\+\+Assets/\+\+DRBN\+\_\+\+STEAMVR/\+\+Scripts/\+hankpym\+\_\+v2.cs File Reference}
+\hypertarget{hankpym__v2_8cs}{}\label{hankpym__v2_8cs}\index{DRBN\_XR/Assets/DRBN\_STEAMVR/Scripts/hankpym\_v2.cs@{DRBN\_XR/Assets/DRBN\_STEAMVR/Scripts/hankpym\_v2.cs}}
+
+
+Improved joint anchor management during object scaling (version 2).  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classhankpym__v2}{hankpym\+\_\+v2}}
+\begin{DoxyCompactList}\small\item\em Maintains joint anchor positions for child objects during scaling operations (v2). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Improved joint anchor management during object scaling (version 2). 
+
+This script preserves joint anchor configurations for child objects while the parent object scales. Handles multiple joints per child object. The physics system calculates anchors at start but doesn\textquotesingle{}t update them during scaling, causing models to fall apart. This script saves and reapplies anchor positions each frame. \begin{DoxyWarning}{Warning}
+Don\textquotesingle{}t forget to disable Auto Configure Connected Anchor! 
+\end{DoxyWarning}

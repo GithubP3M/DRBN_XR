@@ -1,0 +1,88 @@
+﻿#pragma kernel MarchingCubes
+
+#include "MarchingTable.hlsl"
+
+struct Triangle {
+    float3 a, b, c;
+};
+
+Texture3D<float> _Input;
+SamplerState sampler_Input;
+
+AppendStructuredBuffer<Triangle> _Triangles;
+
+uint _Resolution;
+float _Threshold;
+
+float3 _Min;
+float3 _Max;
+
+float3 interp(
+    float3 p1, float v1, 
+    float3 p2, float v2)
+{
+    float t = (_Threshold - v1) / (v2 - v1);
+    return p1 + t * (p2 - p1);
+}
+
+float3 remap(
+    float3 value, float3 fromMin, float3 fromMax,
+    float3 toMin, float3 toMax)
+{
+    return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
+}
+
+static const float3 cornerOffsets[8] = {
+    float3(0,0,0), float3(1,0,0), float3(1,0,1), float3(0,0,1),
+    float3(0,1,0), float3(1,1,0), float3(1,1,1), float3(0,1,1)
+};
+
+[numthreads(8,8,8)]
+void MarchingCubes (uint3 id : SV_DispatchThreadID)
+{
+    if (
+        id.x <= 0 || id.x >= _Resolution - 1 ||
+        id.y <= 0 || id.y >= _Resolution - 1 ||
+        id.z <= 0 || id.z >= _Resolution - 1
+    ) return;
+
+    float3 cornerMeshPositions[8];
+    float3 cornerPositions[8];
+    float cornerValues[8];
+    for (int i = 0; i < 8; i++) {
+        float3 texCoord = (float3(id) + cornerOffsets[i]) / float(_Resolution);
+        cornerPositions[i] = texCoord;
+        cornerMeshPositions[i] = (float3(id) + cornerOffsets[i] - 1) / float(_Resolution - 2);
+        cornerValues[i] = _Input.SampleLevel(sampler_Input, cornerPositions[i], 0).r;
+    }
+
+    int cubeIndex = 0;
+    if (cornerValues[0] < _Threshold) cubeIndex |= 1;
+    if (cornerValues[1] < _Threshold) cubeIndex |= 2;
+    if (cornerValues[2] < _Threshold) cubeIndex |= 4;
+    if (cornerValues[3] < _Threshold) cubeIndex |= 8;
+    if (cornerValues[4] < _Threshold) cubeIndex |= 16;
+    if (cornerValues[5] < _Threshold) cubeIndex |= 32;
+    if (cornerValues[6] < _Threshold) cubeIndex |= 64;
+    if (cornerValues[7] < _Threshold) cubeIndex |= 128;
+
+    for (int i = 0; triangulation[cubeIndex][i] != -1; i += 3) {
+        int e0 = triangulation[cubeIndex][i];
+        int e1 = triangulation[cubeIndex][i+1];
+        int e2 = triangulation[cubeIndex][i+2];
+
+        int a0 = cornerIndexAFromEdge[e0];
+        int b0 = cornerIndexBFromEdge[e0];
+        int a1 = cornerIndexAFromEdge[e1];
+        int b1 = cornerIndexBFromEdge[e1];
+        int a2 = cornerIndexAFromEdge[e2];
+        int b2 = cornerIndexBFromEdge[e2];
+
+        Triangle tri;
+        tri.a = remap(interp(cornerMeshPositions[a0], cornerValues[a0], cornerMeshPositions[b0], cornerValues[b0]), float3(0,0,0), float3(1,1,1), _Min, _Max);
+        tri.b = remap(interp(cornerMeshPositions[a2], cornerValues[a2], cornerMeshPositions[b2], cornerValues[b2]), float3(0,0,0), float3(1,1,1), _Min, _Max);
+        tri.c = remap(interp(cornerMeshPositions[a1], cornerValues[a1], cornerMeshPositions[b1], cornerValues[b1]), float3(0,0,0), float3(1,1,1), _Min, _Max);
+
+        _Triangles.Append(tri);
+    }
+}
