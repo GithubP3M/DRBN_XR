@@ -1,16 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class nosie : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bedb1389a03a5931f263bff2d7ee546a4af25810f0699cccf09fe412dff8719c
+size 256

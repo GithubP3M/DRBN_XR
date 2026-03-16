@@ -1,12 +1,3 @@
-{
-    "name": "Unity.XR.Management.Samples",
-    "references": [
-        "Unity.XR.Management.Editor",
-        "Unity.XR.Management"
-    ],
-    "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:87aea05bd348fc860430051ba409a1c687dff16abf8c1ddd99d7d14abfc1039c
+size 266

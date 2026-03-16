@@ -1,14 +1,3 @@
-# $Id$
-#
-#  Copyright (C) 2005   Gregory P. Smith (greg@krypto.org)
-#  Licensed to PSF under a Contributor Agreement.
-
-import warnings
-warnings.warn("the md5 module is deprecated; use hashlib instead",
-                DeprecationWarning, 2)
-
-from hashlib import md5
-new = md5
-
-blocksize = 1        # legacy value (wrong in any useful sense)
-digest_size = 16
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd05326d186bfe54f8c8f0c52fb286191cbe6fab445ab6493f8a115e32858dfc
+size 372

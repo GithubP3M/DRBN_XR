@@ -1,32 +1,3 @@
-using UnityEngine;
-using System.Collections;
-
-public class PerlinNoisePlane : MonoBehaviour {
-	public float power = 3.0f;
-	public float scale = 1.0f;
-	private Vector2 v2SampleStart = new Vector2(0f, 0f);
-
-	void Start () {
-		MakeSomeNoise ();
-	}
-
-	void Update () {
-		//if (Input.GetKeyDown (KeyCode.Space)) {
-			v2SampleStart = new Vector2(Random.Range (0.0f, 100.0f), Random.Range (0.0f, 100.0f));
-			MakeSomeNoise();
-		//}
-	}
-
-	void MakeSomeNoise() {
-		MeshFilter mf = GetComponent<MeshFilter>();
-		Vector3[] vertices = mf.mesh.vertices;
-		for (int i = 0; i < vertices.Length; i++) {    
-			float xCoord = v2SampleStart.x + vertices[i].x  * scale;
-			float yCoord = v2SampleStart.y + vertices[i].z  * scale;
-			vertices[i].y = (Mathf.PerlinNoise (xCoord, yCoord) - 0.5f) * power; 
-		}
-		mf.mesh.vertices = vertices;
-		mf.mesh.RecalculateBounds();
-		mf.mesh.RecalculateNormals();
-	}
-} 
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea2f59c3d531a85b6501ea04012659c018d7b937418fc8fd36bd9ffee70acea7
+size 918

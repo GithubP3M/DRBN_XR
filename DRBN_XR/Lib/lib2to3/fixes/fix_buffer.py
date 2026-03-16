@@ -1,22 +1,3 @@
-# Copyright 2007 Google, Inc. All Rights Reserved.
-# Licensed to PSF under a Contributor Agreement.
-
-"""Fixer that changes buffer(...) into memoryview(...)."""
-
-# Local imports
-from .. import fixer_base
-from ..fixer_util import Name
-
-
-class FixBuffer(fixer_base.BaseFix):
-    BM_compatible = True
-
-    explicit = True # The user must ask for this fixer
-
-    PATTERN = """
-              power< name='buffer' trailer< '(' [any] ')' > any* >
-              """
-
-    def transform(self, node, results):
-        name = results["name"]
-        name.replace(Name(u"memoryview", prefix=name.prefix))
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0e0502b02009144559581c65d6604844818b571c929bf962aa500bc4587faeb
+size 613

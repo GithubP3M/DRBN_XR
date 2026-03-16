@@ -1,19 +1,3 @@
-"""
-Fixer that changes os.getcwdu() to os.getcwd().
-"""
-# Author: Victor Stinner
-
-# Local imports
-from .. import fixer_base
-from ..fixer_util import Name
-
-class FixGetcwdu(fixer_base.BaseFix):
-    BM_compatible = True
-
-    PATTERN = """
-              power< 'os' trailer< dot='.' name='getcwdu' > any* >
-              """
-
-    def transform(self, node, results):
-        name = results["name"]
-        name.replace(Name(u"getcwd", prefix=name.prefix))
+version https://git-lfs.github.com/spec/v1
+oid sha256:02e179c1418bfdad782ba857b4c6205789e7341c1132d9b7a8c4da8c875cc6b8
+size 471

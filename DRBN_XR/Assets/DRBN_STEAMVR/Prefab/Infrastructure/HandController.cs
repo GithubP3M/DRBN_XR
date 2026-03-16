@@ -1,25 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-
-[RequireComponent(typeof(ActionBasedController))]
-public class HandController : MonoBehaviour
-{
-    ActionBasedController controller;
-
-    public Hands hand;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        controller = GetComponent<ActionBasedController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        hand.SetGrip(controller.selectAction.action.ReadValue<float>());
-        hand.SetTrigger(controller.activateAction.action.ReadValue<float>());
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:52f0ab41944c67966a4b565553c3638295ea97c00661d2c3aa45a181b1da9178
+size 674

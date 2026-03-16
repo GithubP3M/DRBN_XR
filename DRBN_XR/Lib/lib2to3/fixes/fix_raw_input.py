@@ -1,17 +1,3 @@
-"""Fixer that changes raw_input(...) into input(...)."""
-# Author: Andre Roberge
-
-# Local imports
-from .. import fixer_base
-from ..fixer_util import Name
-
-class FixRawInput(fixer_base.BaseFix):
-
-    BM_compatible = True
-    PATTERN = """
-              power< name='raw_input' trailer< '(' [any] ')' > any* >
-              """
-
-    def transform(self, node, results):
-        name = results["name"]
-        name.replace(Name(u"input", prefix=name.prefix))
+version https://git-lfs.github.com/spec/v1
+oid sha256:a76a64652cb2b8f08f074394eb5c88c3d10198808f400717b6480358f2dcccc9
+size 472

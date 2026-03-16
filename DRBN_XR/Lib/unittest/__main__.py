@@ -1,12 +1,3 @@
-"""Main entry point"""
-
-import sys
-if sys.argv[0].endswith("__main__.py"):
-    sys.argv[0] = "python -m unittest"
-
-__unittest = True
-
-from .main import main, TestProgram, USAGE_AS_MAIN
-TestProgram.USAGE = USAGE_AS_MAIN
-
-main(module=None)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f28f7f9e1c79698ddaa0bf5b21960eb2bfbac7b5c858125b32aff00a9316e300
+size 250

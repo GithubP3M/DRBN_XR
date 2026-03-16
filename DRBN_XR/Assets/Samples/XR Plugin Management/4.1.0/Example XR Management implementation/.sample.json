@@ -1,5 +1,3 @@
-{
-	"displayName":"Example XR Management implementation",
-	"description": "Example code showing how to implement various portions of the XR Management API.",
-	"createSeparatePackage": true
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b86d97bd2177bc144f183e8ee22b34e84a3e883625efba29bce0503f6b22cd78
+size 195

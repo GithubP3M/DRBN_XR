@@ -1,30 +1,3 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.InputSystem;
-
-public class HandControllerImproved : MonoBehaviour
-{
-    [SerializeField] InputActionReference controllerActionGrip;
-    [SerializeField] InputActionReference controllerActionTrigger;
-
-    private Animator _handAnimator;
-
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        controllerActionGrip.action.performed += GripPress;
-        //controllerActionTrigger.action.performed += TriggerPress;
-
-        _handAnimator = GetComponent<Animator>();
-    }
-
-    private void TriggerPress(InputAction.CallbackContext obj)
-    {
-        //_handAnimator.SetFloat("Trigger",obj.ReadValue<float>());
-    }
-
-    private void GripPress(InputAction.CallbackContext obj)
-    {
-        _handAnimator.SetFloat("Grip", obj.ReadValue<float>());
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:19d128615b3dfc00bb002b72b6d64808d385646d761512868b18e0c505d32c60
+size 873

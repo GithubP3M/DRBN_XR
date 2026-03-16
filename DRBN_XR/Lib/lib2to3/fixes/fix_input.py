@@ -1,26 +1,3 @@
-"""Fixer that changes input(...) into eval(input(...))."""
-# Author: Andre Roberge
-
-# Local imports
-from .. import fixer_base
-from ..fixer_util import Call, Name
-from .. import patcomp
-
-
-context = patcomp.compile_pattern("power< 'eval' trailer< '(' any ')' > >")
-
-
-class FixInput(fixer_base.BaseFix):
-    BM_compatible = True
-    PATTERN = """
-              power< 'input' args=trailer< '(' [any] ')' > >
-              """
-
-    def transform(self, node, results):
-        # If we're already wrapped in an eval() call, we're done.
-        if context.match(node.parent.parent):
-            return
-
-        new = node.clone()
-        new.prefix = u""
-        return Call(Name(u"eval"), [new], prefix=node.prefix)
+version https://git-lfs.github.com/spec/v1
+oid sha256:384118ce856d64f833e0e82956995082855cf8680c8f92b489d2cdf38d26770d
+size 736
