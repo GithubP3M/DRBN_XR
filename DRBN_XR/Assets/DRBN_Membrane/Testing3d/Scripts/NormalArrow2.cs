@@ -1,4 +1,5 @@
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [RequireComponent(typeof(LineRenderer))]
@@ -56,3 +57,5 @@ public class NormalArrow2Editor : Editor
         EditorGUILayout.LabelField($"Distance: {normalArrow.Distance}");
     }
 }
+
+#endif

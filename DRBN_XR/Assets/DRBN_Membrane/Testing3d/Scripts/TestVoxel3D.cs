@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using MarchingCubing.V2;
 using UnityEngine;
 using Voxelization;
+#if UNITY_EDITOR
 using UnityEditor;
 
 public class TestVoxel3D : MonoBehaviour
@@ -133,3 +134,4 @@ public class TestVoxel3DEditor : Editor
         }
     }
 }
+#endif

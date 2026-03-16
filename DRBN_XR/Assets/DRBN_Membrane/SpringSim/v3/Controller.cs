@@ -3,6 +3,7 @@ using MarchingCubing.V2;
 using WeightPainting;
 using WeightGeneration;
 using System;
+#if UNITY_EDITOR
 
 namespace SpringSim.V3
 {
@@ -197,3 +198,4 @@ namespace SpringSim.V3
     }
 #endif
 }
+#endif

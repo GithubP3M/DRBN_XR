@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Xml;
 using System.IO;
+#if UNITY_EDITOR
 using UnityEditor;
 
 /// <summary>
@@ -164,3 +165,4 @@ public class PrefabImageLoaderAuto : MonoBehaviour
         return bounds;
     }
 }
+#endif
