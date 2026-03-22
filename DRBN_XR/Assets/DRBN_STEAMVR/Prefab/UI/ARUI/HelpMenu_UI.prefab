@@ -29,13 +29,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2383693732426789058}
+  m_Children: []
   m_Father: {fileID: 7658355400139952102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7449341, y: -627.93665}
+  m_AnchoredPosition: {x: -1.7449341, y: -625.00006}
   m_SizeDelta: {x: -15.689819, y: 1250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8560951983686623898
@@ -479,8 +478,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1849835144766155291}
   m_HandleRect: {fileID: 3800588874089242096}
   m_Direction: 2
-  m_Value: 1.0030487
-  m_Size: 0.20938027
+  m_Value: 1.0000001
+  m_Size: 0.2293803
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1022,12 +1021,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2842400926887678097}
+  m_Father: {fileID: 7658355400139952102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -369.99997, y: 0}
-  m_SizeDelta: {x: 750, y: 0}
+  m_AnchoredPosition: {x: -379.5898, y: -481.6374}
+  m_SizeDelta: {x: 750, y: 963.27466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4862529026919812367
 CanvasRenderer:
@@ -1057,12 +1056,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Se D\xE9placer :\r\n\tBouger le t\xE9l\xE9phone.\r\nS\xE9lectionner un
+  m_text: "Se d\xE9placer :\r\n\tBouger le t\xE9l\xE9phone.\r\nS\xE9lectionner un
     \xE9l\xE9ment : \r\n\tCliquer sur l\u2019\xE9l\xE9ment.\r\nModifier la taille
     de l\u2019interface et la vitesse de la simulation :\r\n\tLes param\xE8tre dans
-    le menu\n\tparam\xE8tre.\nAjouter/supprimer une mol\xE9cule :\n\tLe panel add
-    ou delete du Spawn menu\nAjuster les paramattres de la simulation et customis\xE9
-    les controles :\n\tLes Param\xE8tre de Controller Settings\n\tmenu"
+    le menu \n\t\"Param\xE8tre\".\r\nAjouter/supprimer une mol\xE9cule :\r\n\tLe
+    panel \"add\" ou \"delete\" du menu\n\t\"Spawn\".\r\nAjuster les param\xE8tres
+    de la simulation et customis\xE9 les contr\xF4les :\r\n\tAcc\xE9der aux param\xE8tres
+    dans le menu\n\t\"Controller Settings\".\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1166,6 +1166,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2842400926887678097}
+  - {fileID: 2383693732426789058}
   m_Father: {fileID: 9127429465144552885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
