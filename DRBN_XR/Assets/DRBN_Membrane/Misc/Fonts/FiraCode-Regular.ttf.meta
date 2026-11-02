@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 0e3eac5fcdba173489bf27d56ab8d2c8
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontNames:
-  - Fira Code
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:95db4963f7e39ba255225b36bc435d3c4f4f1cafb65dac0aa1115672d8f78acf
+size 474

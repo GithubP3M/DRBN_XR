@@ -1,7 +1,3 @@
-<Images>
-    <Image name="Collagen" path="Images/Molecules/Collagen" prefab="Prefabs/iCollagen"/>
-    <Image name="Nidogen" path="Images/Molecules/Nidogen" prefab="Prefabs/iNidogen"/>
-    <Image name="Perlecan" path="Images/Molecules/Perlecan" prefab="Prefabs/iPerlecan"/>
-    <Image name="Laminin" path="Images/Molecules/Laminin" prefab="Prefabs/iLaminin"/>
-    <Image name="Integrin" path="Images/Molecules/Integrin" prefab="Prefabs/iIntegrin"/>
-</Images>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2c95319c4de2946eb974bed5377e00b22f5b6d7c45fb9d1beef21e429958a96
+size 458

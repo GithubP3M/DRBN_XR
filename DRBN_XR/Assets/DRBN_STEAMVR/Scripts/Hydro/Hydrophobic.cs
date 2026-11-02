@@ -1,32 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Hydrophobic : MonoBehaviour
-{
-	public enum Hydro
-	{
-		phobic,
-		philic
-	}
-
-	public float HydroForce;
-	public Hydro HydroPole;
-	public Rigidbody RigidBody;
-
-	// Use this for initialization
-	void Start ()
-	{
-	}
-
-	// Update is called once per frame
-	void Update ()
-	{
-
-	}
-
-	void OnDrawGizmos()
-	{
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d61499d9ae2cd4e6afee092ffa84dfcb040299aaffe42fcb918edf2c46c552b9
+size 428

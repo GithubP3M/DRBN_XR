@@ -1,32 +1,3 @@
-﻿
-namespace MarchingCubing.V1
-{
-    public static class GridMetrics
-    {
-        public const int NumThreads = 8;
-
-        public const int Scale = 32;
-
-        public const int GroundLevel = Scale / 2;
-
-        public static int[] LODs = {
-        8,
-        16,
-        24,
-        32,
-        40
-    };
-
-        public static int LastLod = LODs.Length - 1;
-
-        public static int PointsPerChunk(int lod)
-        {
-            return LODs[lod];
-        }
-
-        public static int ThreadGroups(int lod)
-        {
-            return LODs[lod] / NumThreads;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8398c02bb3a6482f66750db57c0cac5b62b05948be7c756d086d995b9c87fc69
+size 583

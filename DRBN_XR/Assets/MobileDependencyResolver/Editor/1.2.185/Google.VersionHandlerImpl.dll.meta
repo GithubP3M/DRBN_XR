@@ -1,32 +1,3 @@
-fileFormatVersion: 2
-guid: e2831157d94e4d15998dcb6ad1418057
-labels:
-- gvh_version-1.2.185
-- gvhp_exportpath-ExternalDependencyManager/Editor/1.2.185/Google.VersionHandlerImpl.dll
-- gvh
-- gvhp_targets-editor
-PluginImporter:
-  externalObjects: {}
-  serializedVersion: 3
-  iconMap: {}
-  executionOrder: {}
-  defineConstraints: []
-  isPreloaded: 0
-  isOverridable: 0
-  isExplicitlyReferenced: 0
-  validateReferences: 1
-  platformData:
-    Any:
-      enabled: 0
-      settings: {}
-    Editor:
-      enabled: 1
-      settings:
-        DefaultValueInitialized: true
-    WindowsStoreApps:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:08625fd91f43a54ec46c4748f7bdb393ee3873ce3260c70dc952679a26c6554f
+size 690

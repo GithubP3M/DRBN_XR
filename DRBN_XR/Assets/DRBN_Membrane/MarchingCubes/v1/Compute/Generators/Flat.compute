@@ -1,24 +1,3 @@
-#pragma kernel GenerateFlat
-
-#include "../Includes/MetricsCompute.compute"
-
-RWStructuredBuffer<float> _Weights;
-
-float _Min;
-float _Max;
-float _GroundLevel;
-
-[numthreads(numThreads, numThreads, numThreads)]
-void GenerateFlat(uint3 id : SV_DispatchThreadID)
-{
-    float3 pos = float3(id) / (_ChunkSize - 1);
-    
-    if(pos.y < _GroundLevel)
-    {
-        _Weights[indexFromCoord(id.x, id.y, id.z)] = _Max;
-    }
-    else
-    {
-        _Weights[indexFromCoord(id.x, id.y, id.z)] = _Min;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3532037b7ac34e7004c577d4d5c795d78ccce8436559a4395bf2c7753812de95
+size 494

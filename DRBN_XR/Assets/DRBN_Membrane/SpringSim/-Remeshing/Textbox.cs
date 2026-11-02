@@ -1,24 +1,3 @@
-using TMPro;
-using UnityEngine;
-
-[RequireComponent(typeof(TextMeshPro))]
-public class Textbox : MonoBehaviour
-{
-    public Vector3 Position { get => transform.position; set => transform.position = value; }
-    public string Text
-    {
-        get => GetComponent<TextMeshPro>().text;
-        set => GetComponent<TextMeshPro>().text = value;
-    }
-    public Color Color
-    {
-        get => GetComponent<TextMeshPro>().color;
-        set => GetComponent<TextMeshPro>().color = value;
-    }
-
-    // void Update()
-    // {
-    //     transform.LookAt(Camera.main.transform);
-    //     transform.rotation *= Quaternion.Euler(0f, 180f, 0f);
-    // }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c2e93153a1978eb1e21e6ad5827a88fb63832a386a31a4f01fbb7449b5f33a1
+size 649

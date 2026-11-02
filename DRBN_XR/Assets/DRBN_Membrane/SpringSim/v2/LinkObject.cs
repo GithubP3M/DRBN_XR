@@ -1,36 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace SpringSim.V2
-{
-
-    [RequireComponent(typeof(LineRenderer))]
-    public class LinkObject : MonoBehaviour
-    {
-        [NonSerialized] public MassObject a, b;
-        [NonSerialized] public float length;
-        LineRenderer line;
-
-        void Awake()
-        {
-            line = GetComponent<LineRenderer>();
-        }
-
-        void OnEnable() => Place();
-
-        void Update() => Place();
-
-        void Place()
-        {
-            if (a == null || b == null)
-            {
-                line.SetPositions(new Vector3[0]);
-                return;
-            }
-            line.SetPositions(new[]{
-                a.transform.position,
-                b.transform.position,
-            });
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f90204f490e7640d01d6b03419fd4102a1a1df12a20f9f99a17ccc51b3f50a7
+size 760

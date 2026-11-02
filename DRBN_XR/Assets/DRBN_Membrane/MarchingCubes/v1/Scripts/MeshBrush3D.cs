@@ -1,19 +1,3 @@
-using UnityEngine;
-
-namespace MarchingCubing.V1
-{
-    public class MeshBrush3D : MonoBehaviour
-    {
-        [Range(0, 5)] public float BrushSize = 1.0f;
-        [Range(0, 1)] public float BrushStrength = 0.25f;
-        public bool IsPainting = false;
-        public bool PaintOrErase = true;
-
-        public void OnDrawGizmos()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.matrix = transform.localToWorldMatrix;
-            Gizmos.DrawWireSphere(Vector3.zero, BrushSize * 0.125f);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53a78232ae155df6b8067dc94b5cb75d512b86090c00b83800c4c0e7948bcdab
+size 524

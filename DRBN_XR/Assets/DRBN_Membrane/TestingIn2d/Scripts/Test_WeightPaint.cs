@@ -1,22 +1,3 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
-using WeightPainting;
-
-public class Test_WeightPaint : MonoBehaviour
-{
-    public WeightPainter weightPainter;
-    public Transform input;
-    public Material textureRenderer;
-
-    void Update()
-    {
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        float aspect = (float)Screen.width / Screen.height;
-        float x = (mousePos.x / Screen.width) * 2f - 1f;
-        float y = (mousePos.y / Screen.height) * 2f - 1f;
-        x *= aspect;
-        Vector3 normalizedPos = new Vector3(x, y, 0.0f);
-        input.position = normalizedPos;
-        textureRenderer.SetFloat("_Threshold", 0);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b37bbb545d8f0bfad6ff5c0f9a48264259d7b9a101908684e859b61cc94413e
+size 666

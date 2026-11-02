@@ -1,16 +1,3 @@
-using UnityEngine;
-
-public class TestSdf : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae791c21dee2e026918635392b6762f039d36cf8a9fb4a6a25471ccc68900990
+size 262

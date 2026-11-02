@@ -1,33 +1,3 @@
-﻿#pragma kernel GenerateNoise
-
-#include "../Includes/FastNoiseLite.compute"
-#include "../Includes/MetricsCompute.compute"
-
-RWStructuredBuffer<float> _Weights;
-
-float _NoiseScale;
-float _Amplitude;
-float _Frequency;
-int _Octaves;
-float _GroundPercent;
-int _GroundLevel;
-
-float _Min;
-float _Max;
-
-
-[numthreads(numThreads, numThreads, numThreads)]
-void GenerateNoise(uint3 id : SV_DispatchThreadID)
-{
-    fnl_state noise = fnlCreateState();
-    noise.noise_type = FNL_NOISE_OPENSIMPLEX2;
-    noise.fractal_type = FNL_FRACTAL_RIDGED;
-    noise.frequency = _Frequency;
-    noise.octaves = _Octaves;
-
-    float3 pos = (id * _NoiseScale) / (_ChunkSize - 1) * _Scale;
-    float ground = -pos.y + (_GroundPercent * _GroundLevel);
-    float n = ground + fnlGetNoise3D(noise, pos.x, pos.y, pos.z) * _Amplitude;
-    n = clamp(n, _Min, _Max);
-    _Weights[indexFromCoord(id.x, id.y, id.z)] = n;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4751acfb99e15146ed6d786b1f43d26639dd9e12c82246534ba1f9b228278776
+size 885

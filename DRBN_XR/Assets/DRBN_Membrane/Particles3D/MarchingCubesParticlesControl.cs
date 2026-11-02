@@ -1,30 +1,3 @@
-using UnityEngine;
-using MarchingCubing.V2;
-using WeightGeneration;
-
-namespace Particles3D
-{
-    public class MarchingCubesParticlesControl : MonoBehaviour
-    {
-        [SerializeField] WeightGenerator weightGenerator;
-        [SerializeField] RenderTexture renderTexture;
-        [SerializeField] MarchingCubesRef marchingCubes;
-
-        void OnEnable()
-        {
-            Regenerate();
-        }
-
-        void Update()
-        {
-            if (!renderTexture) return;
-            weightGenerator.Generate(renderTexture);
-            marchingCubes
-                .GenerateAndApplyMesh(renderTexture, weightGenerator.Threshold);
-        }
-
-        void Regenerate()
-        {
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a754972656f4b49904308247a290218c5c8ed2e510ca0fdc9a71ee90da9ed37d
+size 699

@@ -1,32 +1,3 @@
-fileFormatVersion: 2
-guid: 459f2b4255ec498caed1c0aeb1bf03a0
-labels:
-- gvh_version-1.2.185
-- gvhp_exportpath-ExternalDependencyManager/Editor/1.2.185/Google.JarResolver.dll
-- gvh
-- gvhp_targets-editor
-PluginImporter:
-  externalObjects: {}
-  serializedVersion: 3
-  iconMap: {}
-  executionOrder: {}
-  defineConstraints: []
-  isPreloaded: 0
-  isOverridable: 0
-  isExplicitlyReferenced: 0
-  validateReferences: 1
-  platformData:
-    Any:
-      enabled: 0
-      settings: {}
-    Editor:
-      enabled: 1
-      settings:
-        DefaultValueInitialized: true
-    WindowsStoreApps:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc36ca0296b682a31044026c522a149f9e32c8b1c0939fd74cb8d5763c638cc1
+size 683

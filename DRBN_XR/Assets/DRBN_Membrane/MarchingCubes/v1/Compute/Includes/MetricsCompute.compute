@@ -1,9 +1,3 @@
-﻿static const uint numThreads = 8;
-
-int _ChunkSize;
-int _Scale;
-
-int indexFromCoord(int x, int y, int z)
-{
-    return x + _ChunkSize * (y + _ChunkSize * z);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:132301c6a8b463946d6542b61f56528543bf95fc86df9dc3ce4e8aa0fb765a73
+size 160

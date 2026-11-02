@@ -1,32 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Electrostatic : MonoBehaviour
-{
-	public enum Charge
-	{
-		plus,
-		minus
-	}
-
-	public float ChargeForce;
-	public Charge Pole;
-	public Rigidbody RigidBody;
-
-	// Use this for initialization
-	void Start ()
-	{
-	}
-
-	// Update is called once per frame
-	void Update ()
-	{
-
-	}
-
-	void OnDrawGizmos()
-	{
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc5e37aca8eb61ec58ce847fb8e7ab69d25632b957a587b1e490d03da281f92b
+size 425

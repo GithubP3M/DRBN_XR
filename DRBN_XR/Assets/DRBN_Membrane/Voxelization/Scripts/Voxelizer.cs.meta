@@ -1,13 +1,3 @@
-fileFormatVersion: 2
-guid: f494f329b7aef4447872f79c55f33f57
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences:
-  - voxelizer: {fileID: 7200000, guid: c5facb5168affff4a8ed9ef7eb479485, type: 3}
-  - output: {instanceID: 0}
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:a63279d1d78d369083046a4ba3e53c894d7b60563fa57e100d7cb5484340d1fe
+size 350
